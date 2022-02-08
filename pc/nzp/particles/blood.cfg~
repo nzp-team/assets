@@ -1,0 +1,14 @@
+r_part blood_decal
+{
+	texture "particles/bullethole.tga"
+	tcoords 0 0 256 256 256
+	type cdecal
+	die 45
+	scalefactor 1
+	scale 14
+	alpha 0.4
+	alphadelta -0.01
+	rgb 0 0 0
+	count 1
+	blend blend
+}

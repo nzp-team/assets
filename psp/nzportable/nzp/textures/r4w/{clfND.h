@@ -1,0 +1,15 @@
+/* File produced with RAWTEX Gimp plugin v1.06
+   Written by Franck Charlet. */
+
+#define _CLFND_TEXTURE_WIDTH 32
+#define _CLFND_TEXTURE_REAL_WIDTH 32
+#define _CLFND_TEXTURE_HEIGHT 32
+#define _CLFND_TEXTURE_REAL_HEIGHT 32
+#define _CLFND_TEXTURE_FORMAT 4
+#define _CLFND_TEXTURE_MIPMAPS 0
+#define _CLFND_TEXTURE_SWIZZLE 1
+
+#define _CLFND_PALETTE_FORMAT 3
+#define _CLFND_PALETTE_COLORS (7 / 8)
+#define _CLFND_PALETTE_MASK 0xf
+#define _CLFND_MIPMAPS_OFFSET0 0
