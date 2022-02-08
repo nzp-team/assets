@@ -13,13 +13,6 @@ jobs:
       - name: Generate Build Date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
-      - name: Get Changes in Repo
-        id: files
-        uses: jitterbit/get-changed-files@v1
-        with:
-          format: 'csv'
-      - run: |
-          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
       - name: Delete Old Release
         uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
