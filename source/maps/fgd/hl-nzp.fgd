@@ -200,7 +200,7 @@
 // Jugger-Nog
 @PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(107 29 20) studio() = perk_juggernog : "Jugger-Nog" 
 [
-	model(studio) : "Model" : "models/machines/juggernog.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/juggernog.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -225,7 +225,7 @@
 // PhD Flopper
 @PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(131 63 148) studio() = perk_flopper : "PhD Flopper" 
 [
-	model(studio) : "Model" : "models/machines/flopper.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/flopper.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -250,7 +250,7 @@
 // Double Tap Root Beer
 @PointClass size(-16 -16 -32, 16 16 40) base(Item, Appearflags) color(214 203 1) studio() = perk_double : "Double Tap Root Beer"  
 [
-	model(studio) : "Model" : "models/machines/double_tap.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/double_tap.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -275,7 +275,7 @@
 // Speed Cola
 @PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) studio() = perk_speed : "Speed Cola" 
 [
-	model(studio) : "Model" : "models/machines/speed_cola.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/speed_cola.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -300,7 +300,7 @@
 // Quick Revive
 @PointClass size(-16 -16 -32, 16 16 32) base(Item, Appearflags) color(129 172 254) studio() = perk_revive : "Quick Revive" 
 [
-	model(studio) : "Model" : "models/machines/quick_revive.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/quick_revive.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -326,7 +326,7 @@
 // Stamin-Up
 @PointClass size(-24 -24 -32, 24 24 48) base(Item, Appearflags) color(254 198 65) studio() = perk_staminup : "Stamin-Up" 
 [
-	model(studio) : "Model" : "models/machines/staminup.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/staminup.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -351,7 +351,7 @@
 // Deadshot Daiquiri
 @PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 35 10) studio() = perk_deadshot : "Deadshot Daiquiri" 
 [
-	model(studio) : "Model" : "models/machines/deadshot.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/deadshot.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -377,7 +377,7 @@
 // Mule Kick
 @PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) studio() = perk_mule : "Mule Kick" 
 [
-	model(studio) : "Model" : "models/machines/mulekick.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/mulekick.mdl"
 	skin(integer) : "Skin" : 0
 	aistatus(string) : "Perk Sting" : ""
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
@@ -399,7 +399,7 @@
 	]
 ]
 
-@PointClass size(-32 -32 -32, 32 32 56) base(Item, Appearflags) color(125 196 187) studio("models/machines/pap.mdl") = 
+@PointClass size(-32 -32 -32, 32 32 56) base(Item, Appearflags) color(125 196 187) studio("models/machines/hl_scale/pap.mdl") = 
 	perk_pap : "Pack-A-Punch" 
 [	
 
