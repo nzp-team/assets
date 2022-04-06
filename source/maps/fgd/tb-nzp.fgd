@@ -140,23 +140,36 @@
 @PointClass size(-8 -8 -8, 8 8 8) base(Item)  color(141 85 29) model("progs/Misc/teddy.mdl") =  teddy_spawn : "Teddy spawn location" []
 
 
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model("models/machines/zapper/z_switch.mdl")  =  zapper_switch : "Electro-Shock Activation Switch"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({"path" : model, "skin" : skin})  =  zapper_switch : "Electro-Shock Activation Switch"
 [
-	cost(integer) : "Cost"
+	model(string) : "Model" : "models/machines/zapper/z_switch.mdl"
+	skin(integer) : "Skin" : 0
+	cost(integer) : "Cost" : 1000
 	zappername(string) : "Zapper Name"
+	mode(choices) : "Cooldown Mode" : 0 =
+	[
+		0: "Timed Cooldown (Der Riese)"
+		1: "End of Round Cooldown (Verruckt)"
+	]
+	cooldown(integer) : "Cooldown Time (s)" : 30
+	calc_time(integer) : "Lasting Time (s)" : 60
 	spawnflags(Flags) =
 	[
 		1 : "Requires Power" : 0
 	]
 ]
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model("models/machines/zapper/z_zap.mdl")  =  zapper_node : "Electro-Shock Node"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({"path" : model, "skin" : skin})  =  zapper_node : "Electro-Shock Node"
 [
+	model(string) : "Model" : "models/machines/zapper/z_zap.mdl"
+	skin(integer) : "Skin" : 0
 	zappername(string) : "Zapper Name"
 	targetname(target_source) : "Name"
 	target(target_destination) : "Target" 
 ]
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model("models/machines/zapper/z_light.mdl")  =  zapper_light : "Electro-Shock Node"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({"path" : model, "skin" : skin})  =  zapper_light : "Electro-Shock Node"
 [
+	model(string) : "Model" : "models/machines/zapper/z_light.mdl"
+	skin(integer) : "Skin" : 0
 	zappername(string) : "Zapper Name"
 ]
 @SolidClass = trigger_electro : "Zapper trigger field"
