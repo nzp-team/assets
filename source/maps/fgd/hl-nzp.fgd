@@ -448,10 +448,13 @@
 	]
 
 ]
-	
-@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) studio("models/machines/power_switch.mdl") = 
-	power_switch : "Power Switch" []
 
+@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) studio() = power_switch : "Power Switch" 
+[
+	model(studio) : "Model" : "models/machines/power_switch.mdl"
+	skin(integer) : "Skin" : 0
+	oldmodel(string) : "Activation Sound" : "sounds/machines/power.wav"
+]
 
 @PointClass color(114 224 172) studio() = place_model : "Place a Model" 
 [

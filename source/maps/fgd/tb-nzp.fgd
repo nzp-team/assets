@@ -447,10 +447,13 @@
 	]
 
 ]
-	
-@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) model("models/machines/power_switch.mdl") = 
-	power_switch : "Power Switch" []
 
+@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) model({"path" : model, "skin" : skin}) = power_switch : "Power Switch" 
+[
+	model(string) : "Model" : "models/machines/power_switch.mdl"
+	skin(integer) : "Skin" : 0
+	oldmodel(string) : "Activation Sound" : "sounds/machines/power.wav"
+]
 
 @PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = place_model : "Place a Model" 
 [
