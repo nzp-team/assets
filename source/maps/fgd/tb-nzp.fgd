@@ -512,8 +512,11 @@
 	]
 	model(string) : "World Model" : "progs/GModels/"
 ]
-@PointClass  base(Appearflags, Targetname) color(114 224 172) model("models/props/barrel_m.mdl") = explosive_barrel : "Barrel that can explode when shot at" 
+@PointClass  base(Appearflags, Targetname) color(114 224 172) model({"path" : model, "skin" : skin}) = explosive_barrel : "Barrel that can explode when shot at" 
 [
+	model(string) : "Model" : "models/props/barrel_m.mdl"
+	health(integer) : "Health" : 300
+	oldmodel(string) : "sounds/weapons/grenade/explode.wav"
 	skin(choices) : "Color" : 0 = 
 	[
 		0: "Green"
