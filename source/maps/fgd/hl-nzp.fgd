@@ -142,7 +142,7 @@
 
 @PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) studio()  =  zapper_switch : "Electro-Shock Activation Switch"
 [
-	model(studio) : "Model" : "models/machines/zapper/z_switch.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/zapper/z_switch.mdl"
 	skin(integer) : "Skin" : 0
 	cost(integer) : "Cost" : 1000
 	zappername(string) : "Zapper Name"
@@ -161,7 +161,7 @@
 ]
 @PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) studio()  =  zapper_node : "Electro-Shock Node"
 [
-	model(studio) : "Model" : "models/machines/zapper/z_zap.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/zapper/z_zap.mdl"
 	skin(integer) : "Skin" : 0
 	zappername(string) : "Zapper Name"
 	targetname(target_source) : "Name"
@@ -169,7 +169,7 @@
 ]
 @PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) studio()  =  zapper_light : "Electro-Shock Node"
 [
-	model(studio) : "Model" : "models/machines/zapper/z_light.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/zapper/z_light.mdl"
 	skin(integer) : "Skin" : 0
 	zappername(string) : "Zapper Name"
 ]
@@ -451,7 +451,7 @@
 
 @PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) studio() = power_switch : "Power Switch" 
 [
-	model(studio) : "Model" : "models/machines/power_switch.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/power_switch.mdl"
 	skin(integer) : "Skin" : 0
 	oldmodel(string) : "Activation Sound" : "sounds/machines/power.wav"
 ]
