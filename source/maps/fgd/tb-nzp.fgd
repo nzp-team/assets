@@ -87,7 +87,7 @@
 	mangle(string) : "Mangle (Pitch Yaw Roll)"
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(107 29 20) model("progs/props/teleporter.mdl") =  func_teleporter_entrance : "Teleporter Entrance" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(107 29 20) model("models/props/teleporter.mdl") =  func_teleporter_entrance : "Teleporter Entrance" 
 [
 	target(target_destination) : "Destination"
 	cost(integer) : "Cost"
@@ -101,24 +101,24 @@
 	tpTimer(integer) : "[Timed] Time before return"
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(107 29 20) model("progs/props/mainframe_pad.mdl") = func_teleporter_destination : "Teleporter Destination" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(107 29 20) model("models/props/mainframe_pad.mdl") = func_teleporter_destination : "Teleporter Destination" 
 [
 	targetname(target_source) : "Name" 
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(171 73 252) model("progs/props/mainframe_pad.mdl") = func_teleporter_timed : "Teleporter Timed Destination" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(171 73 252) model("models/props/mainframe_pad.mdl") = func_teleporter_timed : "Teleporter Timed Destination" 
 [
 	targetname(target_source) : "Name" 
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(62 0 132) model("progs/props/mainframe_pad.mdl") = func_teleporter_pad : "Teleporter Pad" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item) color(62 0 132) model("models/props/mainframe_pad.mdl") = func_teleporter_pad : "Teleporter Pad" 
 [
 	targetname(target_source) : "Name" 
 ]
 
 @PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = func_ending : "Buyable Ending" 
 [
-	model(model) : "Model" : "progs/Props/"
+	model(model) : "Model" : "models/Props/"
 	skin(integer) : "Skin" : 0
 	cost(integer) : "Cost" : 0
 ]
@@ -137,7 +137,7 @@
 	length(integer) : "length"
 ]
 
-@PointClass size(-8 -8 -8, 8 8 8) base(Item)  color(141 85 29) model("progs/Misc/teddy.mdl") =  teddy_spawn : "Teddy spawn location" []
+@PointClass size(-8 -8 -8, 8 8 8) base(Item)  color(141 85 29) model("models/props/teddy.mdl") =  teddy_spawn : "Teddy spawn location" []
 
 
 @PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({"path" : model, "skin" : skin})  =  zapper_switch : "Electro-Shock Activation Switch"
@@ -183,7 +183,7 @@
 
 @PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = trigger_song : "Song trigger" 
 [
-	model(model) : "Model" : "progs/Props/"
+	model(model) : "Model" : "models/Props/"
 	skin(integer) : "Skin" : 0
 	tune(string) : "Trigger Sound" : "sounds/"
 	spawnflags(Flags) =
@@ -400,11 +400,11 @@
 
 @PointClass size(-32 -32 -32, 32 32 56) base(Item, Appearflags) color(125 196 187) model("models/machines/hl_scale/pap.mdl") = 
 	perk_pap : "Pack-A-Punch" 
-[	
+[
 
 ]
 
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model("models/machines/speed_cola.mdl") = 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model("models/machines/hl_scale/speed_cola.mdl") = 
 	perk_random : "Random Perk-a-Cola" 
 [
 	spawnflags(Flags) =
@@ -457,7 +457,7 @@
 
 @PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = place_model : "Place a Model" 
 [
-	model(model) : "Model" : "progs/Props/"
+	model(model) : "Model" : "models/Props/"
 	skin(integer) : "Skin" : 0
 	sequence(integer) : "Frame" : 0
 	spawnflags(Flags) =
@@ -510,7 +510,7 @@
 		25: "Grenade"
 		26: "Betty"
 	]
-	model(string) : "World Model" : "progs/GModels/"
+	model(string) : "World Model" : "models/GModels/"
 ]
 @PointClass  base(Appearflags, Targetname) color(114 224 172) model({"path" : model, "skin" : skin}) = explosive_barrel : "Barrel that can explode when shot at" 
 [
