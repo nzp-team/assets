@@ -27,7 +27,7 @@ Being a Quake-based game, NZ:P uses conventional Quake mapping tools and standar
 
 If you are new to Quake mapping, check out `dumptruck_ds`'s ["Mapping for Quake" Trenchbroom YouTube tutorials](https://www.youtube.com/watch?v=gONePWocbqA&list=PLgDKRPte5Y0AZ_K_PZbWbgBAEt5xf74aE). If you are familiar with Trenchbroom and want to get started with NZ:P mapping, you can watch `BCDeshiG`'s [NZ:P Trenchbroom Set Up Guide](https://youtu.be/ATvpV7xyfhQ).
 
-Note that we have .WAD3 textures ready for you to use in your `nzp/textures` directory, and latest FGDs can be found in `source/maps/fgd` in this repository.
+Note that we have .WAD3 textures ready for you to use in the `source/textures/wad` directory, and latest FGDs can be found in `source/maps/fgd` in this repository.
 
 ## Assembly
 Assembling `.ZIP` archives from this asset repository requires a Linux system to run the automatic shell script. Simply navigate to `tools/` and execute `assemble-assets.sh`. If unfamiliar with executing shell (`.sh`) scripts on Linux systems, give this [itsFOSS article](https://itsfoss.com/run-shell-script-linux/) a read.
