@@ -478,7 +478,7 @@
 	]
 ]
 
-@PointClass  base(Appearflags, Targetname) color(114 224 172) model("models/misc/chalk.mdl") = weapon_wall : "Wall weapon for buy_weapon" 
+@PointClass  base(Appearflags, Targetname) color(114 224 172) model({"path" : "models/misc/chalk.mdl", "frame" : sequence}) = weapon_wall : "Wall weapon for buy_weapon" 
 [
 	sequence(choices) : "Weapon" : 0 = 
 	[
