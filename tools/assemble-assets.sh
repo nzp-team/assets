@@ -1,5 +1,5 @@
 cd ../
-mkdir -p tmp/{pc,psp,nx,vita,3ds,nzp}
+mkdir -p tmp/{pc,psp,nx,vita,ctr,nzp}
 cp -r common/* tmp/nzp/
 cp -r psp/* tmp/psp/
 cp -r tmp/nzp/* tmp/psp/nzportable/nzp/
@@ -16,8 +16,8 @@ cp -r tmp/nzp/* tmp/vita/data/nzp/nzp/
 cd tmp/vita/
 zip -r ../vita-nzp-assets.zip ./*
 cd ../../
-cp -r 3ds/* tmp/3ds/
-cp -r tmp/nzp/* tmp/3ds/nzportable/nzp/
+cp -r ctr/* tmp/ctr/
+cp -r tmp/nzp/* tmp/ctr/nzportable/nzp/
 cd tmp/3ds/
 zip -r ../3ds-nzp-assets.zip ./*
 cd ../../
