@@ -18,7 +18,7 @@ zip -r ../vita-nzp-assets.zip ./*
 cd ../../
 cp -r ctr/* tmp/ctr/
 cp -r tmp/nzp/* tmp/ctr/nzportable/nzp/
-cd tmp/3ds/
+cd tmp/ctr/
 zip -r ../3ds-nzp-assets.zip ./*
 cd ../../
 cp -r pc/* tmp/pc/
