@@ -1,6 +1,6 @@
 # Nazi Zombies: Portable Game Assets
 
-## About
+## About 
 This repository stores the game data required to play the game, such as maps, textures, or sounds. It also includes the source data for some, and will be updated over time to eventually include them all.
 
 ## Project Structure
