@@ -29,7 +29,7 @@ jobs:
           tag_name: newest
           release_name: Automated Release ${{ steps.date.outputs.date }}
           body: |
-            These are the latest versions of NZ:P's game asset data. This does **not** include the game itself or the QuakeC. If you do not know what you are doing, you may want/need to be [here](https://github.com/nzp-developers/nzportable) instead.
+            These are the latest versions of NZ:P's game asset data. This does **not** include the game itself or the QuakeC. If you do not know what you are doing, you may want/need to be [here](https://github.com/nzp-team/nzportable) instead.
 
             <details>
               <summary>Changed files (ignore)</summary>
