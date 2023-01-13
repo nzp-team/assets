@@ -560,6 +560,7 @@
 		25: "Bowie Knife"
 		26: "Stielhandgranate"
 		27: "Bouncing Betties"
+		99: "Universal Ammunition"
 	]
 	cost(integer) : "Cost" : 0
 	cost2(integer) : "Ammo Cost" : 0
