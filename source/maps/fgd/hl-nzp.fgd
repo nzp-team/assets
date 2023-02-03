@@ -1224,5 +1224,6 @@
 			8: "Only once" : 0
 			16: "Play count times" : 0
 			32: "Start Hidden" : 0
+			64: "Fullbright" : 0
 		]
 ]
