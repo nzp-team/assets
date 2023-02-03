@@ -1204,3 +1204,33 @@
 [
 	model(string) : "Sprite Model" : "progs/s_blood1.spr"
 ]
+
+@PointClass base(Angle, Appearflags, Target, Targetname) size(32 32 32) color(255 128 0) model({"path" : model, "skin" : skin, "frame": frame}) = misc_model : "A point entity for displaying models. A frame range can be given to animate the model.
+
+mdl: The model to display. Can be of type mdl, bsp, or spr.
+frame: Single frame to display. Can also be used to offset the animation.
+first_frame: The starting frame of the animation.
+last_frame: The last frame of the animation.
+speed: The frames per second of animation. Divide 1 by the fps for this value (default 0.1).
+angles: pitch roll yaw (up/down, angle, tilt left/right)
+NOTE: set angle value to 0 if using angles key to rotate mdls"
+[
+	skin(integer) : "Skin index (default 0)" : : "Skin index (default 0) Use this when your custom model has more than one skin to select"
+	model(string) : "Model Selection (ex progs/model.mdl)"
+	frame(integer)
+	first_frame(integer)
+	last_frame(integer)
+	speed(integer) : "1 divided by frames per second (default 0.1)"
+	angles(integer) : "set 'angle' to 0 if this is used"
+	mdlsz(integer) : "Entity size (x y z)"
+	centeroffset(integer) : "Model center offset"
+	spawnflags(flags) =
+		[
+			1: "Gravity" : 0
+			2: "Solid" : 0
+			4: "Back and forth" : 0
+			8: "Only once" : 0
+			16: "Play count times" : 0
+			32: "Start Hidden" : 0
+		]
+]
