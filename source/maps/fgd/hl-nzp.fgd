@@ -213,11 +213,15 @@
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
-		2: "Red Light" : 1
+		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 1
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 0
 	]
 ]
 
@@ -241,8 +245,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -266,8 +274,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -289,10 +301,14 @@
 	[
 		1: "No Light": 0
 		2: "Red Light" : 0
-		4: "Green Light" : 1
+		4: "Green Light" : 0
 		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 1
+		512: "Yellow Light" : 0
 	]
 ]
 
@@ -316,9 +332,13 @@
 		1: "No Light": 0
 		2: "Red Light" : 0
 		4: "Green Light" : 0
-		8: "Blue Light" : 1
+		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 1
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 0
 	]
 ]
 
@@ -342,8 +362,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -368,8 +392,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -391,10 +419,14 @@
 	[
 		1: "No Light": 0
 		2: "Red Light" : 0
-		4: "Green Light" : 1
+		4: "Green Light" : 0
 		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 1
+		512: "Yellow Light" : 0
 	]
 ]
 
