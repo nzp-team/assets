@@ -1287,3 +1287,6 @@
 			64: "Fullbright" : 0
 		]
 ]
+
+@PointClass = zombie_horde_point : "Hording spot for Zombies"
+[]

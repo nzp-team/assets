@@ -1295,3 +1295,6 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 			64: "Fullbright" : 0
 		]
 ]
+
+@PointClass = zombie_horde_point : "Hording spot for Zombies"
+[]
