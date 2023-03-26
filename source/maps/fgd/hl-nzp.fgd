@@ -1334,12 +1334,8 @@
 	health(integer) : "Limit Value" : 10
 ]
 
-@PointClass base(Targetname, Target) = game_counter_set : "Sets a game_counter"
+@PointClass base(Targetname, Target) = game_songplay : "Plays a track from tracks/ when triggered."
 [
-	spawnflags(flags) =
-	[
-		1: "Remove On fire" : 0
-	]
-	master(string) : "Master"
-	frags(integer) : "New Value" : 10
+	aistatus(string) : "Track name (looks in nzp/tracks/)"
+	cost(integer) : "Track duration (seconds)" : 0
 ]
