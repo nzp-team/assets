@@ -50,7 +50,13 @@
 	killtarget(target_destination) : "Killtarget"
 ]
 
-
+// info_texlights
+// It defines texture lights.
+// Add any texture name as a key and their brightness as the value.
+// Don't need to set colors because hlrad knows texture colors.
+@PointClass color(255 0 0) = info_texlights : "Texture name : Brightness"
+[
+]
 
 //
 // player starts, deathmatch, coop, teleport
