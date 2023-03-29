@@ -1108,6 +1108,16 @@
 	spawnflags(flags) = [ 1: "Entity only" : 0 ]
 ]
 
+@SolidClass base(Trigger) = trigger_stuffcmd : "Trigger: Run CMD on Client (NZP)"
+[
+	message(string) : "CMD"
+	spawnflags(flags) =
+	[
+		1: "Don't exec on Players" : 0
+		2: "Don't exec on Spectators" : 0
+	]
+]
+
 @SolidClass base(Trigger) = trigger_activator : "Trigger: Activate spawnpoints"
 [
 ]
