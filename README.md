@@ -11,11 +11,11 @@ Here is how the files in this asset repository are structured:
 * `tools`: Script(s) to assist in assembling a complete archive of game assets.
 
 ## Downloading
-It is recommended that if you do not know what you are doing to use the completely set up builds found [here](https://github.com/nzp-developers/nzportable).
+It is recommended that if you do not know what you are doing to use the completely set up builds found [here](https://github.com/nzp-team/nzportable).
 
-If you want to continue anyway, you can download a pre-assembled `.ZIP` archive of assets for your platform on the [Releases](https://github.com/nzp-developers/assets/releases/tag/newest) page. Follow the instructions there for installation assistance.
+If you want to continue anyway, you can download a pre-assembled `.ZIP` archive of assets for your platform on the [Releases](https://github.com/nzp-team/assets/releases/tag/newest) page. Follow the instructions there for installation assistance.
 
-It is also an option for people who may want to modify model sources to either [download](https://github.com/nzp-developers/assets/archive/refs/heads/main.zip) this repository (easy) or [clone it](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) (for developers).
+It is also an option for people who may want to modify model sources to either [download](https://github.com/nzp-team/assets/archive/refs/heads/main.zip) this repository (easy) or [clone it](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) (for developers).
 
 ## Modifying Model Sources
 [Blender](https://www.blender.org/) version 2.9X is used to create models, and as such the model sources are in `.blend` format.
