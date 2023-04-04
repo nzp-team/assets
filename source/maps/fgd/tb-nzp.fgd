@@ -50,7 +50,13 @@
 	killtarget(target_destination) : "Killtarget"
 ]
 
-
+// info_texlights
+// It defines texture lights.
+// Add any texture name as a key and their brightness as the value.
+// Don't need to set colors because hlrad knows texture colors.
+@PointClass color(255 0 0) = info_texlights : "Texture name : Brightness"
+[
+]
 
 //
 // player starts, deathmatch, coop, teleport
@@ -213,11 +219,15 @@
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
-		2: "Red Light" : 1
+		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 1
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 0
 	]
 ]
 
@@ -241,8 +251,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -266,8 +280,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -289,10 +307,14 @@
 	[
 		1: "No Light": 0
 		2: "Red Light" : 0
-		4: "Green Light" : 1
+		4: "Green Light" : 0
 		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 1
+		512: "Yellow Light" : 0
 	]
 ]
 
@@ -316,9 +338,13 @@
 		1: "No Light": 0
 		2: "Red Light" : 0
 		4: "Green Light" : 0
-		8: "Blue Light" : 1
+		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 1
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 0
 	]
 ]
 
@@ -342,8 +368,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -368,8 +398,12 @@
 		2: "Red Light" : 0
 		4: "Green Light" : 0
 		8: "Blue Light" : 0
-		16: "Orange Light" : 1
+		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 0
+		512: "Yellow Light" : 1
 	]
 ]
 
@@ -391,10 +425,14 @@
 	[
 		1: "No Light": 0
 		2: "Red Light" : 0
-		4: "Green Light" : 1
+		4: "Green Light" : 0
 		8: "Blue Light" : 0
 		16: "Orange Light" : 0
 		32: "Purple Light" : 0
+		64: "Cyan Light" : 0
+		128: "Pink Light" : 0
+		256: "Lime Light" : 1
+		512: "Yellow Light" : 0
 	]
 ]
 
@@ -490,14 +528,14 @@
 		5: "Ballistic Knife"
 		6: "Browning M1919"
 		7: "Double-Barreled Shotgun"
-		8: "FG-42"
+		8: "FG42"
 		9: "Gewehr 43"
 		10: "Scoped Kar 98k"
 		11: "M1 Garand"
 		12: "M1A1 Carbine"
 		13: "M2 Flamethrower"
 		14: "MP40"
-		15: "MG-42"
+		15: "MG42"
 		16: "Panzerschrek"
 		17: "PPSh-41"
 		18: "PTRS-41"
@@ -507,6 +545,7 @@
 		22: "M1897 Trench Gun"
 		23: "Type 100"
 		28: "MP5K"
+		29: "Springfield"
 		27: "Wunderwaffe DG-2"
 		24: "Bowie Knife"
 		25: "Stielhandgranate"
@@ -523,6 +562,7 @@
 	[
 		0: "Green"
 		1: "Grey"
+		2: "Dark Grey"
 	]
 ]
 
@@ -539,14 +579,14 @@
 		6: "Ballistic Knife"
 		7: "Browning M1919"
 		8: "Double-Barreled Shotgun"
-		9: "FG-42"
+		9: "FG42"
 		10: "Gewehr 43"
 		11: "Scoped Kar 98k"
 		12: "M1 Garand"
 		13: "M1A1 Carbine"
 		14: "M2 Flamethrower"
 		15: "MP40"
-		16: "MG-42"
+		16: "MG42"
 		17: "Panzerschrek"
 		18: "PPSh-41"
 		19: "PTRS-41"
@@ -556,7 +596,34 @@
 		23: "M1897 Trench Gun"
 		24: "Type 100"
 		54: "MP5K"
+		58: "Springfield"
 		56: "Wunderwaffe DG-2"
+		28: "Mustang & Sally (Colt M1911)"
+		36: "Armageddon (Kar 98k)"
+		38: "Gibs-O-Matic (Thompson)"
+		29: ".357 Plus 1 K1L-u (.357 Magnum)"
+		52: "The Widow Maker (BAR)"
+		46: "B115 Accelerator (Browning M1919)"
+		43: "24 Bore Long Range (Double-Barreled Shotgun)"
+		44: "420 Impeller (FG42)"
+		30: "G115 Compressor (Gewehr)"
+		49: "Headcracker (Scoped Kar 98k)"
+		31: "M1000 (M1 Garand)"
+		34: "Widdershins RC-1 (M1A1 Carbine)"
+		35: "F1W Nitrogen Cooled (M2 Flamethrower)"
+		40: "The Afterburner (MP40)"
+		45: "Barracuda FU-A11 (MG42)"
+		50: "Longinus (Panzerschreck)"
+		48: "The Reaper (PPSh-41)"
+		51: "The Penetrator (PTRS-41)"
+		33: "Porter's X2 Ray Gun (Ray Gun)"
+		42: "The Snuff Box (Sawed-Off Shotgun)"
+		41: "Spatz-447 + (Stg-44)"
+		47: "Gut Shot (M1897 Trench Gun)"
+		39: "1001 Samurais (Type 100)"
+		32: "MP115 Kollider (MP5K)"
+		59: "Pulverizer (Springfield)"
+		57: "Wunderwaffe DG-3 JZ (Wunderwaffe DG-2)"
 		25: "Bowie Knife"
 		26: "Stielhandgranate"
 		27: "Bouncing Betties"
@@ -701,6 +768,36 @@
 	]
 @PointClass size(-4 -4 -12, 4 4 20) base(Light, Target, Targetname) = 
 	light_torch_small_walltorch : "Small walltorch" []
+
+@PointClass size(-4 -4 -12, 4 4 20) base(Targetname, Target, Angles) = light_spot : "Spotlight" 
+[
+	_cone(integer) : "Inner (bright) angle" : 30
+	_cone2(integer) : "Outer (fading) angle" : 45
+	pitch(integer) : "Pitch" : -90
+	_light(color255) : "Brightness" : "255 255 128 200"
+	_sky(Choices) : "Is Sky" : 0 = 
+	[ 
+		0 : "No"
+		1 : "Yes"
+	]
+	spawnflags(Flags) = [ 1 : "Initially dark" : 0 ]
+      style(Choices) : "Appearance" : 0 =
+	[
+		0 : "Normal"
+		10: "Fluorescent flicker"
+		2 : "Slow, strong pulse"
+		11: "Slow pulse, noblack"
+		5 : "Gentle pulse"
+		1 : "Flicker A"
+		6 : "Flicker B"
+		3 : "Candle A"
+		7 : "Candle B"
+		8 : "Candle C"
+		4 : "Fast strobe"
+		9 : "Slow strobe"
+	]
+	pattern(string) : "Custom Appearance"
+]
 
 //
 // misc
@@ -1015,6 +1112,16 @@
 [
 ]
 
+@SolidClass base(Trigger) = trigger_stuffcmd : "Trigger: Run CMD on Client (NZP)"
+[
+	message(string) : "CMD"
+	spawnflags(flags) =
+	[
+		1: "Don't exec on Players" : 0
+		2: "Don't exec on Spectators" : 0
+	]
+]
+
 @SolidClass base(Trigger) = trigger_multiple : "Trigger: Activate multiple" 
 [
 	wait(string) : "Wait before reset" : "4"
@@ -1234,4 +1341,25 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 			32: "Start Hidden" : 0
 			64: "Fullbright" : 0
 		]
+]
+
+@PointClass = zombie_horde_point : "Hording spot for Zombies"
+[]
+
+@PointClass base(Targetname, Target) = game_counter : "Fires when it hits limit"
+[
+	spawnflags(flags) =
+	[
+		1: "Remove On fire" : 0
+		2: "Reset On fire" : 1
+	]
+	master(string) : "Master"
+	frags(integer) : "Initial Value" : 0
+	health(integer) : "Limit Value" : 10
+]
+
+@PointClass base(Targetname, Target) = game_songplay : "Plays a track from tracks/ when triggered."
+[
+	aistatus(string) : "Track name (looks in nzp/tracks/)"
+	cost(integer) : "Track duration (seconds)" : 0
 ]
