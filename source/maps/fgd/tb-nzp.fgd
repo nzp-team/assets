@@ -124,7 +124,7 @@
 
 @PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = func_ending : "Buyable Ending" 
 [
-	model(model) : "Model" : "models/Props/"
+	model(model) : "Model" : "models/props/"
 	skin(integer) : "Skin" : 0
 	cost(integer) : "Cost" : 0
 ]
@@ -146,7 +146,7 @@
 @PointClass size(-8 -8 -8, 8 8 8) base(Item)  color(141 85 29) model("models/props/teddy.mdl") =  teddy_spawn : "Teddy spawn location" []
 
 
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({"path" : model, "skin" : skin})  =  zapper_switch : "Electro-Shock Activation Switch"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_switch.mdl"} }})  =  zapper_switch : "Electro-Shock Activation Switch"
 [
 	model(string) : "Model" : "models/machines/hl_scale/zapper/z_switch.mdl"
 	skin(integer) : "Skin" : 0
@@ -164,7 +164,7 @@
 		1 : "Requires Power" : 0
 	]
 ]
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({"path" : model, "skin" : skin})  =  zapper_node : "Electro-Shock Node"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_zap.mdl"} }})  =  zapper_node : "Electro-Shock Node"
 [
 	model(string) : "Model" : "models/machines/hl_scale/zapper/z_zap.mdl"
 	skin(integer) : "Skin" : 0
@@ -172,7 +172,7 @@
 	targetname(target_source) : "Name"
 	target(target_destination) : "Target" 
 ]
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({"path" : model, "skin" : skin})  =  zapper_light : "Electro-Shock Node"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_light.mdl"} }})  =  zapper_light : "Electro-Shock Node"
 [
 	model(string) : "Model" : "models/machines/hl_scale/zapper/z_light.mdl"
 	skin(integer) : "Skin" : 0
@@ -189,7 +189,7 @@
 
 @PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = trigger_song : "Song trigger" 
 [
-	model(model) : "Model" : "models/Props/"
+	model(model) : "Model" : "models/props/"
 	skin(integer) : "Skin" : 0
 	tune(string) : "Trigger Sound" : "sounds/"
 	spawnflags(Flags) =
@@ -203,7 +203,7 @@
 //
 
 // Jugger-Nog
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(107 29 20) model({"path" : model, "skin" : skin}) = perk_juggernog : "Jugger-Nog" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(107 29 20) model({{ model != Null -> model, {"path":"models/machines/hl_scale/juggernog.mdl"} }}) = perk_juggernog : "Jugger-Nog" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/juggernog.mdl"
 	skin(integer) : "Skin" : 0
@@ -232,7 +232,7 @@
 ]
 
 // PhD Flopper
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(131 63 148) model({"path" : model, "skin" : skin}) = perk_flopper : "PhD Flopper" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(131 63 148) model({{ model != Null -> model, {"path":"models/machines/hl_scale/flopper.mdl"} }}) = perk_flopper : "PhD Flopper" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/flopper.mdl"
 	skin(integer) : "Skin" : 0
@@ -261,7 +261,7 @@
 ]
 
 // Double Tap Root Beer
-@PointClass size(-16 -16 -32, 16 16 40) base(Item, Appearflags) color(214 203 1) model({"path" : model, "skin" : skin}) = perk_double : "Double Tap Root Beer"  
+@PointClass size(-16 -16 -32, 16 16 40) base(Item, Appearflags) color(214 203 1) model({{ model != Null -> model, {"path":"models/machines/hl_scale/double_tap_2.mdl"} }}) = perk_double : "Double Tap Root Beer"  
 [
 	model(model) : "Model" : "models/machines/hl_scale/double_tap_2.mdl"
 	skin(integer) : "Skin" : 0
@@ -290,7 +290,7 @@
 ]
 
 // Speed Cola
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model({"path" : model, "skin" : skin}) = perk_speed : "Speed Cola" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/speed_cola.mdl"} }}) = perk_speed : "Speed Cola" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/speed_cola.mdl"
 	skin(integer) : "Skin" : 0
@@ -319,7 +319,7 @@
 ]
 
 // Quick Revive
-@PointClass size(-16 -16 -32, 16 16 32) base(Item, Appearflags) color(129 172 254) model({"path" : model, "skin" : skin}) = perk_revive : "Quick Revive" 
+@PointClass size(-16 -16 -32, 16 16 32) base(Item, Appearflags) color(129 172 254) model({{ model != Null -> model, {"path":"models/machines/hl_scale/quick_revive.mdl"} }}) = perk_revive : "Quick Revive" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/quick_revive.mdl"
 	skin(integer) : "Skin" : 0
@@ -349,7 +349,7 @@
 ]
 
 // Stamin-Up
-@PointClass size(-24 -24 -32, 24 24 48) base(Item, Appearflags) color(254 198 65) model({"path" : model, "skin" : skin}) = perk_staminup : "Stamin-Up" 
+@PointClass size(-24 -24 -32, 24 24 48) base(Item, Appearflags) color(254 198 65) model({{ model != Null -> model, {"path":"models/machines/hl_scale/staminup.mdl"} }}) = perk_staminup : "Stamin-Up" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/staminup.mdl"
 	skin(integer) : "Skin" : 0
@@ -378,7 +378,7 @@
 ]
 
 // Deadshot Daiquiri
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 35 10) model({"path" : model, "skin" : skin}) = perk_deadshot : "Deadshot Daiquiri" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 35 10) model({{ model != Null -> model, {"path":"models/machines/hl_scale/deadshot.mdl"} }}) = perk_deadshot : "Deadshot Daiquiri" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/deadshot.mdl"
 	skin(integer) : "Skin" : 0
@@ -408,7 +408,7 @@
 ]
 
 // Mule Kick
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model({"path" : model, "skin" : skin}) = perk_mule : "Mule Kick" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/mulekick.mdl"} }}) = perk_mule : "Mule Kick" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/mulekick.mdl"
 	skin(integer) : "Skin" : 0
@@ -473,7 +473,7 @@
 @PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(151 104 34) model("models/machines/mystery.mdl") = 
 	mystery_box_tp_spot : "Mystery Box Possible Spawn Point" []
 	
-@PointClass size(-28 -28 -64, 28 28 40 ) base(Item, Appearflags) color(114 224 172) model({"path" : model, "skin" : skin}) = item_barricade : "Window Boards" 
+@PointClass size(-28 -28 -64, 28 28 40 ) base(Item, Appearflags) color(114 224 172) model({{ model != Null -> model, {"path":"models/misc/window.mdl"} }}) = item_barricade : "Window Boards" 
 [
 	model(model) : "Model" : "models/misc/window.mdl"
 	skin(integer) : "Skin" : 0
@@ -486,7 +486,7 @@
 
 ]
 
-@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) model({"path" : model, "skin" : skin}) = power_switch : "Power Switch" 
+@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) model({{ model != Null -> model, {"path":"models/machines/hl_scale/power_switch.mdl"} }}) = power_switch : "Power Switch" 
 [
 	model(string) : "Model" : "models/machines/hl_scale/power_switch.mdl"
 	skin(integer) : "Skin" : 0
@@ -495,7 +495,7 @@
 
 @PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = place_model : "Place a Model" 
 [
-	model(model) : "Model" : "models/Props/"
+	model(model) : "Model" : "models/props/"
 	skin(integer) : "Skin" : 0
 	sequence(integer) : "Frame" : 0
 	spawnflags(Flags) =
@@ -553,7 +553,7 @@
 	]
 	model(string) : "World Model" : "models/GModels/"
 ]
-@PointClass  base(Appearflags, Targetname) color(114 224 172) model({"path" : model, "skin" : skin}) = explosive_barrel : "Barrel that can explode when shot at" 
+@PointClass  base(Appearflags, Targetname) color(114 224 172) model({{ model != Null -> model, {"path":"models/props/barrel_m.mdl"} }}) = explosive_barrel : "Barrel that can explode when shot at" 
 [
 	model(string) : "Model" : "models/props/barrel_m.mdl"
 	health(integer) : "Health" : 300
@@ -908,7 +908,7 @@
 
 
 
-@PointClass size(0 0 0, 32 32 32) base(Targetname, Target, Appearflags) = func_counter : "Activation Counter"
+@PointClass size(32 32 32) base(Targetname, Target, Appearflags) = func_counter : "Activation Counter"
 [
 	spawnflags(flags) =
 	[
