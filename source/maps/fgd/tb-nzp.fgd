@@ -461,9 +461,14 @@
 // NZP Weapons
 //
 
-@PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(141 85 29) model("models/machines/mystery.mdl") = 
+@PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(141 85 29) model({{ model != Null -> model, {"path":"models/machines/mystery.mdl"} }}) =
 	mystery_box : "Mystery Box" 
 [	
+	model(model) : "Model" : "models/machines/mystery.mdl"
+	weapon2model(model) : "Light Model" : "models/machines/mglow$.mdl"
+	cost(integer) : "Cost" : 950
+	oldmodel(string) : "Open Sound" : "sounds/machines/mbox_open.wav"
+	powerup_vo(string) : "Close Sound" : "sounds/machines/mbox_open.wav"
 	spawnflags(Flags) =
 	[
 		1 : "Not here" : 0
