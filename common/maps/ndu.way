@@ -336,7 +336,7 @@ special =
 target = 22
 target2 = 26
 target3 = 28
-target4 = 
+target4 = 25
 target5 = 
 target6 = 
 target7 = 
@@ -364,7 +364,7 @@ origin = '1081 1691 224'
 id = 25
 special = 
 target = 26
-target2 = 
+target2 = 23
 target3 = 
 target4 = 
 target5 = 
@@ -375,7 +375,7 @@ target8 =
 
 Waypoint
 {
-origin = '1046 2117 218'
+origin = '1076 2124 224'
 id = 27
 special = 
 target = 26
