@@ -525,7 +525,7 @@ target8 =
 
 Waypoint
 {
-origin = '-1055 -122 32'
+origin = '-1073 -132 32'
 id = 37
 special = 
 target = 34
@@ -546,7 +546,7 @@ special =
 target = 37
 target2 = 31
 target3 = 34
-target4 = 
+target4 = 39
 target5 = 
 target6 = 
 target7 = 
@@ -558,7 +558,7 @@ Waypoint
 origin = '-841 -99 32'
 id = 39
 special = 
-target = 40
+target = 78
 target2 = 38
 target3 = 
 target4 = 
@@ -570,8 +570,8 @@ target8 =
 
 Waypoint
 {
-origin = '-841 -261 32'
-id = 40
+origin = '-848 -248 32'
+id = 78
 special = 
 target = 41
 target2 = 39
@@ -590,8 +590,8 @@ id = 41
 special = 
 target = 42
 target2 = 77
-target3 = 
-target4 = 40
+target3 = 78
+target4 = 
 target5 = 
 target6 = 
 target7 = 
@@ -664,7 +664,7 @@ origin = '-353 344 176'
 id = 49
 special = 
 target = 48
-target2 = 50
+target2 = 82
 target3 = 
 target4 = 
 target5 = 
@@ -675,12 +675,12 @@ target8 =
 
 Waypoint
 {
-origin = '-351 180 176'
-id = 50
+origin = '-350 170 176'
+id = 82
 special = 
 target = 49
 target2 = 63
-target3 = 72
+target3 = 88
 target4 = 
 target5 = 
 target6 = 
@@ -690,10 +690,10 @@ target8 =
 
 Waypoint
 {
-origin = '-700 66 176'
-id = 51
+origin = '-757 239 176'
+id = 83
 special = 
-target = 57
+target = 84
 target2 = 
 target3 = 
 target4 = 
@@ -705,13 +705,13 @@ target8 =
 
 Waypoint
 {
-origin = '-156 -200 176'
-id = 53
+origin = '-181 -199 176'
+id = 89
 special = 
-target = 71
-target2 = 65
-target3 = 66
-target4 = 75
+target = 80
+target2 = 90
+target3 = 91
+target4 = 92
 target5 = 
 target6 = 
 target7 = 
@@ -720,85 +720,10 @@ target8 =
 
 Waypoint
 {
-origin = '-697 -200 176'
-id = 54
+origin = '-192 -298 176'
+id = 90
 special = 
-target = 67
-target2 = 68
-target3 = 55
-target4 = 
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-663 -360 176'
-id = 55
-special = 
-target = 54
-target2 = 68
-target3 = 
-target4 = 
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-612 169 176'
-id = 56
-special = 
-target = 57
-target2 = 58
-target3 = 
-target4 = 
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-616 98 176'
-id = 57
-special = 
-target = 60
-target2 = 61
-target3 = 51
-target4 = 56
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-617 247 176'
-id = 58
-special = 
-target = 56
-target2 = 59
-target3 = 
-target4 = 
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-784 245 176'
-id = 59
-special = 
-target = 58
+target = 89
 target2 = 
 target3 = 
 target4 = 
@@ -810,12 +735,87 @@ target8 =
 
 Waypoint
 {
-origin = '-468 111 176'
-id = 60
+origin = '-309 -232 176'
+id = 91
 special = 
-target = 72
-target2 = 61
-target3 = 57
+target = 92
+target2 = 89
+target3 = 80
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-605 229 176'
+id = 84
+special = 
+target = 83
+target2 = 85
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-611 125 176'
+id = 85
+special = 
+target = 84
+target2 = 86
+target3 = 87
+target4 = 88
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-689 57 176'
+id = 86
+special = 
+target = 85
+target2 = 
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-495 15 176'
+id = 87
+special = 
+target = 88
+target2 = 85
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-395 62 176'
+id = 88
+special = 
+target = 85
+target2 = 87
+target3 = 82
 target4 = 63
 target5 = 
 target6 = 
@@ -825,13 +825,13 @@ target8 =
 
 Waypoint
 {
-origin = '-474 14 176'
-id = 61
+origin = '-350 -137 176'
+id = 92
 special = 
-target = 60
-target2 = 72
-target3 = 62
-target4 = 57
+target = 93
+target2 = 91
+target3 = 89
+target4 = 
 target5 = 
 target6 = 
 target7 = 
@@ -840,14 +840,14 @@ target8 =
 
 Waypoint
 {
-origin = '-301 15 176'
-id = 62
+origin = '-149 32 176'
+id = 79
 special = 
-target = 
-target2 = 63
-target3 = 72
-target4 = 50
-target5 = 76
+target = 81
+target2 = 
+target3 = 
+target4 = 
+target5 = 
 target6 = 
 target7 = 
 target8 = 
@@ -855,14 +855,14 @@ target8 =
 
 Waypoint
 {
-origin = '-279 111 176'
+origin = '-300 52 176'
 id = 63
 special = 
-target = 50
-target2 = 72
-target3 = 62
-target4 = 
-target5 = 76
+target = 88
+target2 = 82
+target3 = 81
+target4 = 97
+target5 = 
 target6 = 
 target7 = 
 target8 = 
@@ -870,11 +870,26 @@ target8 =
 
 Waypoint
 {
-origin = '-202 -57 176'
-id = 74
+origin = '-204 -77 176'
+id = 80
 special = 
-target = 76
-target2 = 75
+target = 91
+target2 = 81
+target3 = 89
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-489 -144 176'
+id = 93
+special = 
+target = 94
+target2 = 92
 target3 = 
 target4 = 
 target5 = 
@@ -885,43 +900,13 @@ target8 =
 
 Waypoint
 {
-origin = '-265 -220 176'
-id = 65
+origin = '-584 -188 176'
+id = 94
 special = 
-target = 53
-target2 = 75
-target3 = 66
+target = 96
+target2 = 95
+target3 = 93
 target4 = 
-target5 = 70
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-339 -159 176'
-id = 66
-special = 
-target = 71
-target2 = 65
-target3 = 53
-target4 = 75
-target5 = 
-target6 = 70
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-604 -148 176'
-id = 67
-special = 
-target = 70
-target2 = 
-target3 = 68
-target4 = 54
 target5 = 
 target6 = 
 target7 = 
@@ -930,42 +915,12 @@ target8 =
 
 Waypoint
 {
-origin = '-604 -233 176'
-id = 68
+origin = '-670 -354 176'
+id = 95
 special = 
-target = 55
-target2 = 67
-target3 = 54
-target4 = 70
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-455 -156 176'
-id = 70
-special = 
-target = 66
-target2 = 65
+target = 96
+target2 = 94
 target3 = 
-target4 = 68
-target5 = 67
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-188 -320 176'
-id = 71
-special = 
-target = 53
-target2 = 
-target3 = 66
 target4 = 
 target5 = 
 target6 = 
@@ -975,43 +930,43 @@ target8 =
 
 Waypoint
 {
-origin = '-391 59 176'
-id = 72
+origin = '-683 -190 176'
+id = 96
 special = 
-target = 50
+target = 95
+target2 = 94
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-218 129 176'
+id = 97
+special = 
+target = 63
+target2 = 81
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '-203 30 176'
+id = 81
+special = 
+target = 79
 target2 = 63
-target3 = 62
-target4 = 60
-target5 = 61
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-209 -143 176'
-id = 75
-special = 
-target = 74
-target2 = 53
-target3 = 65
-target4 = 66
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '-194 48 176'
-id = 76
-special = 
-target = 62
-target2 = 63
-target3 = 
-target4 = 74
+target3 = 80
+target4 = 97
 target5 = 
 target6 = 
 target7 = 
