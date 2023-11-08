@@ -65,7 +65,7 @@
 @baseclass base(Appearflags) size(-16 -16 -32, 16 16 40) 
 	color(0 255 0) = PlayerClass []
 
-@PointClass base(PlayerClass) color(255 255 255) model("models/player.mdl") = info_player_1_spawn : "Player 1 Spawn Point" [
+@PointClass base(PlayerClass, Target) color(255 255 255) model("models/player.mdl") = info_player_1_spawn : "Player 1 Spawn Point" [
 	weapon(choices) : "Weapon" : 0 = 
 	[
 		1: "Colt M1911"
@@ -126,7 +126,7 @@
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
 ]
 
-@PointClass base(PlayerClass) color(2 118 181) model("models/player.mdl") = info_player_2_spawn : "Player 2 Spawn Point" [
+@PointClass base(PlayerClass, Target) color(2 118 181) model("models/player.mdl") = info_player_2_spawn : "Player 2 Spawn Point" [
 	weapon(choices) : "Weapon" : 0 = 
 	[
 		1: "Colt M1911"
@@ -187,7 +187,7 @@
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
 ]
 
-@PointClass base(PlayerClass) color(235 189 0) model("models/player.mdl") = info_player_3_spawn : "Player 3 Spawn Point" [
+@PointClass base(PlayerClass, Target) color(235 189 0) model("models/player.mdl") = info_player_3_spawn : "Player 3 Spawn Point" [
 	weapon(choices) : "Weapon" : 0 = 
 	[
 		1: "Colt M1911"
@@ -248,7 +248,7 @@
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
 ]
 
-@PointClass base(PlayerClass) color(0 230 34) model("models/player.mdl") = info_player_4_spawn : "Player 4 Spawn Point" [
+@PointClass base(PlayerClass, Target) color(0 230 34) model("models/player.mdl") = info_player_4_spawn : "Player 4 Spawn Point" [
 	weapon(choices) : "Weapon" : 0 = 
 	[
 		1: "Colt M1911"
