@@ -674,10 +674,26 @@
 	]
 ]
 
-@PointClass size(-32 -32 -32, 32 32 56) base(Item, Appearflags) color(125 196 187) model("models/machines/hl_scale/pap.mdl") = 
+@PointClass size(-32 -32 -32, 32 32 56) base(Item, Appearflags) color(125 196 187) model({{ model != Null -> model, {"path":"models/machines/hl_scale/packapunch/p_machine.mdl"} }}) =
 	perk_pap : "Pack-A-Punch" 
 [
-
+	model(model) : "Model" : "models/machines/hl_scale/packapunch/p_machine.mdl"
+	skin(integer) : "Skin" : 0
+	oldorigin(vector) : "Floating Weapon Offset" : "0 0 2"
+	oldz(integer) : "Floating Weapon forward velocity" : 30
+	weapon2model(string) : "Roller Model" : "models/machines/hl_scale/packapunch/p_roller.mdl"
+	box1(vector) : "Roller Offset" : "7.5 0.1 6.0"
+	door_model_name(string) : "Flag Model" : "models/machines/hl_scale/packapunch/p_flag.mdl"
+	box3(vector) : "Flag Offset" : "-18 -31.7 18"
+	box2(vector) : "Spark Offset" : "17 0 6"
+	cost(integer) : "Cost" :  5000
+	oldmodel(string) : "Upgrade Sound" : "sounds/machines/packapunch/upgrade.wav"
+	spawnflags(Flags) =
+	[
+		1: "Use Rollers": 1
+		2: "Use Flag" : 1
+		4: "No Spark" : 0
+	]
 ]
 
 @PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model("models/machines/hl_scale/speed_cola.mdl") = 
