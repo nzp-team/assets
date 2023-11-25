@@ -379,6 +379,10 @@
 [
 	tune(string) : "tune"
 	length(integer) : "length"
+	spawnflags(Flags) =
+	[
+		1 : "Play Once" : 0
+	]
 ]
 
 @PointClass size(-8 -8 -8, 8 8 8) base(Item)  color(141 85 29) model("models/props/teddy.mdl") =  teddy_spawn : "Teddy spawn location" []
