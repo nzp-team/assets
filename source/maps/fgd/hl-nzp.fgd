@@ -1381,6 +1381,10 @@
 [
 ]
 
+@SolidClass base(Trigger) = trigger_interact : "Trigger: On Use Button"
+[
+]
+
 @SolidClass base(Trigger) = trigger_multiple : "Trigger: Activate multiple" 
 [
 	wait(string) : "Wait before reset" : "4"

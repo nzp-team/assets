@@ -1371,6 +1371,10 @@
 [
 ]
 
+@SolidClass base(Trigger) = trigger_interact : "Trigger: On Use Button"
+[
+]
+
 @SolidClass base(Trigger) = trigger_stuffcmd : "Trigger: Run CMD on Client (NZP)"
 [
 	message(string) : "CMD"
