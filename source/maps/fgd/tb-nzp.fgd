@@ -528,6 +528,7 @@
 		128: "Pink Light" : 0
 		256: "Lime Light" : 0
 		512: "Yellow Light" : 1
+		1024: "No damage increase (Double-Tap 1.0)" : 0
 	]
 ]
 
