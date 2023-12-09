@@ -737,10 +737,12 @@
 @PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(151 104 34) model("models/machines/mystery.mdl") = 
 	mystery_box_tp_spot : "Mystery Box Possible Spawn Point" []
 	
-@PointClass size(-28 -28 -64, 28 28 40 ) base(Item, Appearflags) color(114 224 172) model({{ model != Null -> model, {"path":"models/misc/window.mdl"} }}) = item_barricade : "Window Boards" 
+@PointClass size(-28 -28 -64, 28 28 40 ) base(Item, Appearflags) color(114 224 172) model({{ model != Null -> model, {"path":"models/misc/window.mdl"} }}) = item_barricade : "Window Barricade" 
 [
 	model(model) : "Model" : "models/misc/window.mdl"
 	skin(integer) : "Skin" : 0
+	health(integer) : "Starting Boards (-1 for none)" : 6
+	health_delay(integer) : "Max/Repairable Boards" : 6
 	oldmodel(string) : "Rebuild Sound" : "sounds/misc/barricade.wav"
 	aistatus(string) : "Destroy Sound" : "sounds/misc/barricade_destroy.wav"
 	spawnflags(Flags) =
