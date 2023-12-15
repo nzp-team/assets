@@ -1667,7 +1667,7 @@ Waypoint
 {
 origin = '-559 -650 476'
 id = 111
-special = 
+special = Catwalk
 target = 110
 target2 = 112
 target3 = 14

@@ -4568,7 +4568,7 @@
 {
 "classname" "spawn_zombie"
 "angles" "0 -15 0"
-"spawnflags" "s"
+"spawnflags" "1"
 "targetname" "z9"
 "target" "p15"
 "origin" "-1669.42 -964.76 481"
