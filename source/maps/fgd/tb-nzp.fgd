@@ -445,7 +445,7 @@
 //
 
 // Jugger-Nog
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(107 29 20) model({{ model != Null -> model, {"path":"models/machines/hl_scale/juggernog.mdl"} }}) = perk_juggernog : "Jugger-Nog" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags, Target) color(107 29 20) model({{ model != Null -> model, {"path":"models/machines/hl_scale/juggernog.mdl"} }}) = perk_juggernog : "Jugger-Nog" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/juggernog.mdl"
 	skin(integer) : "Skin" : 0
@@ -453,11 +453,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2500
+	cost(integer) : "Perk Cost (Normal)" : 2500
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -474,7 +479,7 @@
 ]
 
 // PhD Flopper
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(131 63 148) model({{ model != Null -> model, {"path":"models/machines/hl_scale/flopper.mdl"} }}) = perk_flopper : "PhD Flopper" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags, Target) color(131 63 148) model({{ model != Null -> model, {"path":"models/machines/hl_scale/flopper.mdl"} }}) = perk_flopper : "PhD Flopper" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/flopper.mdl"
 	skin(integer) : "Skin" : 0
@@ -482,11 +487,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2000
+	cost(integer) : "Perk Cost (Normal)" : 2000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -503,7 +513,7 @@
 ]
 
 // Double Tap Root Beer
-@PointClass size(-16 -16 -32, 16 16 40) base(Item, Appearflags) color(214 203 1) model({{ model != Null -> model, {"path":"models/machines/hl_scale/double_tap_2.mdl"} }}) = perk_double : "Double Tap Root Beer"  
+@PointClass size(-16 -16 -32, 16 16 40) base(Item, Appearflags, Target) color(214 203 1) model({{ model != Null -> model, {"path":"models/machines/hl_scale/double_tap_2.mdl"} }}) = perk_double : "Double Tap Root Beer"  
 [
 	model(model) : "Model" : "models/machines/hl_scale/double_tap_2.mdl"
 	skin(integer) : "Skin" : 0
@@ -511,11 +521,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2000
+	cost(integer) : "Perk Cost (Normal)" : 2000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -533,7 +548,7 @@
 ]
 
 // Speed Cola
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/speed_cola.mdl"} }}) = perk_speed : "Speed Cola" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags, Target) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/speed_cola.mdl"} }}) = perk_speed : "Speed Cola" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/speed_cola.mdl"
 	skin(integer) : "Skin" : 0
@@ -541,11 +556,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 3000
+	cost(integer) : "Perk Cost (Normal)" : 3000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -562,7 +582,7 @@
 ]
 
 // Quick Revive
-@PointClass size(-16 -16 -32, 16 16 32) base(Item, Appearflags) color(129 172 254) model({{ model != Null -> model, {"path":"models/machines/hl_scale/quick_revive.mdl"} }}) = perk_revive : "Quick Revive" 
+@PointClass size(-16 -16 -32, 16 16 32) base(Item, Appearflags, Target) color(129 172 254) model({{ model != Null -> model, {"path":"models/machines/hl_scale/quick_revive.mdl"} }}) = perk_revive : "Quick Revive" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/quick_revive.mdl"
 	skin(integer) : "Skin" : 0
@@ -570,12 +590,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost (Solo)" : 500
-	cost2(integer) : "Perk Cost (Co-Op)" : 1500
+	cost(integer) : "Perk Cost (Normal)" : 500
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 1500
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 3
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : -1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -592,7 +616,7 @@
 ]
 
 // Stamin-Up
-@PointClass size(-24 -24 -32, 24 24 48) base(Item, Appearflags) color(254 198 65) model({{ model != Null -> model, {"path":"models/machines/hl_scale/staminup.mdl"} }}) = perk_staminup : "Stamin-Up" 
+@PointClass size(-24 -24 -32, 24 24 48) base(Item, Appearflags, Target) color(254 198 65) model({{ model != Null -> model, {"path":"models/machines/hl_scale/staminup.mdl"} }}) = perk_staminup : "Stamin-Up" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/staminup.mdl"
 	skin(integer) : "Skin" : 0
@@ -600,11 +624,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2000
+	cost(integer) : "Perk Cost (Normal)" : 2000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -621,7 +650,7 @@
 ]
 
 // Deadshot Daiquiri
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 35 10) model({{ model != Null -> model, {"path":"models/machines/hl_scale/deadshot.mdl"} }}) = perk_deadshot : "Deadshot Daiquiri" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags, Target) color(0 35 10) model({{ model != Null -> model, {"path":"models/machines/hl_scale/deadshot.mdl"} }}) = perk_deadshot : "Deadshot Daiquiri" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/deadshot.mdl"
 	skin(integer) : "Skin" : 0
@@ -629,12 +658,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost (Console)" : 1500
-	cost2(integer) : "Perk Cost (PC)" : 1000
+	cost(integer) : "Perk Cost (Normal)" : 1500
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -651,7 +684,7 @@
 ]
 
 // Mule Kick
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/mulekick.mdl"} }}) = perk_mule : "Mule Kick" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags, Target) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/mulekick.mdl"} }}) = perk_mule : "Mule Kick" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/mulekick.mdl"
 	skin(integer) : "Skin" : 0
@@ -659,11 +692,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 4000
+	cost(integer) : "Perk Cost (Normal)" : 4000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(string) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
 	weapon2_animduration(integer) : "View Model End Frame" : 22
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
