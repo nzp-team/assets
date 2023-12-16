@@ -1478,11 +1478,17 @@
 	spawnflags(flags) = [ 1: "Once Only" : 0 ]
 	speed(integer) : "Speed of push" : 1000
 ]
-@SolidClass  base(Targetname) = trigger_hurt : "Trigger player hurt" 
+
+@SolidClass  base(Targetname) = trigger_hurt : "Trigger damage" 
 [
 	dmg(integer) : "Damage" : 5
 	wait(integer) : "Delay before reset"
 	message(string) : "Message"
+	spawnflags(Flags) =
+	[
+		1: "No damage to AI/Enemies": 0
+		2: "No damage to clients" : 0
+	]
 ]
 
 @SolidClass  base(Targetname) = func_rotating : "Rotateing Brush" 
