@@ -448,7 +448,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
@@ -482,7 +482,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
@@ -516,7 +516,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
@@ -551,7 +551,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
@@ -585,7 +585,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 3
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : -1
@@ -619,7 +619,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
@@ -653,7 +653,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
@@ -687,7 +687,7 @@
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
 	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
 	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
 	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
