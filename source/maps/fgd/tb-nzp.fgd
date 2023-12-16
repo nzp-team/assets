@@ -27,16 +27,6 @@
 // base marker definitions
 //
 
-@baseclass = Appearflags [
-	spawnflags(Flags) =
-	[
-		256 : "Not in Easy" : 0
-		512 : "Not in Normal" : 0
-		1024 : "Not in Heroic" : 0
-		2048 : "deatmatch" : 0
-	]
-]
-
 @baseclass = Targetname [ targetname(target_source) : "Name" ]
 @baseclass = Target [ 
 	target(target_destination) : "Target" 
@@ -62,7 +52,7 @@
 // player starts, deathmatch, coop, teleport
 //
 
-@baseclass base(Appearflags) size(-16 -16 -32, 16 16 40) 
+@baseclass base() size(-16 -16 -32, 16 16 40)
 	color(0 255 0) = PlayerClass []
 
 @PointClass base(PlayerClass, Target) color(255 255 255) model("models/player.mdl") = info_player_1_spawn : "Player 1 Spawn Point" [
@@ -326,7 +316,7 @@
 	noise(string) : "noise"
 	wait(integer) : "wait"
 ]
-@PointClass base(Appearflags) = info_intermission : "Intermission camera" 
+@PointClass base() = info_intermission : "Intermission camera"
 [
 	mangle(string) : "Mangle (Pitch Yaw Roll)"
 ]
@@ -445,7 +435,7 @@
 //
 
 // Jugger-Nog
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags, Target) color(107 29 20) model({{ model != Null -> model, {"path":"models/machines/hl_scale/juggernog.mdl"} }}) = perk_juggernog : "Jugger-Nog" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Target) color(107 29 20) model({{ model != Null -> model, {"path":"models/machines/hl_scale/juggernog.mdl"} }}) = perk_juggernog : "Jugger-Nog"
 [
 	model(model) : "Model" : "models/machines/hl_scale/juggernog.mdl"
 	skin(integer) : "Skin" : 0
@@ -479,7 +469,7 @@
 ]
 
 // PhD Flopper
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags, Target) color(131 63 148) model({{ model != Null -> model, {"path":"models/machines/hl_scale/flopper.mdl"} }}) = perk_flopper : "PhD Flopper" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Target) color(131 63 148) model({{ model != Null -> model, {"path":"models/machines/hl_scale/flopper.mdl"} }}) = perk_flopper : "PhD Flopper"
 [
 	model(model) : "Model" : "models/machines/hl_scale/flopper.mdl"
 	skin(integer) : "Skin" : 0
@@ -513,7 +503,7 @@
 ]
 
 // Double Tap Root Beer
-@PointClass size(-16 -16 -32, 16 16 40) base(Item, Appearflags, Target) color(214 203 1) model({{ model != Null -> model, {"path":"models/machines/hl_scale/double_tap_2.mdl"} }}) = perk_double : "Double Tap Root Beer"  
+@PointClass size(-16 -16 -32, 16 16 40) base(Item, Target) color(214 203 1) model({{ model != Null -> model, {"path":"models/machines/hl_scale/double_tap_2.mdl"} }}) = perk_double : "Double Tap Root Beer"
 [
 	model(model) : "Model" : "models/machines/hl_scale/double_tap_2.mdl"
 	skin(integer) : "Skin" : 0
@@ -548,7 +538,7 @@
 ]
 
 // Speed Cola
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags, Target) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/speed_cola.mdl"} }}) = perk_speed : "Speed Cola" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/speed_cola.mdl"} }}) = perk_speed : "Speed Cola"
 [
 	model(model) : "Model" : "models/machines/hl_scale/speed_cola.mdl"
 	skin(integer) : "Skin" : 0
@@ -582,7 +572,7 @@
 ]
 
 // Quick Revive
-@PointClass size(-16 -16 -32, 16 16 32) base(Item, Appearflags, Target) color(129 172 254) model({{ model != Null -> model, {"path":"models/machines/hl_scale/quick_revive.mdl"} }}) = perk_revive : "Quick Revive" 
+@PointClass size(-16 -16 -32, 16 16 32) base(Item, Target) color(129 172 254) model({{ model != Null -> model, {"path":"models/machines/hl_scale/quick_revive.mdl"} }}) = perk_revive : "Quick Revive"
 [
 	model(model) : "Model" : "models/machines/hl_scale/quick_revive.mdl"
 	skin(integer) : "Skin" : 0
@@ -616,7 +606,7 @@
 ]
 
 // Stamin-Up
-@PointClass size(-24 -24 -32, 24 24 48) base(Item, Appearflags, Target) color(254 198 65) model({{ model != Null -> model, {"path":"models/machines/hl_scale/staminup.mdl"} }}) = perk_staminup : "Stamin-Up" 
+@PointClass size(-24 -24 -32, 24 24 48) base(Item, Target) color(254 198 65) model({{ model != Null -> model, {"path":"models/machines/hl_scale/staminup.mdl"} }}) = perk_staminup : "Stamin-Up"
 [
 	model(model) : "Model" : "models/machines/hl_scale/staminup.mdl"
 	skin(integer) : "Skin" : 0
@@ -650,7 +640,7 @@
 ]
 
 // Deadshot Daiquiri
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags, Target) color(0 35 10) model({{ model != Null -> model, {"path":"models/machines/hl_scale/deadshot.mdl"} }}) = perk_deadshot : "Deadshot Daiquiri" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target) color(0 35 10) model({{ model != Null -> model, {"path":"models/machines/hl_scale/deadshot.mdl"} }}) = perk_deadshot : "Deadshot Daiquiri"
 [
 	model(model) : "Model" : "models/machines/hl_scale/deadshot.mdl"
 	skin(integer) : "Skin" : 0
@@ -684,7 +674,7 @@
 ]
 
 // Mule Kick
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags, Target) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/mulekick.mdl"} }}) = perk_mule : "Mule Kick" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/mulekick.mdl"} }}) = perk_mule : "Mule Kick"
 [
 	model(model) : "Model" : "models/machines/hl_scale/mulekick.mdl"
 	skin(integer) : "Skin" : 0
@@ -717,7 +707,7 @@
 	]
 ]
 
-@PointClass size(-32 -32 -32, 32 32 56) base(Item, Appearflags) color(125 196 187) model({{ model != Null -> model, {"path":"models/machines/hl_scale/packapunch/p_machine.mdl"} }}) =
+@PointClass size(-32 -32 -32, 32 32 56) base(Item) color(125 196 187) model({{ model != Null -> model, {"path":"models/machines/hl_scale/packapunch/p_machine.mdl"} }}) =
 	perk_pap : "Pack-A-Punch" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/packapunch/p_machine.mdl"
@@ -739,7 +729,7 @@
 	]
 ]
 
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) model("models/machines/hl_scale/speed_cola.mdl") = 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item) color(0 117 58) model("models/machines/hl_scale/speed_cola.mdl") =
 	perk_random : "Random Perk-a-Cola" 
 [
 	spawnflags(Flags) =
@@ -758,7 +748,7 @@
 // NZP Weapons
 //
 
-@PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(141 85 29) model({{ model != Null -> model, {"path":"models/machines/mystery.mdl"} }}) =
+@PointClass size(-32 -8 -8, 32 8 8) base(Item) color(141 85 29) model({{ model != Null -> model, {"path":"models/machines/mystery.mdl"} }}) =
 	mystery_box : "Mystery Box" 
 [	
 	model(model) : "Model" : "models/machines/mystery.mdl"
@@ -772,10 +762,10 @@
 		2 : "No Light" : 0
 	]
 ]
-@PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(151 104 34) model("models/machines/mystery.mdl") = 
+@PointClass size(-32 -8 -8, 32 8 8) base(Item) color(151 104 34) model("models/machines/mystery.mdl") =
 	mystery_box_tp_spot : "Mystery Box Possible Spawn Point" []
 	
-@PointClass size(-28 -28 -64, 28 28 40 ) base(Item, Appearflags) color(114 224 172) model({{ model != Null -> model, {"path":"models/misc/window.mdl"} }}) = item_barricade : "Window Barricade" 
+@PointClass size(-28 -28 -64, 28 28 40 ) base(Item) color(114 224 172) model({{ model != Null -> model, {"path":"models/misc/window.mdl"} }}) = item_barricade : "Window Barricade"
 [
 	model(model) : "Model" : "models/misc/window.mdl"
 	skin(integer) : "Skin" : 0
@@ -790,7 +780,7 @@
 
 ]
 
-@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) model({{ model != Null -> model, {"path":"models/machines/hl_scale/power_switch.mdl"} }}) = power_switch : "Power Switch" 
+@PointClass size(-16 -16 -16, 16 16 51 ) base(Item) color(147 132 108) model({{ model != Null -> model, {"path":"models/machines/hl_scale/power_switch.mdl"} }}) = power_switch : "Power Switch"
 [
 	model(string) : "Model" : "models/machines/hl_scale/power_switch.mdl"
 	skin(integer) : "Skin" : 0
@@ -820,7 +810,7 @@
 	]
 ]
 
-@PointClass  base(Appearflags, Targetname) color(114 224 172) model({"path" : "models/misc/chalk.mdl", "frame" : sequence}) = weapon_wall : "Wall weapon for buy_weapon" 
+@PointClass  base(Targetname) color(114 224 172) model({"path" : "models/misc/chalk.mdl", "frame" : sequence}) = weapon_wall : "Wall weapon for buy_weapon"
 [
 	sequence(choices) : "Weapon" : 0 = 
 	[
@@ -857,7 +847,7 @@
 	]
 	model(string) : "World Model" : "models/GModels/"
 ]
-@PointClass  base(Appearflags, Targetname) color(114 224 172) model({{ model != Null -> model, {"path":"models/props/barrel_m.mdl"} }}) = explosive_barrel : "Barrel that can explode when shot at" 
+@PointClass  base(Targetname) color(114 224 172) model({{ model != Null -> model, {"path":"models/props/barrel_m.mdl"} }}) = explosive_barrel : "Barrel that can explode when shot at"
 [
 	model(string) : "Model" : "models/props/barrel_m.mdl"
 	health(integer) : "Health" : 300
@@ -871,7 +861,7 @@
 ]
 
 //JUKKI DOOR
-@SolidClass base(Appearflags, Targetname) = buy_weapon : "buy_weapon" 
+@SolidClass base(Targetname) = buy_weapon : "buy_weapon"
 [
 	weapon(choices) : "Weapon" : 0 = 
 	[
@@ -942,7 +932,7 @@
 // NZP Monsters
 //
 
-@baseclass base(Appearflags, Target, Targetname) color(220 0 0) = Monster 
+@baseclass base(Target, Targetname) color(220 0 0) = Monster
 [
 ]
 
@@ -1139,7 +1129,7 @@
 //
 
 
-@SolidClass base(Appearflags, Targetname, Target) = func_door : "Basic door" 
+@SolidClass base(Targetname, Target) = func_door : "Basic door"
 [
 	speed(integer) : "Speed" : 100
 	sounds(choices) : "Sound" : 0 = 
@@ -1168,7 +1158,7 @@
 	]
 ]
 //JUKKI DOOR
-@SolidClass base(Appearflags, Targetname, Target) = func_door_nzp : "nzp door" 
+@SolidClass base(Targetname, Target) = func_door_nzp : "nzp door"
 [
 	wayTarget(string) : "Waypoint Target"
 	speed(integer) : "Speed" : 100
@@ -1199,7 +1189,7 @@
 	]
 ]
 
-@SolidClass base(Targetname, Appearflags) = func_wall : "Wall" 
+@SolidClass base(Targetname) = func_wall : "Wall"
 [
 	alpha(string) : "Transparency (0.1 - 1.0)"
 	rendermode(integer) : "rendermode" : 4
@@ -1212,7 +1202,7 @@
 
 
 
-@PointClass size(32 32 32) base(Targetname, Target, Appearflags) = func_counter : "Activation Counter"
+@PointClass size(32 32 32) base(Targetname, Target) = func_counter : "Activation Counter"
 [
 	spawnflags(flags) =
 	[
@@ -1507,7 +1497,7 @@
 
 @PointClass size(-4 -4 -4, 4 4 4) base(Targetname) = info_rotate : "Point of rotation" []
 
-@SolidClass base(Targetname, Appearflags) = func_movewall : "Movable Wall, used for rotating brush collision"
+@SolidClass base(Targetname) = func_movewall : "Movable Wall, used for rotating brush collision"
 [
 	spawnflags(flags) =
 	[
@@ -1620,7 +1610,7 @@
 	model(string) : "Sprite Model" : "progs/s_blood1.spr"
 ]
 
-@PointClass base(Angle, Appearflags, Target, Targetname) size(32 32 32) color(255 128 0) model({"path" : model, "skin" : skin, "frame": frame}) = misc_model : "A point entity for displaying models. A frame range can be given to animate the model.
+@PointClass base(Angle, Target, Targetname) size(32 32 32) color(255 128 0) model({"path" : model, "skin" : skin, "frame": frame}) = misc_model : "A point entity for displaying models. A frame range can be given to animate the model.
 
 mdl: The model to display. Can be of type mdl, bsp, or spr.
 frame: Single frame to display. Can also be used to offset the animation.
