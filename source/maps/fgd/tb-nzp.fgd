@@ -1489,6 +1489,15 @@
 		2: "No damage to clients" : 0
 	]
 ]
+@SolidClass  base(Targetname) = trigger_setfire : "Trigger fire effect" 
+[
+	fire_timeout(integer) : "Effect Duration" : 2
+	spawnflags(Flags) =
+	[
+		1: "Applies to Clients": 0
+		2: "No damage to AI/Enemies" : 0
+	]
+]
 
 @SolidClass  base(Targetname) = func_rotating : "Rotateing Brush" 
 [
