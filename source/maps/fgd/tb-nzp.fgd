@@ -707,16 +707,16 @@
 	]
 ]
 
-@PointClass size(-32 -32 -32, 32 32 56) base(Item) color(125 196 187) model({{ model != Null -> model, {"path":"models/machines/hl_scale/packapunch/p_machine.mdl"} }}) =
+@PointClass size(-32 -32 -32, 32 32 56) base(Item) color(125 196 187) model({{ model != Null -> model, {"path":"models/machines/hl_scale/pap/p_machine.mdl"} }}) =
 	perk_pap : "Pack-A-Punch" 
 [
-	model(model) : "Model" : "models/machines/hl_scale/packapunch/p_machine.mdl"
+	model(model) : "Model" : "models/machines/hl_scale/pap/p_machine.mdl"
 	skin(integer) : "Skin" : 0
 	oldorigin(vector) : "Floating Weapon Offset" : "0 0 2"
 	oldz(integer) : "Floating Weapon forward velocity" : 30
-	weapon2model(string) : "Roller Model" : "models/machines/hl_scale/packapunch/p_roller.mdl"
+	weapon2model(string) : "Roller Model" : "models/machines/hl_scale/pap/p_roller.mdl"
 	box1(vector) : "Roller Offset" : "7.5 0.1 6.0"
-	door_model_name(string) : "Flag Model" : "models/machines/hl_scale/packapunch/p_flag.mdl"
+	door_model_name(string) : "Flag Model" : "models/machines/hl_scale/pap/p_flag.mdl"
 	box3(vector) : "Flag Offset" : "-18 -31.7 18"
 	box2(vector) : "Spark Offset" : "17 0 6"
 	cost(integer) : "Cost" :  5000
