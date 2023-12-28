@@ -755,7 +755,7 @@
 	weapon2model(studio) : "Light Model" : "models/machines/mglow$.mdl"
 	cost(integer) : "Cost" : 950
 	oldmodel(string) : "Open Sound" : "sounds/machines/mbox_open.wav"
-	powerup_vo(string) : "Close Sound" : "sounds/machines/mbox_open.wav"
+	powerup_vo(string) : "Close Sound" : "sounds/machines/mbox_close.wav"
 	spawnflags(Flags) =
 	[
 		1 : "Not here" : 0
