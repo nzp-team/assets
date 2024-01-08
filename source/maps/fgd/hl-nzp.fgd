@@ -1364,10 +1364,20 @@
 	]
 ]
 
-@PointClass = ambient_general : "Universal Ambient Sound"
-[
+@PointClass base(Targetname, Soundplaying) = ambient_generic : "Universal Ambient Sound"
+[	
+	spawnflags(flags) = 
+	[
+		0: "Medium radius"
+		1: "Everywhere"
+		2: "Small (Idle)"
+		4: "Medium (static)"
+		8: "Large (normal)"
+		16: "Start Silent"
+		32: "Not looping"
+	]
 	volume(integer) : "Volume" : 1
-	noise(string) : "Ambient Sound"
+	message(string) : "Ambient Sound"
 ]
 
 @PointClass base(Targetname, Soundplaying) = ambient_bgm : "Back Ground Music"
