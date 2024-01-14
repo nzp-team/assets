@@ -1,6 +1,6 @@
 Waypoint
 {
-origin = '705.8  99.7 120.0'
+origin = '705 99 120'
 id = 1
 special = 
 target = 2
@@ -15,7 +15,7 @@ target8 = 10
 
 Waypoint
 {
-origin = '698.7 339.5 120.0'
+origin = '698 339 120'
 id = 2
 special = 
 target = 1
@@ -30,7 +30,7 @@ target8 = 10
 
 Waypoint
 {
-origin = '322.7 122.8 120.0'
+origin = '322 122 120'
 id = 3
 special = 
 target = 1
@@ -45,7 +45,7 @@ target8 = 10
 
 Waypoint
 {
-origin = '314.0 328.8 120.0'
+origin = '314 328 120'
 id = 4
 special = 
 target = 1
@@ -60,22 +60,22 @@ target8 = 10
 
 Waypoint
 {
-origin = '430.0 125.2 120.0'
+origin = '430 125 120'
 id = 5
 special = 
 target = 1
 target2 = 3
-target3 = 4
+target3 = 10
 target4 = 6
 target5 = 7
 target6 = 8
 target7 = 9
-target8 = 10
+target8 = 
 }
 
 Waypoint
 {
-origin = '574.6 125.3 120.0'
+origin = '574 125 120'
 id = 6
 special = 
 target = 1
@@ -90,7 +90,7 @@ target8 =
 
 Waypoint
 {
-origin = '575.5 322.4  80.0'
+origin = '575 322 80'
 id = 7
 special = 
 target = 1
@@ -105,7 +105,7 @@ target8 = 11
 
 Waypoint
 {
-origin = '428.9 335.9  80.0'
+origin = '428 335 80'
 id = 8
 special = 
 target = 1
@@ -120,7 +120,7 @@ target8 = 11
 
 Waypoint
 {
-origin = '429.4 585.9  32.0'
+origin = '429 585 32'
 id = 9
 special = 
 target = 1
@@ -135,7 +135,7 @@ target8 = 41
 
 Waypoint
 {
-origin = '584.4 596.8  32.0'
+origin = '584 596 32'
 id = 10
 special = 
 target = 3
@@ -150,12 +150,12 @@ target8 = 42
 
 Waypoint
 {
-origin = '549.1 681.7  32.0'
+origin = '640 688 32'
 id = 42
 special = 
 target = 41
 target2 = 10
-target3 = 21
+target3 = 46
 target4 = 12
 target5 = 
 target6 = 
@@ -165,13 +165,13 @@ target8 =
 
 Waypoint
 {
-origin = '910.7 705.0  32.0'
+origin = '910 705 32'
 id = 12
 special = 
 target = 42
 target2 = 13
 target3 = 
-target4 = 16
+target4 = 
 target5 = 
 target6 = 
 target7 = 
@@ -180,42 +180,42 @@ target8 =
 
 Waypoint
 {
-origin = '914.3 1017.4  32.0'
+origin = '914 1017 32'
 id = 13
 special = 
 target = 12
 target2 = 14
-target3 = 17
-target4 = 18
-target5 = 19
-target6 = 22
-target7 = 23
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
 target8 = 
 }
 
 Waypoint
 {
-origin = '683.8 1016.5  32.0'
+origin = '683 1016 32'
 id = 14
 special = 
 target = 13
 target2 = 17
 target3 = 18
 target4 = 19
-target5 = 22
-target6 = 23
+target5 = 44
+target6 = 
 target7 = 24
 target8 = 
 }
 
 Waypoint
 {
-origin = '465.6 688.8  32.0'
+origin = '400 688 32'
 id = 41
 special = 
 target = 40
 target2 = 42
-target3 = 20
+target3 = 46
 target4 = 9
 target5 = 
 target6 = 
@@ -225,7 +225,7 @@ target8 =
 
 Waypoint
 {
-origin = '130.8 705.5  32.0'
+origin = '120 705 32'
 id = 16
 special = 
 target = 11
@@ -240,112 +240,97 @@ target8 =
 
 Waypoint
 {
-origin = '114.3 1030.9  32.0'
+origin = '114 1030 32'
 id = 17
 special = 
-target = 13
-target2 = 14
-target3 = 16
-target4 = 18
-target5 = 19
-target6 = 22
-target7 = 23
-target8 = 
-}
-
-Waypoint
-{
-origin = '230.2 985.2  32.0'
-id = 18
-special = 
-target = 13
-target2 = 14
-target3 = 17
-target4 = 19
-target5 = 22
-target6 = 23
+target = 16
+target2 = 18
+target3 = 19
+target4 = 
+target5 = 
+target6 = 
 target7 = 
 target8 = 
 }
 
 Waypoint
 {
-origin = '360.7 985.3  32.0'
+origin = '230 1024 32'
+id = 18
+special = 
+target = 17
+target2 = 19
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '360 1024 32'
 id = 19
 special = 
 target = 13
 target2 = 14
 target3 = 17
 target4 = 18
-target5 = 22
-target6 = 23
+target5 = 44
+target6 = 
 target7 = 
 target8 = 
 }
 
 Waypoint
 {
-origin = '464.0 865.5  32.0'
-id = 20
+origin = '507 1016 32'
+id = 44
 special = 
-target = 1
-target2 = 6
-target3 = 7
-target4 = 10
-target5 = 21
-target6 = 22
-target7 = 23
-target8 = 41
-}
-
-Waypoint
-{
-origin = '560.0 862.3  32.0'
-id = 21
-special = 
-target = 3
-target2 = 5
-target3 = 8
-target4 = 9
-target5 = 42
-target6 = 20
-target7 = 22
+target = 19
+target2 = 45
+target3 = 14
+target4 = 
+target5 = 
+target6 = 
+target7 = 
 target8 = 
 }
 
 Waypoint
 {
-origin = '475.9 1061.9  32.0'
-id = 22
+origin = '506 860 32'
+id = 45
 special = 
-target = 6
-target2 = 7
-target3 = 10
-target4 = 13
-target5 = 14
-target6 = 17
-target7 = 18
-target8 = 19
-}
-
-Waypoint
-{
-origin = '579.8 1062.4  32.0'
-id = 23
-special = 
-target = 9
-target2 = 13
-target3 = 14
+target = 46
+target2 = 44
+target3 = 
 target4 = 
-target5 = 17
-target6 = 18
-target7 = 19
-target8 = 20
+target5 = 
+target6 = 
+target7 = 
+target8 = 
 }
 
 Waypoint
 {
-origin = '684.3 1313.8  32.0'
+origin = '511 718 32'
+id = 46
+special = 
+target = 41
+target2 = 42
+target3 = 45
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '684 1313 32'
 id = 24
 special = 
 target = 14
@@ -360,7 +345,7 @@ target8 =
 
 Waypoint
 {
-origin = '891.4 1327.3  32.0'
+origin = '891 1327 32'
 id = 25
 special = 
 target = 24
@@ -375,7 +360,7 @@ target8 =
 
 Waypoint
 {
-origin = '876.3 1581.6  32.0'
+origin = '876 1581 32'
 id = 26
 special = 
 target = 25
@@ -390,7 +375,7 @@ target8 =
 
 Waypoint
 {
-origin = '756.0 1744.9  32.0'
+origin = '756 1744 32'
 id = 27
 special = 
 target = 30
@@ -405,7 +390,7 @@ target8 =
 
 Waypoint
 {
-origin = '749.9 2021.4  32.0'
+origin = '749 2021 32'
 id = 28
 special = 
 target = 27
@@ -420,7 +405,7 @@ target8 =
 
 Waypoint
 {
-origin = '517.1 2044.2  32.0'
+origin = '517 2044 32'
 id = 29
 special = 
 target = 39
@@ -435,7 +420,7 @@ target8 =
 
 Waypoint
 {
-origin = '531.1 1694.0  32.0'
+origin = '531 1694 32'
 id = 30
 special = 
 target = 34
@@ -450,7 +435,7 @@ target8 =
 
 Waypoint
 {
-origin = '372.4 1279.2  32.0'
+origin = '372 1279 32'
 id = 31
 special = 
 target = 24
@@ -465,7 +450,7 @@ target8 =
 
 Waypoint
 {
-origin = '211.4 1395.1  32.0'
+origin = '211 1395 32'
 id = 32
 special = 
 target = 31
@@ -480,7 +465,7 @@ target8 =
 
 Waypoint
 {
-origin = '126.1 1660.2  32.0'
+origin = '126 1660 32'
 id = 33
 special = 
 target = 35
@@ -495,7 +480,7 @@ target8 =
 
 Waypoint
 {
-origin = '364.1 1665.4  32.0'
+origin = '364 1665 32'
 id = 34
 special = 
 target = 33
@@ -510,7 +495,7 @@ target8 =
 
 Waypoint
 {
-origin = '144.9 2039.6  32.0'
+origin = '144 2039 32'
 id = 35
 special = 
 target = 29
@@ -525,7 +510,7 @@ target8 =
 
 Waypoint
 {
-origin = '737.3 2214.6  56.0'
+origin = '737 2214 56'
 id = 36
 special = 
 target = 28
@@ -540,7 +525,7 @@ target8 =
 
 Waypoint
 {
-origin = '744.4 2426.0  96.0'
+origin = '720 2388 96'
 id = 37
 special = 
 target = 39
@@ -555,7 +540,7 @@ target8 =
 
 Waypoint
 {
-origin = '529.4 2219.6  56.0'
+origin = '529 2219 56'
 id = 38
 special = 
 target = 39
@@ -570,7 +555,7 @@ target8 =
 
 Waypoint
 {
-origin = '593.5 2448.0  96.0'
+origin = '592 2388 96'
 id = 39
 special = 
 target = 37
@@ -585,7 +570,7 @@ target8 =
 
 Waypoint
 {
-origin = '276.6 722.4  32.0'
+origin = '276 722 32'
 id = 40
 special = 
 target = 16
@@ -600,7 +585,7 @@ target8 =
 
 Waypoint
 {
-origin = '120.0 1240.0  32.0'
+origin = '120 1240 32'
 id = 43
 special = 
 target = 32
