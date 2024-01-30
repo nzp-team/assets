@@ -1508,6 +1508,18 @@
 		2: "No damage to AI/Enemies" : 0
 	]
 ]
+@SolidClass  base(Targetname) = trigger_awardpoints : "Award Score to Client" 
+[
+	points(integer) : "Score to add" : 25
+	noise(string) : "Sound to play on trigger" : "sounds/misc/ching.wav"
+	spawnflags(Flags) =
+	[
+		1: "Requires Client to Stand": 0
+		2: "Requires Client to Crouch" : 0
+		4: "Requires Client to Prone" : 0
+		8: "Affected by Double Points Power-Up" : 0
+	]
+]
 
 @SolidClass  base(Targetname) = func_rotating : "Rotateing Brush" 
 [
