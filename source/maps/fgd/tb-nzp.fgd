@@ -1380,6 +1380,11 @@
 	message(string) : "Ambient Sound"
 ]
 
+@PointClass base(Targetname) = trigger_atroundend : "Trigger at End of Round"
+[
+	health(integer) : "Round to Activate on" : 0
+]
+
 @PointClass base(Targetname, Soundplaying) = ambient_bgm : "Back Ground Music"
 [
 	spawnflags(flags) =
