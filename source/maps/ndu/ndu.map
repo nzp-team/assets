@@ -2624,8 +2624,9 @@
 "classname" "spawn_zombie"
 "target" "b1"
 "targetname" "frz"
-"angles" "-0 0 -0"
-"origin" "300 2104 92"
+"angles" "0 -30 0"
+"origin" "328.536 2395.07 92"
+"spawnflags" "2"
 }
 // entity 35
 {
@@ -2638,10 +2639,11 @@
 // entity 36
 {
 "classname" "spawn_zombie"
-"target" "b2"
+"target" "binew2"
 "targetname" "frz"
-"angles" "-0 0 -0"
-"origin" "284 1768 92"
+"angles" "0 90 0"
+"origin" "276 1544 92"
+"spawnflags" "2"
 }
 // entity 37
 {
@@ -2657,8 +2659,9 @@
 "classname" "spawn_zombie"
 "target" "b3"
 "targetname" "frz"
-"angles" "-0 0 -0"
-"origin" "252 904 108"
+"angles" "0 45 0"
+"origin" "306.828 583.515 108"
+"spawnflags" "2"
 }
 // entity 39
 {
@@ -2673,8 +2676,9 @@
 "classname" "spawn_zombie"
 "target" "b4"
 "targetname" "frz"
-"angles" "-0 0 -0"
-"origin" "1624 184 120"
+"angles" "0 105 0"
+"origin" "1641.8 186.343 120"
+"spawnflags" "2"
 }
 // entity 41
 {
@@ -2690,17 +2694,18 @@
 "classname" "spawn_zombie"
 "target" "b5"
 "targetname" "frz"
-"angles" "-0 0 -0"
+"angles" "0 135 0"
 "origin" "2032 1056 112"
+"spawnflags" "2"
 }
 // entity 43
 {
 "classname" "spawn_zombie"
 "target" "b6"
 "targetname" "z1"
-"angles" "-0 0 -0"
-"spawnflags" "1"
-"origin" "2456 2064 148"
+"angles" "0 165 0"
+"spawnflags" "3"
+"origin" "2471.73 2013.93 148"
 }
 // entity 44
 {
@@ -2723,9 +2728,9 @@
 "classname" "spawn_zombie"
 "target" "b7"
 "targetname" "z1"
-"angles" "-0 0 -0"
+"angles" "0 135 0"
 "spawnflags" "3"
-"origin" "2816 2272 104"
+"origin" "2976 2288 104"
 }
 // entity 47
 {
@@ -2740,18 +2745,18 @@
 "classname" "spawn_zombie"
 "target" "b8"
 "targetname" "z1"
-"angles" "-0 0 -0"
-"spawnflags" "1"
-"origin" "1848 2872 96"
+"angles" "0 -180 0"
+"spawnflags" "3"
+"origin" "1852 2900 96"
 }
 // entity 49
 {
 "classname" "spawn_zombie"
 "target" "b9"
 "targetname" "z2"
-"angles" "-0 0 -0"
-"spawnflags" "1"
-"origin" "2120 1488 120"
+"angles" "0 180 0"
+"spawnflags" "3"
+"origin" "2136 1488 120"
 }
 // entity 50
 {
@@ -2799,9 +2804,9 @@
 "classname" "spawn_zombie"
 "target" "b12"
 "targetname" "z2"
-"angles" "-0 0 -0"
+"angles" "0 -60 0"
 "spawnflags" "3"
-"origin" "1128 3088 248"
+"origin" "1132 3094.93 248"
 }
 // entity 56
 {
@@ -2834,9 +2839,9 @@
 "classname" "spawn_zombie"
 "target" "b11"
 "targetname" "z2"
-"angles" "-0 0 -0"
+"angles" "0 -75 0"
 "spawnflags" "3"
-"origin" "1752 3295 248"
+"origin" "1772.96 3255.47 248"
 }
 // entity 60
 {
@@ -8998,4 +9003,136 @@
 ( 1320 1808 192 ) ( 1240 1800 192 ) ( 1320 1808 232 ) {RAILLING_NDU [ 0.995037 0.0995038 0 -66.3959 ] [ 0 0 -1 38.1538 ] 0 0.65 0.65
 ( 1320 1810 192 ) ( 1320 1808 192 ) ( 1320 1810 232 ) NULL [ 0 -0 -1 12 ] [ 0 1 -0 -8 ] 90 0.6 0.6
 }
+}
+// entity 388
+{
+"classname" "spawn_zombie"
+"target" "b2"
+"targetname" "frz"
+"angles" "0 -30 0"
+"origin" "248.536 1915.07 92"
+"spawnflags" "2"
+}
+// entity 389
+{
+"classname" "spawn_zombie"
+"target" "b2new"
+"targetname" "frz"
+"angles" "0 0 0"
+"origin" "220 1864 92"
+"spawnflags" "2"
+}
+// entity 390
+{
+"classname" "path_corner"
+"targetname" "b2new"
+"target" "b3new"
+"angles" "-0 0 -0"
+"origin" "536 1768 80"
+}
+// entity 391
+{
+"classname" "path_corner"
+"targetname" "b3new"
+"target" "bi3"
+"angles" "-0 0 -0"
+"origin" "696 1304 80"
+}
+// entity 392
+{
+"classname" "spawn_zombie"
+"target" "b3"
+"targetname" "frz"
+"angles" "0 15 0"
+"origin" "230.207 613.094 108"
+"spawnflags" "2"
+}
+// entity 393
+{
+"classname" "spawn_zombie"
+"target" "b4"
+"targetname" "frz"
+"angles" "0 165 0"
+"origin" "1789.8 723.802 84"
+"spawnflags" "2"
+}
+// entity 394
+{
+"classname" "spawn_zombie"
+"target" "b5"
+"targetname" "frz"
+"angles" "0 135 0"
+"origin" "2080 1120 112"
+"spawnflags" "2"
+}
+// entity 395
+{
+"classname" "spawn_zombie"
+"target" "b1"
+"targetname" "frz"
+"angles" "0 30 0"
+"origin" "348.395 1958.53 92"
+"spawnflags" "2"
+}
+// entity 396
+{
+"classname" "spawn_zombie"
+"target" "b9"
+"targetname" "z2"
+"angles" "0 180 0"
+"spawnflags" "3"
+"origin" "2264 1360 136"
+}
+// entity 397
+{
+"classname" "spawn_zombie"
+"target" "bi12"
+"targetname" "z2"
+"angles" "0 -120 0"
+"spawnflags" "3"
+"origin" "1556 3254.93 264"
+}
+// entity 398
+{
+"classname" "spawn_zombie"
+"target" "b11"
+"targetname" "z2"
+"angles" "0 -135 0"
+"spawnflags" "3"
+"origin" "2196.95 3254.37 248"
+}
+// entity 399
+{
+"classname" "spawn_zombie"
+"target" "bi6"
+"targetname" "z1"
+"angles" "0 105 0"
+"spawnflags" "3"
+"origin" "2130.07 1688.27 108"
+}
+// entity 400
+{
+"classname" "spawn_zombie"
+"target" "b7"
+"targetname" "z1"
+"angles" "0 -150 0"
+"spawnflags" "3"
+"origin" "2992 2576 156"
+}
+// entity 401
+{
+"classname" "spawn_zombie"
+"target" "b8"
+"targetname" "z1"
+"angles" "0 -180 0"
+"spawnflags" "3"
+"origin" "1896 2856 96"
+}
+// entity 402
+{
+"classname" "path_corner"
+"targetname" "binew2"
+"target" "b2"
+"angles" "-0 0 -0"
+"origin" "304 1716 80"
 }

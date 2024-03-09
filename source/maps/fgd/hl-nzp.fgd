@@ -27,16 +27,6 @@
 // base marker definitions
 //
 
-@baseclass = Appearflags [
-	spawnflags(Flags) =
-	[
-		256 : "Not in Easy" : 0
-		512 : "Not in Normal" : 0
-		1024 : "Not in Heroic" : 0
-		2048 : "deatmatch" : 0
-	]
-]
-
 @baseclass = Targetname [ targetname(target_source) : "Name" ]
 @baseclass = Target [ 
 	target(target_destination) : "Target" 
@@ -62,7 +52,7 @@
 // player starts, deathmatch, coop, teleport
 //
 
-@baseclass base(Appearflags) size(-16 -16 -32, 16 16 40) 
+@baseclass base() size(-16 -16 -32, 16 16 40)
 	color(0 255 0) = PlayerClass []
 
 @PointClass base(PlayerClass, Target) color(255 255 255) studio("models/player.mdl") = info_player_1_spawn : "Player 1 Spawn Point" [
@@ -326,7 +316,7 @@
 	noise(string) : "noise"
 	wait(integer) : "wait"
 ]
-@PointClass base(Appearflags) = info_intermission : "Intermission camera" 
+@PointClass base() = info_intermission : "Intermission camera"
 [
 	mangle(string) : "Mangle (Pitch Yaw Roll)"
 ]
@@ -445,7 +435,7 @@
 //
 
 // Jugger-Nog
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(107 29 20) studio() = perk_juggernog : "Jugger-Nog" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Target) color(107 29 20) studio() = perk_juggernog : "Jugger-Nog"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/juggernog.mdl"
 	skin(integer) : "Skin" : 0
@@ -453,11 +443,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2500
+	cost(integer) : "Perk Cost (Normal)" : 2500
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -474,7 +469,7 @@
 ]
 
 // PhD Flopper
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Appearflags) color(131 63 148) studio() = perk_flopper : "PhD Flopper" 
+@PointClass size(-16 -16 -32, 16 16 56) base(Item, Target) color(131 63 148) studio() = perk_flopper : "PhD Flopper"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/flopper.mdl"
 	skin(integer) : "Skin" : 0
@@ -482,11 +477,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2000
+	cost(integer) : "Perk Cost (Normal)" : 2000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -503,7 +503,7 @@
 ]
 
 // Double Tap Root Beer
-@PointClass size(-16 -16 -32, 16 16 40) base(Item, Appearflags) color(214 203 1) studio() = perk_double : "Double Tap Root Beer"  
+@PointClass size(-16 -16 -32, 16 16 40) base(Item, Target) color(214 203 1) studio() = perk_double : "Double Tap Root Beer"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/double_tap_2.mdl"
 	skin(integer) : "Skin" : 0
@@ -511,11 +511,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2000
+	cost(integer) : "Perk Cost (Normal)" : 2000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -533,7 +538,7 @@
 ]
 
 // Speed Cola
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) studio() = perk_speed : "Speed Cola" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target) color(0 117 58) studio() = perk_speed : "Speed Cola"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/speed_cola.mdl"
 	skin(integer) : "Skin" : 0
@@ -541,11 +546,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 3000
+	cost(integer) : "Perk Cost (Normal)" : 3000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -562,7 +572,7 @@
 ]
 
 // Quick Revive
-@PointClass size(-16 -16 -32, 16 16 32) base(Item, Appearflags) color(129 172 254) studio() = perk_revive : "Quick Revive" 
+@PointClass size(-16 -16 -32, 16 16 32) base(Item, Target) color(129 172 254) studio() = perk_revive : "Quick Revive"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/quick_revive.mdl"
 	skin(integer) : "Skin" : 0
@@ -570,12 +580,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost (Solo)" : 500
-	cost2(integer) : "Perk Cost (Co-Op)" : 1500
+	cost(integer) : "Perk Cost (Normal)" : 500
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 1500
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 3
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : -1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -592,7 +606,7 @@
 ]
 
 // Stamin-Up
-@PointClass size(-24 -24 -32, 24 24 48) base(Item, Appearflags) color(254 198 65) studio() = perk_staminup : "Stamin-Up" 
+@PointClass size(-24 -24 -32, 24 24 48) base(Item, Target) color(254 198 65) studio() = perk_staminup : "Stamin-Up"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/staminup.mdl"
 	skin(integer) : "Skin" : 0
@@ -600,11 +614,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 2000
+	cost(integer) : "Perk Cost (Normal)" : 2000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -621,7 +640,7 @@
 ]
 
 // Deadshot Daiquiri
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 35 10) studio() = perk_deadshot : "Deadshot Daiquiri" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target) color(0 35 10) studio() = perk_deadshot : "Deadshot Daiquiri"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/deadshot.mdl"
 	skin(integer) : "Skin" : 0
@@ -629,12 +648,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost (Console)" : 1500
-	cost2(integer) : "Perk Cost (PC)" : 1000
+	cost(integer) : "Perk Cost (Normal)" : 1500
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -651,7 +674,7 @@
 ]
 
 // Mule Kick
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) studio() = perk_mule : "Mule Kick" 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target) color(0 117 58) studio() = perk_mule : "Mule Kick"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/mulekick.mdl"
 	skin(integer) : "Skin" : 0
@@ -659,11 +682,16 @@
 	anim_weapon_time(integer) : "Perk Sting Duration (s)" : 0
 	powerup_vo(string) : "Perk Jingle" : ""
 	anim_weapon2_time(integer) : "Perk Jingle Duration (s)" : 0
-	cost(integer) : "Perk Cost" : 4000
+	cost(integer) : "Perk Cost (Normal)" : 4000
+	cost2(integer) : "Perk Cost (Co-Op, 0 for no change)" : 0
 	oldmodel(string) : "Player Trigger Sound" : "sounds/machines/perk_drink.wav"
 	weapon2model(studio) : "View Model" : "models/machines/v_perk.mdl"
 	weapon_animduration(integer) : "View Model Start Frame" : 0
-	weapon2_animduration(integer) : "View Model End Frame" : 22
+	weapon2_animduration(integer) : "View Model End Frame" : 31
+	perk_purchase_limit_solo(integer) : "Maximum amount of uses before leave (solo)" : 0
+	perk_purchase_limit_coop(integer) : "Maximum amount of uses before leave (co-op)" : 0
+	perk_requires_power_solo(integer) : "-1 for Always On, 1 for Power Switch dependency (solo)" : 1
+	perk_requires_power_coop(integer) : "-1 for Always On, 1 for Power Switch dependency (coop)" : 1
 	spawnflags(Flags) =
 	[
 		1: "No Light": 0
@@ -679,16 +707,16 @@
 	]
 ]
 
-@PointClass size(-32 -32 -32, 32 32 56) base(Item, Appearflags) color(125 196 187) studio("models/machines/hl_scale/packapunch/p_machine.mdl") = 
+@PointClass size(-32 -32 -32, 32 32 56) base(Item) color(125 196 187) studio("models/machines/hl_scale/pap/p_machine.mdl") =
 	perk_pap : "Pack-A-Punch" 
 [	
-	model(studio) : "Model" : "models/machines/hl_scale/packapunch/p_machine.mdl"
+	model(studio) : "Model" : "models/machines/hl_scale/pap/p_machine.mdl"
 	skin(integer) : "Skin" : 0
 	oldorigin(vector) : "Floating Weapon Offset" : "0 0 2"
 	oldz(integer) : "Floating Weapon forward velocity" : 30
-	weapon2model(string) : "Roller Model" : "models/machines/hl_scale/packapunch/p_roller.mdl"
+	weapon2model(string) : "Roller Model" : "models/machines/hl_scale/pap/p_roller.mdl"
 	box1(vector) : "Roller Offset" : "7.5 0.1 6.0"
-	door_model_name(string) : "Flag Model" : "models/machines/hl_scale/packapunch/p_flag.mdl"
+	door_model_name(string) : "Flag Model" : "models/machines/hl_scale/pap/p_flag.mdl"
 	box3(vector) : "Flag Offset" : "-18 -31.7 18"
 	box2(vector) : "Spark Offset" : "17 0 6"
 	cost(integer) : "Cost" :  5000
@@ -701,7 +729,7 @@
 	]
 ]
 
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Appearflags) color(0 117 58) studio("models/machines/hl_scale/speed_cola.mdl") = 
+@PointClass size(-24 -24 -32, 24 24 56) base(Item) color(0 117 58) studio("models/machines/hl_scale/speed_cola.mdl") =
 	perk_random : "Random Perk-a-Cola" 
 [
 	spawnflags(Flags) =
@@ -720,24 +748,24 @@
 // NZP Weapons
 //
 
-@PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(141 85 29) studio() =
+@PointClass size(-32 -8 -8, 32 8 8) base(Item) color(141 85 29) studio() =
 	mystery_box : "Mystery Box" 
 [	
 	model(studio) : "Model" : "models/machines/mystery.mdl"
 	weapon2model(studio) : "Light Model" : "models/machines/mglow$.mdl"
 	cost(integer) : "Cost" : 950
 	oldmodel(string) : "Open Sound" : "sounds/machines/mbox_open.wav"
-	powerup_vo(string) : "Close Sound" : "sounds/machines/mbox_open.wav"
+	powerup_vo(string) : "Close Sound" : "sounds/machines/mbox_close.wav"
 	spawnflags(Flags) =
 	[
 		1 : "Not here" : 0
 		2 : "No Light" : 0
 	]
 ]
-@PointClass size(-32 -8 -8, 32 8 8) base(Item, Appearflags) color(151 104 34) studio("models/machines/mystery.mdl") = 
+@PointClass size(-32 -8 -8, 32 8 8) base(Item) color(151 104 34) studio("models/machines/mystery.mdl") =
 	mystery_box_tp_spot : "Mystery Box Possible Spawn Point" []
 	
-@PointClass size(-28 -28 -64, 28 28 40 ) base(Item, Appearflags) color(114 224 172) studio() = item_barricade : "Window Barricade" 
+@PointClass size(-28 -28 -64, 28 28 40 ) base(Item) color(114 224 172) studio() = item_barricade : "Window Barricade"
 [
 	model(studio) : "Model" : "models/misc/window.mdl"
 	skin(integer) : "Skin" : 0
@@ -752,7 +780,7 @@
 
 ]
 
-@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Appearflags) color(147 132 108) studio() = power_switch : "Power Switch" 
+@PointClass size(-16 -16 -16, 16 16 51 ) base(Item) color(147 132 108) studio() = power_switch : "Power Switch"
 [
 	model(studio) : "Model" : "models/machines/hl_scale/power_switch.mdl"
 	skin(integer) : "Skin" : 0
@@ -782,7 +810,7 @@
 	]
 ]
 
-@PointClass  base(Appearflags, Targetname) color(114 224 172) studio("models/misc/chalk.mdl") = weapon_wall : "Wall weapon for buy_weapon" 
+@PointClass  base(Targetname) color(114 224 172) studio("models/misc/chalk.mdl") = weapon_wall : "Wall weapon for buy_weapon"
 [
 	sequence(choices) : "Weapon" : 0 = 
 	[
@@ -819,7 +847,7 @@
 	]
 	model(studio) : "World Model" : "models/GModels/"
 ]
-@PointClass  base(Appearflags, Targetname) color(114 224 172) studio() = explosive_barrel : "Barrel that can explode when shot at" 
+@PointClass  base(Targetname) color(114 224 172) studio() = explosive_barrel : "Barrel that can explode when shot at"
 [
 	model(studio) : "Model" : "models/props/barrel_m.mdl"
 	health(integer) : "Health" : 300
@@ -833,7 +861,7 @@
 ]
 
 //JUKKI DOOR
-@SolidClass base(Appearflags, Targetname) = buy_weapon : "buy_weapon" 
+@SolidClass base(Targetname) = buy_weapon : "buy_weapon"
 [
 	weapon(choices) : "Weapon" : 0 = 
 	[
@@ -904,7 +932,7 @@
 // NZP Monsters
 //
 
-@baseclass base(Appearflags, Target, Targetname) color(220 0 0) = Monster 
+@baseclass base(Target, Targetname) color(220 0 0) = Monster
 [
 ]
 
@@ -1101,7 +1129,7 @@
 //
 
 
-@SolidClass base(Appearflags, Targetname, Target) = func_door : "Basic door" 
+@SolidClass base(Targetname, Target) = func_door : "Basic door"
 [
 	speed(integer) : "Speed" : 100
 	sounds(choices) : "Sound" : 0 = 
@@ -1130,7 +1158,7 @@
 	]
 ]
 //JUKKI DOOR
-@SolidClass base(Appearflags, Targetname, Target) = func_door_nzp : "nzp door" 
+@SolidClass base(Targetname, Target) = func_door_nzp : "nzp door"
 [
 	wayTarget(string) : "Waypoint Target"
 	speed(integer) : "Speed" : 100
@@ -1161,7 +1189,7 @@
 	]
 ]
 
-@SolidClass base(Targetname, Appearflags) = func_wall : "Wall" 
+@SolidClass base(Targetname) = func_wall : "Wall"
 [
 	alpha(string) : "Transparency (0.1 - 1.0)"
 	rendermode(integer) : "rendermode" : 4
@@ -1174,7 +1202,7 @@
 
 
 
-@PointClass size(0 0 0, 32 32 32) base(Targetname, Target, Appearflags) = func_counter : "Activation Counter"
+@PointClass size(0 0 0, 32 32 32) base(Targetname, Target) = func_counter : "Activation Counter"
 [
 	spawnflags(flags) =
 	[
@@ -1336,10 +1364,25 @@
 	]
 ]
 
-@PointClass = ambient_general : "Universal Ambient Sound"
-[
+@PointClass base(Targetname, Soundplaying) = ambient_generic : "Universal Ambient Sound"
+[	
+	spawnflags(flags) = 
+	[
+		0: "Medium radius"
+		1: "Everywhere"
+		2: "Small (Idle)"
+		4: "Medium (static)"
+		8: "Large (normal)"
+		16: "Start Silent"
+		32: "Not looping"
+	]
 	volume(integer) : "Volume" : 1
-	noise(string) : "Ambient Sound"
+	message(string) : "Ambient Sound"
+]
+
+@PointClass base(Targetname) = trigger_atroundend : "Trigger at End of Round"
+[
+	health(integer) : "Round to Activate on" : 0
 ]
 
 @PointClass base(Targetname, Soundplaying) = ambient_bgm : "Back Ground Music"
@@ -1450,11 +1493,38 @@
 	spawnflags(flags) = [ 1: "Once Only" : 0 ]
 	speed(integer) : "Speed of push" : 1000
 ]
-@SolidClass  base(Targetname) = trigger_hurt : "Trigger player hurt" 
+
+@SolidClass  base(Targetname) = trigger_hurt : "Trigger damage" 
 [
 	dmg(integer) : "Damage" : 5
 	wait(integer) : "Delay before reset"
 	message(string) : "Message"
+	spawnflags(Flags) =
+	[
+		1: "No damage to AI/Enemies": 0
+		2: "No damage to clients" : 0
+	]
+]
+@SolidClass  base(Targetname) = trigger_setfire : "Trigger fire effect" 
+[
+	fire_timeout(integer) : "Effect Duration" : 2
+	spawnflags(Flags) =
+	[
+		1: "Applies to Clients": 0
+		2: "No damage to AI/Enemies" : 0
+	]
+]
+@SolidClass  base(Targetname) = trigger_awardpoints : "Award Score to Client" 
+[
+	points(integer) : "Score to add" : 25
+	noise(string) : "Sound to play on trigger" : "sounds/misc/ching.wav"
+	spawnflags(Flags) =
+	[
+		1: "Requires Client to Stand": 0
+		2: "Requires Client to Crouch" : 0
+		4: "Requires Client to Prone" : 0
+		8: "Affected by Double Points Power-Up" : 0
+	]
 ]
 
 @SolidClass  base(Targetname) = func_rotating : "Rotateing Brush" 
@@ -1469,7 +1539,7 @@
 
 @PointClass size(-4 -4 -4, 4 4 4) base(Targetname) = info_rotate : "Point of rotation" []
 
-@SolidClass base(Targetname, Appearflags) = func_movewall : "Movable Wall, used for rotating brush collision"
+@SolidClass base(Targetname) = func_movewall : "Movable Wall, used for rotating brush collision"
 [
 	spawnflags(flags) =
 	[
