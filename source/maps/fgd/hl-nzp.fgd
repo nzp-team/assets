@@ -365,8 +365,9 @@
 	message(string) : "Message"
 ]
 
-@PointClass size(-9 -9 -4, 9 9 4) base(Item) color(35 67 36) studio("models/props/radio.mdl") =  item_radio : "Radio" 
+@PointClass size(-9 -9 -4, 9 9 4) base(Item) color(35 67 36) studio() =  item_radio : "Radio" 
 [
+	model(studio) : "Model" : "models/props/radio.mdl"
 	tune(string) : "tune"
 	length(integer) : "length"
 	spawnflags(Flags) =

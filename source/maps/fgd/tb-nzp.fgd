@@ -365,8 +365,9 @@
 	message(string) : "Message"
 ]
 
-@PointClass size(-9 -9 -4, 9 9 4) base(Item) color(35 67 36) model("models/props/radio.mdl") =  item_radio : "Radio" 
+@PointClass size(-9 -9 -4, 9 9 4) base(Item) color(35 67 36) model({{ model != Null -> model, {"path":"models/props/radio.mdl"} }}) =  item_radio : "Radio" 
 [
+	model(string) : "Model" : "models/props/radio.mdl"
 	tune(string) : "tune"
 	length(integer) : "length"
 	spawnflags(Flags) =
