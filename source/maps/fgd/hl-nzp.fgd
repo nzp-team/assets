@@ -368,6 +368,8 @@
 @PointClass size(-9 -9 -4, 9 9 4) base(Item) color(35 67 36) studio() =  item_radio : "Radio" 
 [
 	model(studio) : "Model" : "models/props/radio.mdl"
+	mins(vector) : "Bounding Box Mins" : "-8 -8 -4"
+	maxs(vector) : "Bounding Box Maxs" : "8 8 4"
 	tune(string) : "tune"
 	length(integer) : "length"
 	spawnflags(Flags) =
