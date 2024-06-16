@@ -9,7 +9,7 @@ Here is how the files in this asset repository are structured:
 * `nx`, `psp`, `pc`, `vita`: These directories contain assets exclusive to their individual platforms, starting with the ['root' directory](https://en.wikipedia.org/wiki/Root_directory) for NZ:P data.
 * `source`: Contains assets sources, structured in a similar manner to the compiled paths found in `nzp/*`. 
 * `tools`: Script(s) to assist in assembling a complete archive of game assets.
-
+ 
 ## Downloading
 It is recommended that if you do not know what you are doing to use the completely set up builds found [here](https://github.com/nzp-team/nzportable).
 
