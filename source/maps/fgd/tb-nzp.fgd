@@ -365,8 +365,11 @@
 	message(string) : "Message"
 ]
 
-@PointClass size(-9 -9 -4, 9 9 4) base(Item) color(35 67 36) model("models/props/radio.mdl") =  item_radio : "Radio" 
+@PointClass size(-9 -9 -4, 9 9 4) base(Item) color(35 67 36) model({{ model != Null -> model, {"path":"models/props/radio.mdl"} }}) =  item_radio : "Radio" 
 [
+	model(string) : "Model" : "models/props/radio.mdl"
+	mins(vector) : "Bounding Box Mins" : "-8 -8 -4"
+	maxs(vector) : "Bounding Box Maxs" : "8 8 4"
 	tune(string) : "tune"
 	length(integer) : "length"
 	spawnflags(Flags) =
@@ -465,6 +468,8 @@
 		128: "Pink Light" : 1
 		256: "Lime Light" : 0
 		512: "Yellow Light" : 0
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -499,6 +504,8 @@
 		128: "Pink Light" : 0
 		256: "Lime Light" : 0
 		512: "Yellow Light" : 1
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -534,6 +541,8 @@
 		256: "Lime Light" : 0
 		512: "Yellow Light" : 1
 		1024: "No damage increase (Double-Tap 1.0)" : 0
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -568,6 +577,8 @@
 		128: "Pink Light" : 0
 		256: "Lime Light" : 1
 		512: "Yellow Light" : 0
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -602,6 +613,8 @@
 		128: "Pink Light" : 0
 		256: "Lime Light" : 0
 		512: "Yellow Light" : 0
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -636,6 +649,8 @@
 		128: "Pink Light" : 0
 		256: "Lime Light" : 0
 		512: "Yellow Light" : 1
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -670,6 +685,8 @@
 		128: "Pink Light" : 0
 		256: "Lime Light" : 0
 		512: "Yellow Light" : 1
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -704,6 +721,8 @@
 		128: "Pink Light" : 0
 		256: "Lime Light" : 1
 		512: "Yellow Light" : 0
+		2048: "Allow Purchase while Prone" : 0
+		4096: "Silent leave (no animation)" : 0
 	]
 ]
 
@@ -1200,7 +1219,27 @@
 	]
 ]
 
-
+// func_detail
+// Similar in function to the func_detail in Source, though it is still subject to the bsp file format.
+@SolidClass = func_detail : "Detail brushes"
+[
+	// You can leave the detail level to 1. For tiny objects, you might set to 2, so that they won't chop faces of other func_details.
+	zhlt_detaillevel(integer) : "Detail level" : 1
+	// For large shapes such as terrain and walls, set this to no less than their detail level, so that they can chop the faces of adjacent world brushes.
+	zhlt_chopdown(integer) : "Lower its level to chop others" : 0
+	// Usually you don't have to use this.
+	zhlt_chopup(integer) : "Raise its level to get chopped" : 0
+	// For brushes in the same detail level and have overlapping faces (which are on the same plane), this priority determines which one will appear.
+	zhlt_coplanarpriority(integer) : "Priority when faces overlap" : 0
+	// Setting this to 0 will reduce clipnode count, but will lose the benefit of func_detail's better content deciding method which is designed to prevent "Ambiguous leafnode contents" problem.
+	zhlt_clipnodedetaillevel(integer) : "Detail level of cliphulls" : 1
+	// Very useful option which can reduce clipnode count.
+	zhlt_noclip(choices) : "Passable" : "" =
+	[
+		"": "No"
+		1: "Yes"
+	]
+]
 
 @PointClass size(32 32 32) base(Targetname, Target) = func_counter : "Activation Counter"
 [
