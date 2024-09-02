@@ -440,7 +440,7 @@ id = 31
 special = 
 target = 30
 target2 = 32
-target3 = 
+target3 = 37
 target4 = 
 target5 = 
 target6 = 
@@ -450,13 +450,13 @@ target8 =
 
 Waypoint
 {
-origin = '1039 2377 252'
+origin = '1131 2381 224'
 id = 32
 special = 
 target = 31
 target2 = 33
-target3 = 
-target4 = 
+target3 = 37
+target4 = 71
 target5 = 
 target6 = 
 target7 = 
@@ -471,9 +471,9 @@ special =
 target = 32
 target2 = 37
 target3 = 36
-target4 = 
-target5 = 
-target6 = 
+target4 = 35
+target5 = 31
+target6 = 71
 target7 = 
 target8 = 
 }
@@ -501,7 +501,7 @@ special =
 target = 36
 target2 = 37
 target3 = 34
-target4 = 
+target4 = 33
 target5 = 
 target6 = 
 target7 = 
@@ -532,8 +532,8 @@ target = 33
 target2 = 38
 target3 = 36
 target4 = 35
-target5 = 
-target6 = 
+target5 = 31
+target6 = 32
 target7 = 
 target8 = 
 }
@@ -1010,6 +1010,21 @@ id = 69
 special = 
 target = 5
 target2 = 
+target3 = 
+target4 = 
+target5 = 
+target6 = 
+target7 = 
+target8 = 
+}
+
+Waypoint
+{
+origin = '1041 2345 244'
+id = 71
+special = 
+target = 32
+target2 = 33
 target3 = 
 target4 = 
 target5 = 
