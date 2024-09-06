@@ -17,5 +17,3 @@ stuffcmds
 r_fullbright 0
 scr_showfps 1
 gl_texturemode GL_NEAREST_MIPMAP_NEAREST
-
-menu_main
