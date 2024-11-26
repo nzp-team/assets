@@ -746,6 +746,7 @@
 	box2(vector) : "Spark Offset" : "17 0 6"
 	cost(integer) : "Cost" :  5000
 	oldmodel(string) : "Upgrade Sound" : "sounds/machines/packapunch/upgrade.wav"
+	powerup_vo(string) : "Upgrade Sting" : ""
 	spawnflags(Flags) =
 	[
 		1: "Use Rollers": 1
