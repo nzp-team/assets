@@ -1752,6 +1752,7 @@
 "speed" "1"
 "origin" "-149.5 787.5 32"
 "model" "models/machines/hl_scale/flopper.mdl"
+"aistatus" "sounds/music/perksacola/flopper.wav"
 }
 // entity 35
 {
@@ -1764,6 +1765,7 @@
 "speed" "1"
 "origin" "-82.5 788.5 32"
 "model" "models/machines/hl_scale/staminup.mdl"
+"aistatus" "sounds/music/perksacola/staminup.wav"
 }
 // entity 36
 {
@@ -1776,6 +1778,7 @@
 "speed" "1"
 "origin" "-18.5 788.5 32"
 "model" "models/machines/hl_scale/juggernog.mdl"
+"aistatus" "sounds/music/perksacola/juggernog.wav"
 }
 // entity 37
 {
@@ -1788,6 +1791,7 @@
 "speed" "1"
 "origin" "43.5 779.5 32"
 "model" "models/machines/hl_scale/speed_cola.mdl"
+"aistatus" "sounds/music/perksacola/speedcola.wav"
 }
 // entity 38
 {
@@ -1800,6 +1804,7 @@
 "speed" "1"
 "origin" "242 -22 32"
 "model" "models/machines/hl_scale/quick_revive.mdl"
+"aistatus" "sounds/music/perksacola/quickrevive.wav"
 }
 // entity 39
 {
@@ -1853,6 +1858,7 @@
 "speed" "1"
 "origin" "116.5 787.5 32"
 "model" "models/machines/hl_scale/double_tap_2.mdl"
+"aistatus" "sounds/music/perksacola/doubletap.wav"
 }
 // entity 42
 {
@@ -1860,6 +1866,7 @@
 "origin" "203 785 32"
 "model" "models/machines/hl_scale/mulekick.mdl"
 "angle" "270"
+"aistatus" "sounds/music/perksacola/mulekick.wav"
 }
 // entity 43
 {
@@ -1867,6 +1874,7 @@
 "origin" "-209 787 32"
 "model" "models/machines/hl_scale/deadshot.mdl"
 "angle" "270"
+"aistatus" "sounds/music/perksacola/deadshot.wav"
 }
 // entity 44
 {
