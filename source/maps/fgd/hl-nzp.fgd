@@ -1513,7 +1513,13 @@
 
 @PointClass base(Trigger) = trigger_relay : "Trigger relay"
 [
+	triggerstate(choices) : "Trigger State" : 0 =
+	[
+		0 : "On"
+		1 : "Off"
+	]
 ]
+
 @SolidClass base(Targetname) = trigger_monsterjump : "Trigger monster jump" 
 [
 	speed(integer) : "Jump Speed" : 200
