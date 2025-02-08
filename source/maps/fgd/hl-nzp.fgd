@@ -951,6 +951,7 @@
 	]
 	cost(integer) : "Cost" : 0
 	cost2(integer) : "Ammo Cost" : 0
+	pap_cost(integer) : "Pack-A-Punch Ammo Cost" : 4500
 	target(target_destination) : "Target" 
 ]
 
