@@ -8,7 +8,7 @@
 "light" "0"
 "r_skycolor" "54 55 59"
 "angles" "0 0 0"
-"wad" "W:/NZPSTUFF/assets/source/textures/wad/Ju[s]tice_null2.wad;W:/NZPSTUFF/assets/source/textures/wad/zhlt.wad;W:/NZPSTUFF/assets/source/textures/wad/chalk_drawings.wad"
+"wad" "source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/zhlt.wad;source/textures/wad/chalk_drawings.wad"
 "sky" "ndu"
 "fog" "240 1550 54 55 59"
 // brush 0

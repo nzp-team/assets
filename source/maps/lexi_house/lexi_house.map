@@ -4,7 +4,7 @@
 {
 "mapversion" "220"
 "classname" "worldspawn"
-"wad" "W:/NZPSTUFF TEMP/assets/source/textures/wad/4all.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/b1oodv4.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/chalk_drawings.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Dung3on.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Example_01.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Example_02.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Ju[s]tice_null2.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Loop.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/nzphlwad.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/perks.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/verruckt.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/warehouse.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/zhlt.wad"
+"wad" "source/textures/wad/4all.wad;source/textures/wad/b1oodv4.wad;source/textures/wad/chalk_drawings.wad;source/textures/wad/Dung3on.wad;source/textures/wad/Example_01.wad;source/textures/wad/Example_02.wad;source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/Loop.wad;source/textures/wad/nzphlwad.wad;source/textures/wad/perks.wad;source/textures/wad/verruckt.wad;source/textures/wad/warehouse.wad;source/textures/wad/zhlt.wad"
 "sky" "ndu"
 "fog" "200 2000 80 80 80"
 "date" "14th October 1941"

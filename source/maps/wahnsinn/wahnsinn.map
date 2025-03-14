@@ -9,7 +9,7 @@
 " r_skycolor" "0 0 0"
 "angles" "0 0 0"
 "mapversion" "220"
-"wad" "\Users\judej\Desktop\nzp\git\maps\textures\Ju[s]tice_null2.wad;\Users\judej\Desktop\nzp\git\maps\textures\nzphlwad.wad;\Users\judej\Desktop\nzp\git\maps\textures\verruckt.wad;\Users\judej\Desktop\nzp\git\maps\textures\zhlt.wad"
+"wad" "source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/nzphlwad.wad;source/textures/wad/verruckt.wad;source/textures/wad/zhlt.wad"
 "_generator" "J.A.C.K. 1.1.1064 (vpHalfLife)"
 {
 ( -544 -1448 -256 ) ( -544 -1128 -272 ) ( -544 -1448 -288 ) {ARMB_X [ 0.0499376 0.997506 -0.0498753 31.981 ] [ -0 0.0499376 0.998752 15.9808 ] 0 0.5 0.5
