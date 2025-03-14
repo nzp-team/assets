@@ -7001,14 +7001,14 @@
 {
 "classname" "misc_model"
 "origin" "-788 -168 -12"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angles" "0 5 0"
 }
 // entity 163
 {
 "classname" "misc_model"
 "origin" "-788 -228 -12"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angles" "0 -5 0"
 }
 // entity 164

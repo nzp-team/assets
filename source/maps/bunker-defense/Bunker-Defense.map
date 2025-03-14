@@ -2341,7 +2341,7 @@
 {
 "classname" "place_model"
 "origin" "1512 -2712 1192"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "spawnflags" "1"
 "angle" "270"
 "_tb_layer" "1"
@@ -2350,7 +2350,7 @@
 {
 "classname" "place_model"
 "origin" "1688 -2960 1192"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "angle" "180"
 "spawnflags" "1"
 "_tb_layer" "1"
@@ -2359,7 +2359,7 @@
 {
 "classname" "place_model"
 "origin" "2048 -2712 1152"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "angle" "270"
 "spawnflags" "1"
 "_tb_layer" "1"
@@ -2368,7 +2368,7 @@
 {
 "classname" "place_model"
 "origin" "2408 -2960 1192"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "spawnflags" "1"
 "_tb_layer" "1"
 }
@@ -2376,7 +2376,7 @@
 {
 "classname" "place_model"
 "origin" "2584 -2708 1184"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "angles" "0 -90 0"
 "spawnflags" "1"
 "_tb_layer" "1"
@@ -2385,7 +2385,7 @@
 {
 "classname" "place_model"
 "origin" "2048 -3272 1128"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "spawnflags" "1"
 "angle" "90"
 "_tb_layer" "1"
@@ -2394,7 +2394,7 @@
 {
 "classname" "place_model"
 "origin" "2280 -2024 1176"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "spawnflags" "1"
 "_tb_layer" "1"
 }
@@ -2402,7 +2402,7 @@
 {
 "classname" "place_model"
 "origin" "1820 -2024 1176"
-"model" "models/Derped/Wall_lamp.mdl"
+"model" "models/props/lamp_wall.mdl"
 "spawnflags" "1"
 "angle" "180"
 "_tb_layer" "1"

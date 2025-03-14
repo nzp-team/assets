@@ -3720,7 +3720,7 @@
 // entity 45
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "544 1400 376"
@@ -3729,7 +3729,7 @@
 // entity 46
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "480 824 312"
@@ -3738,7 +3738,7 @@
 // entity 47
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "464 248 312"
@@ -3747,7 +3747,7 @@
 // entity 48
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1248 376 312"
@@ -3756,7 +3756,7 @@
 // entity 49
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "832 536 312"
@@ -3765,7 +3765,7 @@
 // entity 50
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "2000 208 312"
@@ -3774,7 +3774,7 @@
 // entity 51
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "2656 376 312"
@@ -3783,7 +3783,7 @@
 // entity 52
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "2744 976 232"
@@ -3792,7 +3792,7 @@
 // entity 53
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "2752 1464 176"
@@ -3801,7 +3801,7 @@
 // entity 54
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "2896 2176 248"
@@ -3810,7 +3810,7 @@
 // entity 55
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "2152 1992 248"
@@ -3819,7 +3819,7 @@
 // entity 56
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "2016 1464 248"
@@ -3828,7 +3828,7 @@
 // entity 57
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1184 984 248"
@@ -3837,7 +3837,7 @@
 // entity 58
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1592 1224 248"
@@ -3846,7 +3846,7 @@
 // entity 59
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1416 1864 184"
@@ -3855,7 +3855,7 @@
 // entity 60
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "912 2040 184"
@@ -3864,7 +3864,7 @@
 // entity 61
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "184 2048 288"
@@ -3873,7 +3873,7 @@
 // entity 62
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "288 1400 376"
@@ -3951,7 +3951,7 @@
 // entity 65
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1184 -64 312"
@@ -4333,7 +4333,7 @@
 // entity 80
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1792 960 248"
@@ -4342,7 +4342,7 @@
 // entity 81
 {
 "classname" "place_model"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1600 512 312"

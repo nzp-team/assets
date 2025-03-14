@@ -2210,7 +2210,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-132 -860 304.619"
 }
 // entity 27
@@ -2219,7 +2219,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-388 -860 304.619"
 }
 // entity 28
@@ -2228,7 +2228,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-718.709 -858.847 304.619"
 }
 // entity 29
@@ -2237,7 +2237,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-974.709 -858.847 304.619"
 }
 // entity 30
@@ -2521,7 +2521,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1246.71 -858.847 304.619"
 }
 // entity 59
@@ -2530,7 +2530,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2090.71 -858.847 304.619"
 }
 // entity 60
@@ -2563,7 +2563,7 @@
 "angles" "0 0 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2230.85 -233.291 304.619"
 }
 // entity 62
@@ -2572,7 +2572,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2045.29 178.847 304.619"
 }
 // entity 63
@@ -2581,7 +2581,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1329.29 178.847 304.619"
 }
 // entity 64
@@ -2674,7 +2674,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-974.709 186.847 304.619"
 }
 // entity 73
@@ -2683,7 +2683,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-718.709 186.847 304.619"
 }
 // entity 74
@@ -2692,7 +2692,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-388 188 304.619"
 }
 // entity 75
@@ -2701,7 +2701,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-132 188 304.619"
 }
 // entity 76
@@ -2898,7 +2898,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "119 677 211"
 }
 // entity 95
@@ -2999,7 +2999,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3011,7 +3011,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3136,7 +3136,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3155,7 +3155,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3175,7 +3175,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3195,7 +3195,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3215,7 +3215,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3235,7 +3235,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3245,7 +3245,7 @@
 // entity 123
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 180 0"
 "skin" "0"
 "sequence" "0"
@@ -3272,7 +3272,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3292,7 +3292,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -3305,7 +3305,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1294.71 181.153 304.619"
 }
 // entity 130
@@ -3314,7 +3314,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2006.71 181.153 304.619"
 }
 // entity 131
@@ -3323,7 +3323,7 @@
 "angles" "0 180 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2233.15 -190.709 304.619"
 }
 // entity 132
@@ -5065,7 +5065,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5078,7 +5078,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1502.71 -858.847 304.619"
 }
 // entity 195
@@ -5097,7 +5097,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1838.71 -858.847 304.619"
 }
 // entity 197
@@ -5177,7 +5177,7 @@
 "angles" "0 -180 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2233.15 30.709 304.619"
 }
 // entity 206
@@ -5186,7 +5186,7 @@
 "angles" "0 0 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2230.85 73.291 304.619"
 }
 // entity 207
@@ -5501,8 +5501,8 @@
 "box2" "17 0 6"
 "box3" "-18 -31.7 18"
 "cost" "5000"
-"door_model_name" "models/machines/hl_scale/packapunch/p_flag.mdl"
-"model" "models/machines/hl_scale/packapunch/p_machine.mdl"
+"door_model_name" "models/machines/hl_scale/pap/p_flag.mdl"
+"model" "models/machines/hl_scale/pap/p_machine.mdl"
 "oldmodel" "sounds/machines/packapunch/upgrade.wav"
 "oldorigin" "0 0 2"
 "oldz" "30"

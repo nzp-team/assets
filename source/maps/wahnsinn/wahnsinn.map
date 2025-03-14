@@ -5933,7 +5933,7 @@
 }
 {
 "classname" "weapon_wall"
-"model" "progs/gmodels/g_db.mdl"
+"model" "models/weapons/db/g_db.mdl"
 "sequence" "7"
 "targetname" "double"
 "angles" "-0 0 -0"
@@ -5961,7 +5961,7 @@
 }
 {
 "classname" "weapon_wall"
-"model" "progs/gmodels/g_thomp.mdl"
+"model" "models/weapons/thomp/g_thomp.mdl"
 "sequence" "2"
 "targetname" "th"
 "angles" "-0 0 -0"
@@ -5970,7 +5970,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 270 0"
-"model" "progs/gmodels/g_kar.mdl"
+"model" "models/weapons/kar/g_kar.mdl"
 "sequence" "1"
 "targetname" "kar"
 "origin" "-328 -328 -272"
@@ -5978,7 +5978,7 @@
 {
 "classname" "weapon_wall"
 "angles" "0 180 -0"
-"model" "progs/gmodels/g_sawn.mdl"
+"model" "models/weapons/sawnoff/g_sawnoff.mdl"
 "sequence" "20"
 "targetname" "sawn"
 "origin" "95.75 -152 -272"
@@ -6290,7 +6290,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 270 0"
-"model" "progs/gmodels/g_trench.mdl"
+"model" "models/weapons/trench/g_trench.mdl"
 "sequence" "22"
 "targetname" "tre"
 "origin" "432 -208 -136"
@@ -6298,7 +6298,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 270 0"
-"model" "progs/gmodels/g_mp40.mdl"
+"model" "models/weapons/mp40/g_mp40.mdl"
 "sequence" "14"
 "targetname" "mp"
 "origin" "-320.028 200 -136"
@@ -6421,7 +6421,7 @@
 }
 {
 "classname" "weapon_wall"
-"model" "progs/gmodels/g_betty.mdl"
+"model" "models/weapons/grenade/g_betty.mdl"
 "sequence" "26"
 "targetname" "bet"
 "angles" "-0 0 -0"
@@ -6513,7 +6513,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 270 0"
-"model" "progs/gmodels/g_grenade.mdl"
+"model" "models/weapons/grenade/g_grenade.mdl"
 "sequence" "25"
 "targetname" "gre1"
 "origin" "48 120 -136"
@@ -7014,7 +7014,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 90 -0"
-"model" "progs/gmodels/g_bowie.mdl"
+"model" "models/weapons/knife/g_bowie.mdl"
 "sequence" "24"
 "targetname" "bowie"
 "origin" "152 120 -136"
@@ -7059,7 +7059,7 @@
 {
 "classname" "weapon_wall"
 "angles" "0 180 0"
-"model" "progs/gmodels/g_type.mdl"
+"model" "models/weapons/type/g_type.mdl"
 "sequence" "23"
 "targetname" "type"
 "origin" "312 -694 -272"
@@ -7399,7 +7399,7 @@
 {
 "classname" "place_model"
 "angles" "-0 330 -0"
-"model" "models/Props/bed.mdl"
+"model" "models/props/bed.mdl"
 "frame" "0"
 "skin" "0"
 "origin" "-496 -168 -192"
@@ -7636,7 +7636,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 270 0"
-"model" "progs/gmodels/g_bar.mdl"
+"model" "models/weapons/bar/g_bar.mdl"
 "sequence" "4"
 "targetname" "bar"
 "origin" "856 168 -296"
@@ -8490,7 +8490,7 @@
 }
 {
 "classname" "weapon_wall"
-"model" "progs/gmodels/g_m1.mdl"
+"model" "models/weapons/garand/g_m1.mdl"
 "sequence" "11"
 "targetname" "m1ga"
 "angles" "-0 0 -0"
@@ -8618,7 +8618,7 @@
 {
 "classname" "place_model"
 "angles" "0 254 90"
-"model" "models/Props/bed.mdl"
+"model" "models/props/bed.mdl"
 "frame" "0"
 "skin" "0"
 "origin" "-630 -288 -170"
@@ -8626,7 +8626,7 @@
 {
 "classname" "place_model"
 "angles" "-0 90 -0"
-"model" "models/Props/bed.mdl"
+"model" "models/props/bed.mdl"
 "frame" "0"
 "skin" "0"
 "origin" "-632.673 -353.024 -192"
@@ -8634,7 +8634,7 @@
 {
 "classname" "place_model"
 "angles" "0 84 0"
-"model" "models/Props/bed.mdl"
+"model" "models/props/bed.mdl"
 "frame" "0"
 "skin" "0"
 "origin" "-528.673 -353.024 -192"
@@ -8721,7 +8721,7 @@
 "angles" "-0 209 -0"
 "skin" "0"
 "sequence" "5"
-"model" "models/Props/rebar.mdl"
+"model" "models/props/rebar.mdl"
 "origin" "604.843 -56.9045 -356.989"
 }
 {
@@ -8729,7 +8729,7 @@
 "angles" "0 296 180"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/rebar.mdl"
+"model" "models/props/rebar.mdl"
 "origin" "495.359 -33.2389 -354"
 }
 {
@@ -8737,7 +8737,7 @@
 "angles" "-0 1 -0"
 "skin" "0"
 "sequence" "3"
-"model" "models/Props/rebar.mdl"
+"model" "models/props/rebar.mdl"
 "origin" "575.324 90.6619 -354"
 }
 {
@@ -8745,7 +8745,7 @@
 "angles" "-0 92 -0"
 "skin" "0"
 "sequence" "3"
-"model" "models/Props/rebar.mdl"
+"model" "models/props/rebar.mdl"
 "origin" "878.336 290.105 -356"
 }
 {
@@ -8753,7 +8753,7 @@
 "angles" "-0 265 -0"
 "skin" "0"
 "sequence" "5"
-"model" "models/Props/rebar.mdl"
+"model" "models/props/rebar.mdl"
 "origin" "987.505 218.486 -356"
 }
 {

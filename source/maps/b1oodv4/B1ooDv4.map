@@ -1900,7 +1900,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "936 832 64"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "_tb_layer" "16"
 }
@@ -1908,7 +1908,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "14 600 64"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "_tb_layer" "16"
 }
@@ -1943,7 +1943,7 @@
 // entity 48
 {
 "classname" "place_model"
-"model" "models/Props/shelf.mdl"
+"model" "models/props/shelf.mdl"
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
@@ -1954,7 +1954,7 @@
 {
 "classname" "place_model"
 "origin" "592 2128 64"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "angles" "0 180 0"
 "_tb_layer" "16"
 }
@@ -1962,7 +1962,7 @@
 {
 "classname" "place_model"
 "origin" "592 2080 64"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "angles" "0 0 0"
 "_tb_layer" "16"
 }
@@ -1970,7 +1970,7 @@
 {
 "classname" "place_model"
 "origin" "656 1800 64"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "angles" "0 90 0"
 "_tb_layer" "16"
 }
@@ -1978,7 +1978,7 @@
 {
 "classname" "place_model"
 "origin" "704 1800 64"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "angles" "0 -90 0"
 "_tb_layer" "16"
 }
@@ -1988,7 +1988,7 @@
 "skin" "0"
 "sequence" "0"
 "origin" "416 1744 272"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "_tb_layer" "16"
 }
 // entity 54
@@ -1997,7 +1997,7 @@
 "skin" "0"
 "sequence" "0"
 "origin" "776 2104 272"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "_tb_layer" "16"
 }
 // entity 55
@@ -2006,14 +2006,14 @@
 "skin" "0"
 "sequence" "0"
 "origin" "1040 1696 272"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "_tb_layer" "16"
 }
 // entity 56
 {
 "classname" "place_model"
 "origin" "968 672 0"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "_tb_layer" "16"
 }
 // entity 57
@@ -2022,7 +2022,7 @@
 "skin" "0"
 "sequence" "0"
 "origin" "816 344 200"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "spawnflags" "1"
 "_tb_layer" "16"
 }
@@ -2032,7 +2032,7 @@
 "skin" "0"
 "sequence" "0"
 "origin" "504 640 200"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "spawnflags" "1"
 "_tb_layer" "16"
 }
@@ -2042,7 +2042,7 @@
 "skin" "0"
 "sequence" "0"
 "origin" "128 712 200"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "spawnflags" "1"
 "_tb_layer" "16"
 }
@@ -2052,7 +2052,7 @@
 "skin" "0"
 "sequence" "0"
 "origin" "696 1072 256"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "spawnflags" "1"
 "_tb_layer" "16"
 }
@@ -2060,7 +2060,7 @@
 {
 "classname" "place_model"
 "origin" "912 2680 0"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "_tb_layer" "16"
 }
 // entity 62

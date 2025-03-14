@@ -3732,8 +3732,8 @@
 "box2" "17 0 6"
 "box3" "-18 -31.7 18"
 "cost" "5000"
-"door_model_name" "models/machines/hl_scale/packapunch/p_flag.mdl"
-"model" "models/machines/hl_scale/packapunch/p_machine.mdl"
+"door_model_name" "models/machines/hl_scale/pap/p_flag.mdl"
+"model" "models/machines/hl_scale/pap/p_machine.mdl"
 "oldmodel" "sounds/machines/packapunch/upgrade.wav"
 "oldorigin" "0 0 2"
 "oldz" "30"
@@ -3801,7 +3801,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-132 -860 304.619"
 }
 // entity 37
@@ -3810,7 +3810,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-388 -860 304.619"
 }
 // entity 38
@@ -3819,7 +3819,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-718.709 -858.847 304.619"
 }
 // entity 39
@@ -3828,7 +3828,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-974.709 -858.847 304.619"
 }
 // entity 40
@@ -4136,7 +4136,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1246.71 -858.847 304.619"
 }
 // entity 71
@@ -4145,7 +4145,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2090.71 -858.847 304.619"
 }
 // entity 72
@@ -4178,7 +4178,7 @@
 "angles" "0 0 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2230.85 -233.291 304.619"
 }
 // entity 74
@@ -4187,7 +4187,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2045.29 178.847 304.619"
 }
 // entity 75
@@ -4196,7 +4196,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1329.29 178.847 304.619"
 }
 // entity 76
@@ -4289,7 +4289,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-974.709 186.847 304.619"
 }
 // entity 85
@@ -4298,7 +4298,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-718.709 186.847 304.619"
 }
 // entity 86
@@ -4307,7 +4307,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-388 188 304.619"
 }
 // entity 87
@@ -4316,7 +4316,7 @@
 "angles" "0 270 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-132 188 304.619"
 }
 // entity 88
@@ -4588,7 +4588,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "119 677 211"
 }
 // entity 112
@@ -4605,7 +4605,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/Barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "origin" "1765 -43 328"
 }
 // entity 114
@@ -4613,13 +4613,13 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/Barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "origin" "1741 -37 328"
 }
 // entity 115
 {
 "classname" "place_model"
-"model" "models/Props/Barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1754 -28 367"
@@ -4629,7 +4629,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/Barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "origin" "1761 -15 328"
 }
 // entity 117
@@ -4801,7 +4801,7 @@
 // entity 129
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 -180 15"
 "skin" "0"
 "sequence" "0"
@@ -4810,7 +4810,7 @@
 // entity 130
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 180 0"
 "skin" "0"
 "sequence" "0"
@@ -4821,7 +4821,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -4833,7 +4833,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5277,7 +5277,7 @@
 // entity 148
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 -180 15"
 "skin" "0"
 "sequence" "0"
@@ -5286,7 +5286,7 @@
 // entity 149
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 -180 15"
 "skin" "0"
 "sequence" "0"
@@ -5303,7 +5303,7 @@
 // entity 151
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 180 -15"
 "skin" "0"
 "sequence" "0"
@@ -5321,7 +5321,7 @@
 // entity 153
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 180 -15"
 "skin" "0"
 "sequence" "0"
@@ -5349,7 +5349,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5369,7 +5369,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5389,7 +5389,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5409,7 +5409,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5419,7 +5419,7 @@
 // entity 163
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "-1457.88 -58 400"
@@ -5447,7 +5447,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5467,7 +5467,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5502,7 +5502,7 @@
 // entity 172
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "574.1 71.9401 263.973"
@@ -5520,7 +5520,7 @@
 // entity 174
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "220.1 567.94 263.973"
@@ -5538,7 +5538,7 @@
 // entity 176
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1094.04 156.043 359.507"
@@ -5556,7 +5556,7 @@
 // entity 178
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1322 -154.06 359.973"
@@ -5574,7 +5574,7 @@
 // entity 180
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1736.1 -32 368.026"
@@ -5583,7 +5583,7 @@
 // entity 181
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "916 -56.06 271.973"
@@ -5601,7 +5601,7 @@
 // entity 183
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1252 375.94 263.973"
@@ -5619,7 +5619,7 @@
 // entity 185
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1028 632 263.973"
@@ -5637,7 +5637,7 @@
 // entity 187
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "322 -711.1 309.973"
@@ -5655,7 +5655,7 @@
 // entity 189
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 180 0"
 "skin" "0"
 "sequence" "0"
@@ -5672,7 +5672,7 @@
 // entity 191
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 180 0"
 "skin" "0"
 "sequence" "0"
@@ -5689,7 +5689,7 @@
 // entity 193
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "angles" "0 180 0"
 "skin" "0"
 "sequence" "0"
@@ -5716,7 +5716,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5736,7 +5736,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/lamp_ndu.mdl"
+"model" "models/props/lamp_ndu.mdl"
 "frame" "111"
 "wait" "1"
 "style" "0"
@@ -5746,7 +5746,7 @@
 // entity 199
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "760 -712 263.973"
@@ -5764,7 +5764,7 @@
 // entity 201
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "738 -320.06 263.973"
@@ -5782,7 +5782,7 @@
 // entity 203
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "656.06 246 263.973"
@@ -5809,7 +5809,7 @@
 // entity 206
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "1988.1 360 304"
@@ -5818,7 +5818,7 @@
 // entity 207
 {
 "classname" "place_model"
-"model" "models/Props/lamp_oil.mdl"
+"model" "models/props/lamp_oil.mdl"
 "skin" "0"
 "sequence" "0"
 "origin" "322 -739.9 357.973"
@@ -5839,7 +5839,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-1294.71 181.153 304.619"
 }
 // entity 210
@@ -5848,7 +5848,7 @@
 "angles" "0 90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2006.71 181.153 304.619"
 }
 // entity 211
@@ -5857,7 +5857,7 @@
 "angles" "0 180 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-2233.15 -190.709 304.619"
 }
 // entity 212
@@ -8246,7 +8246,7 @@
 {
 "classname" "place_model"
 "origin" "-284 -144 344"
-"model" "models/props/kino_boxes2.mdl"
+"model" "models/props/Kino_boxes2.mdl"
 "angle" "90"
 }
 // entity 302
@@ -8267,35 +8267,35 @@
 {
 "classname" "place_model"
 "origin" "-764 -292 304"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angle" "30"
 }
 // entity 305
 {
 "classname" "place_model"
 "origin" "-764 -260 332"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angles" "0 -20 -90"
 }
 // entity 306
 {
 "classname" "place_model"
 "origin" "-676 -76 304"
-"model" "models/props/kino_table.mdl"
+"model" "models/props/Kino_table.mdl"
 "angles" "0 5 0"
 }
 // entity 307
 {
 "classname" "place_model"
 "origin" "-680 -20 304"
-"model" "models/props/kino_table.mdl"
+"model" "models/props/Kino_table.mdl"
 "angles" "0 5 0"
 }
 // entity 308
 {
 "classname" "place_model"
 "origin" "-684 -48 364"
-"model" "models/props/kino_table.mdl"
+"model" "models/props/Kino_table.mdl"
 "angles" "0 -60 180"
 }
 // entity 309
@@ -8304,7 +8304,7 @@
 "angles" "0 0 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-724 -52 304"
 }
 // entity 310
@@ -8313,7 +8313,7 @@
 "angles" "0 35 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-712 -100 304"
 }
 // entity 311
@@ -8322,7 +8322,7 @@
 "angles" "0 105 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-680 -112 304"
 }
 // entity 312
@@ -8331,7 +8331,7 @@
 "angles" "0 140 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-640 -92 304"
 }
 // entity 313
@@ -8340,7 +8340,7 @@
 "angles" "0 -170 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-628 -52 304"
 }
 // entity 314
@@ -8349,7 +8349,7 @@
 "angles" "0 -135 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-648 -8 304"
 }
 // entity 315
@@ -8358,7 +8358,7 @@
 "angles" "0 -90 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-684 16 304"
 }
 // entity 316
@@ -8367,7 +8367,7 @@
 "angles" "0 -20 0"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/sandbags.mdl"
+"model" "models/props/sandbags.mdl"
 "origin" "-720 -8 304"
 }
 // entity 317
@@ -8381,21 +8381,21 @@
 {
 "classname" "place_model"
 "origin" "-208 -520 304"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angle" "50"
 }
 // entity 319
 {
 "classname" "place_model"
 "origin" "-216 -524 332"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angle" "30"
 }
 // entity 320
 {
 "classname" "place_model"
 "origin" "1380 432 248"
-"model" "models/props/kino_boxes4.mdl"
+"model" "models/props/Kino_boxes4.mdl"
 "angle" "90"
 }
 // entity 321
@@ -8473,14 +8473,14 @@
 {
 "classname" "place_model"
 "origin" "-1148 -412 304"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angle" "30"
 }
 // entity 332
 {
 "classname" "place_model"
 "origin" "-1148 -380 332"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angles" "0 -20 -90"
 }
 // entity 333
@@ -8704,7 +8704,7 @@
 {
 "classname" "place_model"
 "origin" "204 -516 448"
-"model" "models/props/kino_boxes2.mdl"
+"model" "models/props/Kino_boxes2.mdl"
 "angle" "90"
 }
 // entity 344
@@ -8760,14 +8760,14 @@
 {
 "classname" "place_model"
 "origin" "607 163 351"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angle" "20"
 }
 // entity 352
 {
 "classname" "place_model"
 "origin" "598 201 379"
-"model" "models/props/kino_box.mdl"
+"model" "models/props/Kino_box.mdl"
 "angles" "0 -20 -90"
 }
 // entity 353

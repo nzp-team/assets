@@ -7371,7 +7371,7 @@
 // entity 122
 {
 "classname" "weapon_wall"
-"model" "progs/grenade.mdl"
+"model" "models/weapons/grenade/g_grenade.mdl"
 "sequence" "25"
 "angles" "0 0 0"
 "origin" "138 -480 220"
@@ -8962,11 +8962,11 @@
 "box2" "17 0 6"
 "box3" "-18 -31.7 18"
 "cost" "5000"
-"door_model_name" "models/machines/hl_scale/packapunch/p_flag.mdl"
-"model" "models/machines/hl_scale/packapunch/p_machine.mdl"
+"door_model_name" "models/machines/hl_scale/pap/p_flag.mdl"
+"model" "models/machines/hl_scale/pap/p_machine.mdl"
 "oldmodel" "sounds/machines/packapunch/upgrade.wav"
 "oldorigin" "0 0 2"
 "oldz" "30"
 "skin" "0"
-"weapon2model" "models/machines/hl_scale/packapunch/p_roller.mdl"
+"weapon2model" "models/machines/hl_scale/pap/p_roller.mdl"
 }
