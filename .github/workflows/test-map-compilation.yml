@@ -1,0 +1,20 @@
+name: Verify Maps Compile
+on: [pull_request]
+jobs:
+  Map-Assets-Exist:
+    name: Verify Maps Compile
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.10
+    steps:
+      - name: Install dependencies
+        run: apt update && apt install wget unzip -y
+        shell: bash
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Wait for GitHub to keep up..
+        run: sleep 2s
+        shell: bash
+      - name: Run Script
+        run: |
+          bash tools/compile-maps.sh

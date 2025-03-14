@@ -4,7 +4,7 @@
 {
 "mapversion" "220"
 "classname" "worldspawn"
-"wad" "W:/NZP-Reboot-master/pc/nzp/textures/zhlt.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Ju[s]tice_null2.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/nzphlwad.wad"
+"wad" "source/textures/wad/zhlt.wad;source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/nzphlwad.wad"
 "_tb_def" "external:W:/trenchbroom/tb-nzp.fgd"
 // brush 0
 {

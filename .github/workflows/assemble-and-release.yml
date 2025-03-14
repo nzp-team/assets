@@ -5,12 +5,18 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
+      - name: Install dependencies
+        run: |
+          apt update && apt install wget unzip -y
+        shell: bash
       - uses: actions/checkout@v2
-      - name: Clone Repository and Run Script
-        working-directory: ./tools
+      - name: Clone Repository and Run Scripts
+        working-directory: ./
         run: |
           sudo -i
-          ./assemble-assets.sh
+          bash tools/compile-maps.sh --full
+          cd tools/
+          bash assemble-assets.sh
       - name: Generate Build Date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"

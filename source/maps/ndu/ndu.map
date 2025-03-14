@@ -8,7 +8,7 @@
 "light" "0"
 "r_skycolor" "54 55 59"
 "angles" "0 0 0"
-"wad" "W:/NZPSTUFF/assets/source/textures/wad/Ju[s]tice_null2.wad;W:/NZPSTUFF/assets/source/textures/wad/zhlt.wad;W:/NZPSTUFF/assets/source/textures/wad/chalk_drawings.wad"
+"wad" "source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/zhlt.wad;source/textures/wad/chalk_drawings.wad"
 "sky" "ndu"
 "fog" "240 1550 54 55 59"
 // brush 0
@@ -2396,7 +2396,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 90 -0"
-"model" "progs/gmodels/g_bar.mdl"
+"model" "models/weapons/bar/g_bar.mdl"
 "frame" "5"
 "targetname" "bar"
 "sequence" "4"
@@ -2461,7 +2461,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 0 -0"
-"model" "progs/gmodels/g_thomp.mdl"
+"model" "models/weapons/thomp/g_thomp.mdl"
 "frame" "3"
 "targetname" "tom"
 "sequence" "2"
@@ -2489,7 +2489,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 0 -0"
-"model" "progs/gmodels/g_trench.mdl"
+"model" "models/weapons/trench/g_trench.mdl"
 "frame" "23"
 "targetname" "tre"
 "sequence" "22"
@@ -2519,7 +2519,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 270 0"
-"model" "progs/gmodels/g_db.mdl"
+"model" "models/weapons/db/g_db.mdl"
 "sequence" "7"
 "targetname" "double"
 "origin" "2256 2456 108"
@@ -2567,7 +2567,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 90 -0"
-"model" "progs/gmodels/g_kar.mdl"
+"model" "models/weapons/kar/g_kar.mdl"
 "frame" "2"
 "targetname" "kar"
 "sequence" "1"
@@ -2598,7 +2598,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 90 -0"
-"model" "progs/gmodels/g_m1a1.mdl"
+"model" "models/weapons/m1carbine/g_m1a1.mdl"
 "frame" "13"
 "targetname" "m1a1"
 "sequence" "12"
@@ -2628,7 +2628,7 @@
 {
 "classname" "weapon_wall"
 "angles" "-0 270 0"
-"model" "progs/gmodels/g_sawn.mdl"
+"model" "models/weapons/sawnoff/g_sawnoff.mdl"
 "frame" "21"
 "targetname" "off"
 "sequence" "20"
@@ -2941,7 +2941,7 @@
 // entity 61
 {
 "classname" "weapon_wall"
-"model" "progs/gmodels/g_grenade.mdl"
+"model" "models/weapons/grenade/g_grenade.mdl"
 "frame" "26"
 "targetname" "gre"
 "angles" "0 180 -0"
@@ -3573,7 +3573,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "500 1685 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3582,7 +3582,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "500 1885 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3591,7 +3591,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "644 1941 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3600,7 +3600,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "532 2213 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3609,7 +3609,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "852 1509 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3618,7 +3618,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "492 1397 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3627,7 +3627,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "780 1653 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3638,7 +3638,7 @@
 "angles" "-0 0 -0"
 "scale" "1"
 "origin" "692 821 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "target" "song_counter"
 }
 // entity 125
@@ -3646,7 +3646,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "468 821 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3655,7 +3655,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "1380 461 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3664,7 +3664,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "1540 565 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3673,7 +3673,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "1780 1549 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3682,7 +3682,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "1812 1181 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3691,7 +3691,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "2500 2605 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3700,7 +3700,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "2700 2421 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3709,7 +3709,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "2484 2365 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3718,7 +3718,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "2164 2917 192"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3727,7 +3727,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "2196 2949 192"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -3736,7 +3736,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "1428 2973 200"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -4140,7 +4140,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/treeSL.mdl"
+"model" "models/props/treeSL.mdl"
 "angles" "-0 218 50"
 "origin" "1931.31 1789.37 55.3393"
 }
@@ -4175,7 +4175,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "1900 1333 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -5966,7 +5966,7 @@
 "classname" "explosive_barrel"
 "angles" "-0 0 -0"
 "origin" "818 1680 48"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "target" "song_counter"
 }
@@ -6830,7 +6830,7 @@
 "classname" "place_model"
 "skin" "0"
 "sequence" "0"
-"model" "models/Props/treeSL.mdl"
+"model" "models/props/treeSL.mdl"
 "angles" "10 -154 -2"
 "origin" "1746.89 1900 55.7029"
 }
