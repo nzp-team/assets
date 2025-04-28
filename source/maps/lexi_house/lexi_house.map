@@ -4,7 +4,7 @@
 {
 "mapversion" "220"
 "classname" "worldspawn"
-"wad" "W:/NZPSTUFF TEMP/assets/source/textures/wad/4all.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/b1oodv4.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/chalk_drawings.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Dung3on.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Example_01.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Example_02.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Ju[s]tice_null2.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/Loop.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/nzphlwad.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/perks.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/verruckt.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/warehouse.wad;W:/NZPSTUFF TEMP/assets/source/textures/wad/zhlt.wad"
+"wad" "F:/NZPSTUFF/assets/source/textures/wad/4all.wad;F:/NZPSTUFF/assets/source/textures/wad/b1oodv4.wad;F:/NZPSTUFF/assets/source/textures/wad/chalk_drawings.wad;F:/NZPSTUFF/assets/source/textures/wad/Dung3on.wad;F:/NZPSTUFF/assets/source/textures/wad/Example_01.wad;F:/NZPSTUFF/assets/source/textures/wad/Example_02.wad;F:/NZPSTUFF/assets/source/textures/wad/Ju[s]tice_null2.wad;F:/NZPSTUFF/assets/source/textures/wad/Loop.wad;F:/NZPSTUFF/assets/source/textures/wad/nzphlwad.wad;F:/NZPSTUFF/assets/source/textures/wad/perks.wad;F:/NZPSTUFF/assets/source/textures/wad/verruckt.wad;F:/NZPSTUFF/assets/source/textures/wad/warehouse.wad;F:/NZPSTUFF/assets/source/textures/wad/zhlt.wad"
 "sky" "ndu"
 "fog" "200 2000 80 80 80"
 "date" "14th October 1941"
@@ -1493,7 +1493,7 @@
 ( -424 -192 40 ) ( -423 -192 40 ) ( -424 -191 40 ) CLIP [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 ( -376 -168 128 ) ( -376 -167 128 ) ( -375 -168 128 ) CLIP [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 ( -376 -168 48 ) ( -375 -168 48 ) ( -376 -168 49 ) CLIP [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( -376 -168 48 ) ( -376 -168 49 ) ( -376 -167 48 ) CLIP [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -352 -168 48 ) ( -352 -168 49 ) ( -352 -167 48 ) CLIP [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 // brush 165
 {
@@ -3942,12 +3942,12 @@
 }
 // brush 434
 {
-( -408 40 50 ) ( -408 40 51 ) ( -408 39 50 ) CLIP [ 0 1.0000000000000002 0 0 ] [ 0 0 -1.0000000000000002 0 ] 0 1 1
+( -416 40 50 ) ( -416 40 51 ) ( -416 39 50 ) CLIP [ 0 1.0000000000000002 0 0 ] [ 0 0 -1.0000000000000002 0 ] 0 1 1
 ( -408 40 50 ) ( -409 40 50 ) ( -408 40 51 ) CLIP [ -1.0000000000000002 0 0 0 ] [ 0 0 -1.0000000000000002 0 ] 0 1 1
 ( -360 64 42 ) ( -361 64 42 ) ( -360 63 42 ) CLIP [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 ( -408 40 130 ) ( -408 39 130 ) ( -409 40 130 ) CLIP [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 ( -360 64 42 ) ( -360 64 43 ) ( -361 64 42 ) CLIP [ 1.0000000000000002 0 0 0 ] [ 0 0 -1.0000000000000002 0 ] 0 1 1
-( -360 64 42 ) ( -360 63 42 ) ( -360 64 43 ) CLIP [ 0 -1.0000000000000002 0 0 ] [ 0 0 -1.0000000000000002 0 ] 0 1 1
+( -352 64 42 ) ( -352 63 42 ) ( -352 64 43 ) CLIP [ 0 -1.0000000000000002 0 0 ] [ 0 0 -1.0000000000000002 0 ] 0 1 1
 }
 // brush 435
 {
@@ -4227,12 +4227,12 @@
 }
 // brush 466
 {
-( -512 -512 144 ) ( -512 -511 144 ) ( -512 -512 145 ) NULL [ 0 -1 0 0 ] [ 0 0 -1 -16 ] 0 1 1
-( -512 -512 144 ) ( -512 -512 145 ) ( -511 -512 144 ) NULL [ 1 0 0 16 ] [ 0 0 -1 -16 ] 0 1 1
-( -512 -512 144 ) ( -511 -512 144 ) ( -512 -511 144 ) NULL [ -1 0 0 -16 ] [ 0 -1 0 0 ] 0 1 1
-( -496 -496 160 ) ( -496 -495 160 ) ( -495 -496 160 ) NULL [ 1 0 0 16 ] [ 0 -1 0 0 ] 0 1 1
-( -496 -496 160 ) ( -495 -496 160 ) ( -496 -496 161 ) NULL [ -1 0 0 -16 ] [ 0 0 -1 -16 ] 0 1 1
-( -496 -496 160 ) ( -496 -496 161 ) ( -496 -495 160 ) NULL [ 0 1 0 0 ] [ 0 0 -1 -16 ] 0 1 1
+( -368 8 152 ) ( -368 9 152 ) ( -368 8 153 ) CLIP [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -688 -56 144 ) ( -688 -56 145 ) ( -687 -56 144 ) CLIP [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -688 -48 144 ) ( -687 -48 144 ) ( -688 -47 144 ) CLIP [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -560 8 256 ) ( -560 9 256 ) ( -559 8 256 ) CLIP [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -560 0 152 ) ( -559 0 152 ) ( -560 0 153 ) CLIP [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -320 8 152 ) ( -320 8 153 ) ( -320 9 152 ) CLIP [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
 // entity 1
