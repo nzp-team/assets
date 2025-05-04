@@ -3,6 +3,8 @@ on: [push]
 jobs:
   Assemble-and-Release:
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.10
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Install dependencies
