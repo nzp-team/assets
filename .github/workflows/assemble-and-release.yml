@@ -9,13 +9,12 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          apt update && apt install wget unzip -y
+          apt update && apt install wget zip unzip -y
         shell: bash
       - uses: actions/checkout@v2
       - name: Clone Repository and Run Scripts
         working-directory: ./
         run: |
-          sudo -i
           bash tools/compile-maps.sh --full
           cd tools/
           bash assemble-assets.sh

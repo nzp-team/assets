@@ -8,7 +8,7 @@ jobs:
       image: ubuntu:24.10
     steps:
       - name: Install dependencies
-        run: apt update && apt install wget unzip -y
+        run: apt update && apt install wget zip unzip -y
         shell: bash
       - name: Checkout
         uses: actions/checkout@v2
