@@ -5,7 +5,7 @@
 "classname" "worldspawn"
 "message" "Map by Ju[s]tice"
 "mapversion" "220"
-"wad" "/home/deck/git/assets/source/textures/wad/4all.wad;/home/deck/git/assets/source/textures/wad/b1oodv4.wad;/home/deck/git/assets/source/textures/wad/chalk_drawings.wad;/home/deck/git/assets/source/textures/wad/Dung3on.wad;/home/deck/git/assets/source/textures/wad/Example_01.wad;/home/deck/git/assets/source/textures/wad/Example_02.wad;/home/deck/git/assets/source/textures/wad/Ju[s]tice_null2.wad;/home/deck/git/assets/source/textures/wad/Loop.wad;/home/deck/git/assets/source/textures/wad/nzphlwad.wad;/home/deck/git/assets/source/textures/wad/verruckt.wad;/home/deck/git/assets/source/textures/wad/zhlt.wad"
+"wad" "source/textures/wad/4all.wad;source/textures/wad/b1oodv4.wad;source/textures/wad/chalk_drawings.wad;source/textures/wad/Dung3on.wad;source/textures/wad/Example_01.wad;source/textures/wad/Example_02.wad;source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/Loop.wad;source/textures/wad/nzphlwad.wad;source/textures/wad/verruckt.wad;source/textures/wad/zhlt.wad"
 "_generator" "J.A.C.K. 1.1.1064 (vpHalfLife)"
 "fog" "200 1800 80 80 80"
 "sky" "sky"
@@ -7371,7 +7371,7 @@
 // entity 122
 {
 "classname" "weapon_wall"
-"model" "progs/grenade.mdl"
+"model" "models/weapons/grenade/g_grenade.mdl"
 "sequence" "25"
 "angles" "0 0 0"
 "origin" "138 -480 220"
@@ -8962,11 +8962,11 @@
 "box2" "17 0 6"
 "box3" "-18 -31.7 18"
 "cost" "5000"
-"door_model_name" "models/machines/hl_scale/packapunch/p_flag.mdl"
-"model" "models/machines/hl_scale/packapunch/p_machine.mdl"
+"door_model_name" "models/machines/hl_scale/pap/p_flag.mdl"
+"model" "models/machines/hl_scale/pap/p_machine.mdl"
 "oldmodel" "sounds/machines/packapunch/upgrade.wav"
 "oldorigin" "0 0 2"
 "oldz" "30"
 "skin" "0"
-"weapon2model" "models/machines/hl_scale/packapunch/p_roller.mdl"
+"weapon2model" "models/machines/hl_scale/pap/p_roller.mdl"
 }

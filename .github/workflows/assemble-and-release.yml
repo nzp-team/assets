@@ -3,14 +3,21 @@ on: [push]
 jobs:
   Assemble-and-Release:
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.10
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v2
-      - name: Clone Repository and Run Script
-        working-directory: ./tools
+      - name: Install dependencies
         run: |
-          sudo -i
-          ./assemble-assets.sh
+          apt update && apt install wget zip unzip -y
+        shell: bash
+      - uses: actions/checkout@v2
+      - name: Clone Repository and Run Scripts
+        working-directory: ./
+        run: |
+          bash tools/compile-maps.sh --full
+          cd tools/
+          bash assemble-assets.sh
       - name: Generate Build Date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"

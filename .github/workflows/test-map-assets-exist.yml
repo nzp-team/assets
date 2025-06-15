@@ -1,0 +1,20 @@
+name: Verify Assets Referenced in Map Files Exist
+on: [pull_request]
+jobs:
+  Map-Assets-Exist:
+    name: Verify Assets Referenced in Map Files Exist
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.10
+    steps:
+      - name: Install binutils
+        run: apt update && apt install binutils -y
+        shell: bash
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Wait for GitHub to keep up..
+        run: sleep 2s
+        shell: bash
+      - name: Run Script
+        run: |
+          bash testing/map_assets_exist.sh
