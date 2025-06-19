@@ -52,6 +52,6 @@ cd tmp/nspire/
 # naievil -- We don't need any sounds or tracks on NSPIRE as there is no sound processing
 rm -rf nzp/sounds nzp/tracks 
 # naievil -- We also need to create the PAK file from our assets now 
-python3 ${ROOT_DIR}/tools/build-pak.py -v --input ${ROOT_DIR}/tmp/nspire/nzp --output ${ROOT_DIR}/tmp/nspire/nzp.pak
+python3 ${ROOT_DIR}/tools/build-pak.py -v --input ${ROOT_DIR}/tmp/nspire/nzp --output ${ROOT_DIR}/tmp/nspire/nzp.pak.tns
 #rm -rf nzp 
 zip -r ../nspire-nzp-assets.zip ./*
