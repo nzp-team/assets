@@ -103,6 +103,15 @@ jobs:
           asset_path: ./tmp/3ds-nzp-assets.zip
           asset_name: 3ds-nzp-assets.zip
           asset_content_type: application/zip
+      - name: Upload TNS Data
+        uses: actions/upload-release-asset@v1
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./tmp/nspire-nzp-assets.zip
+          asset_name: nspire-nzp-assets.zip
+          asset_content_type: application/zip
       - name: Publish Release
         uses: StuYarrow/publish-release@v1
         env:
