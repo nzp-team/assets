@@ -17,6 +17,11 @@ jobs:
           bash tools/compile-maps.sh --full
           cd tools/
           bash assemble-assets.sh
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: assembled-assets
+          path: ./tmp/*.zip
   Release:
     needs: [Assemble]
     if: github.ref == 'refs/heads/main'
@@ -24,6 +29,11 @@ jobs:
     container:
       image: ubuntu:24.10
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: assembled-assets
+          path: ./tmp
       - name: Generate Build Date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
