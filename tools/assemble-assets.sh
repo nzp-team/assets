@@ -3,6 +3,8 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 ROOT_DIR=$(cd ${SCRIPT_DIR}/../ && pwd)
 
+cd "${SCRIPT_DIR}"
+
 # Make generics 
 cd ../
 mkdir -p tmp/{pc,psp,nx,vita,ctr,nzp,nspire}
@@ -53,5 +55,8 @@ cd tmp/nspire/
 rm -rf nzp/sounds nzp/tracks 
 # naievil -- We also need to create the PAK file from our assets now 
 python3 ${ROOT_DIR}/tools/build-pak.py -v --input ${ROOT_DIR}/tmp/nspire/nzp --output ${ROOT_DIR}/tmp/nspire/nzp.pak.tns
-#rm -rf nzp 
+
+# No need to keep any assets besides the PAK file
+rm -rf nzp/*
+mv ${ROOT_DIR}/tmp/nspire/nzp.pak.tns nzp/
 zip -r ../nspire-nzp-assets.zip ./*
