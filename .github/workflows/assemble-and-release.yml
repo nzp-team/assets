@@ -1,5 +1,5 @@
 name: Assemble Assets and Publish Release
-on: [push]
+on: [push, pull_request]
 jobs:
   Assemble:
     runs-on: ubuntu-latest
