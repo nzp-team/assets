@@ -1,15 +1,14 @@
 name: Assemble Assets and Publish Release
-on: [push]
+on: [push, pull_request]
 jobs:
-  Assemble-and-Release:
+  Assemble:
     runs-on: ubuntu-latest
     container:
       image: ubuntu:24.10
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Install dependencies
         run: |
-          apt update && apt install wget zip unzip -y
+          apt update && apt install wget zip unzip python3 -y
         shell: bash
       - uses: actions/checkout@v2
       - name: Clone Repository and Run Scripts
@@ -18,6 +17,23 @@ jobs:
           bash tools/compile-maps.sh --full
           cd tools/
           bash assemble-assets.sh
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: assembled-assets
+          path: ./tmp/*.zip
+  Release:
+    needs: [Assemble]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.10
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: assembled-assets
+          path: ./tmp
       - name: Generate Build Date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
@@ -118,4 +134,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           id: ${{ steps.create_release.outputs.id }}
-
