@@ -3934,21 +3934,21 @@
 {
 "classname" "place_model"
 "origin" "344 -440 80"
-"model" "models/props/kino_couch.mdl"
+"model" "models/props/Kino_couch.mdl"
 "angle" "180"
 }
 // entity 30
 {
 "classname" "place_model"
 "origin" "256 -520 80"
-"model" "models/props/kino_couch.mdl"
+"model" "models/props/Kino_couch.mdl"
 "angle" "90"
 }
 // entity 31
 {
 "classname" "place_model"
 "origin" "176 -440 80"
-"model" "models/props/kino_couch.mdl"
+"model" "models/props/Kino_couch.mdl"
 "angle" "0"
 }
 // entity 32
@@ -4153,7 +4153,7 @@
 {
 "classname" "place_model"
 "origin" "727.565 -488 111.304"
-"model" "models/props/kino_couch.mdl"
+"model" "models/props/Kino_couch.mdl"
 "angles" "0 90 75"
 }
 // entity 53
@@ -5022,7 +5022,7 @@
 {
 "classname" "place_model"
 "origin" "703.834 -78.913 168"
-"model" "models/props/kino_couch.mdl"
+"model" "models/props/Kino_couch.mdl"
 "angle" "220"
 }
 // entity 144
