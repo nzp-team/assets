@@ -1,0 +1,20 @@
+name: Verify MDL Models Conform to Standard
+on: [pull_request]
+jobs:
+  PCX-Conformity:
+    name: Verify MDL Models Conform to Standard
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.10
+    steps:
+      - name: Install xxd
+        run: apt update && apt install xxd -y
+        shell: bash
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Wait for GitHub to keep up..
+        run: sleep 2s
+        shell: bash
+      - name: Run Script
+        run: |
+          bash testing/mdl_validator.sh
