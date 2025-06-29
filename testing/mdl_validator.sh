@@ -77,6 +77,10 @@ function validate_mdl_header()
         echo "    - ERROR: Skin width is zero!"
         should_fail="1"
     fi
+    if (( skin_width % 4 != 0 )); then
+        echo "    - ERROR: Skin width is not multiple of four!"
+        should_fail="1"
+    fi
 
     # Skin Height
     local skin_height=$(read_int_in_file_at_ofs "${mdl_file}" "${MDL_SKINHEIGHT_OFS}")
