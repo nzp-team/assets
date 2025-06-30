@@ -1,2 +1,8 @@
 tmp/*
 *.DS_Store
+*.wad
+*.bsp
+wadmaker.dat
+tools/vhlt/*
+tools/wadmaker/*
+platforms.json
