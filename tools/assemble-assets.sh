@@ -65,4 +65,4 @@ zip -r ../nspire-nzp-assets.zip ./*
 
 # Build WAD archive for releases
 cd ${ROOT_DIR}
-zip -r /tmp/texture-wads.zip source/textures/wad/*.wad
+zip -r tmp/texture-wads.zip source/textures/wad/*.wad
