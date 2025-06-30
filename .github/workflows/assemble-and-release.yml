@@ -1,20 +1,28 @@
-name: Assemble Assets and Publish Release
+name: Asset Assembly
 on: [push, pull_request]
 jobs:
-  Assemble:
+  Build:
     runs-on: ubuntu-latest
     container:
       image: ubuntu:24.10
     steps:
       - name: Install dependencies
         run: |
-          apt update && apt install wget zip unzip python3 -y
+          apt update && apt install wget zip unzip python3 libicu-dev -y
         shell: bash
-      - uses: actions/checkout@v2
-      - name: Clone Repository and Run Scripts
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Compile WADs
+        working-directory: ./
+        run: |
+          bash tools/compile-wads.sh
+      - name: Compile BSPs
         working-directory: ./
         run: |
           bash tools/compile-maps.sh --full
+      - name: Assemble Archives
+        working-directory: ./
+        run: |
           cd tools/
           bash assemble-assets.sh
       - name: Upload build artifacts
@@ -23,7 +31,7 @@ jobs:
           name: assembled-assets
           path: ./tmp/*.zip
   Release:
-    needs: [Assemble]
+    needs: [Build]
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     container:
@@ -128,6 +136,15 @@ jobs:
           asset_path: ./tmp/nspire-nzp-assets.zip
           asset_name: nspire-nzp-assets.zip
           asset_content_type: application/zip
+      - name: Upload Texture WAD Archive
+        uses: actions/upload-release-asset@v1
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./tmp/texture-wads.zip
+          asset_name: texture-wads.zip
+          asset_content_type: application/zip       
       - name: Publish Release
         uses: StuYarrow/publish-release@v1
         env:

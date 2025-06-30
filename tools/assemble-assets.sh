@@ -62,3 +62,7 @@ python3 ${ROOT_DIR}/tools/build-pak.py -v --input ${ROOT_DIR}/tmp/nspire/nzp --o
 rm -rf nzp/*
 mv ${ROOT_DIR}/tmp/nspire/nzp.pak.tns nzp/
 zip -r ../nspire-nzp-assets.zip ./*
+
+# Build WAD archive for releases
+cd ${ROOT_DIR}
+zip -r /tmp/texture-wads.zip source/textures/wad/*.wad

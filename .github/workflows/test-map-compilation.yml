@@ -8,7 +8,7 @@ jobs:
       image: ubuntu:24.10
     steps:
       - name: Install dependencies
-        run: apt update && apt install wget zip unzip -y
+        run: apt update && apt install wget zip unzip libicu-dev -y
         shell: bash
       - name: Checkout
         uses: actions/checkout@v2
@@ -17,4 +17,5 @@ jobs:
         shell: bash
       - name: Run Script
         run: |
+          bash tools/compile-wads.sh
           bash tools/compile-maps.sh
