@@ -4,7 +4,7 @@
 {
 "mapversion" "220"
 "classname" "worldspawn"
-"wad" "D:/NZP-Mapping-Stuff/Mapping-Tools/Textures/WADs/Ju[s]tice_null2.wad;D:/NZP-Mapping-Stuff/Mapping-Tools/Textures/WADs/zhlt.wad"
+"wad" "source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/zhlt.wad"
 "sky" "sky"
 "fog" "100 3000 100 65 0"
 "chaptertitle" "Bunker Defense"
