@@ -5,7 +5,7 @@
 # and the dimensions are power-of-two.
 # ----
 # This is intended to be used via a Docker 
-# container running ubuntu:24.10.
+# container running ubuntu:24.04.
 #
 set -o errexit
 

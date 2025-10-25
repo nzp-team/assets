@@ -5,7 +5,7 @@ jobs:
     name: Verify MDL Models Conform to Standard
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:24.10
+      image: ubuntu:24.04
     steps:
       - name: Install xxd
         run: apt update && apt install xxd -y

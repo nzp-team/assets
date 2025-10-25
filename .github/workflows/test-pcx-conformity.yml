@@ -5,7 +5,7 @@ jobs:
     name: Verify PCX Textures Conform to Standard
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:24.10
+      image: ubuntu:24.04
     steps:
       - name: Install file
         run: apt update && apt install file -y

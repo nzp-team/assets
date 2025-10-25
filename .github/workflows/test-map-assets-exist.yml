@@ -5,7 +5,7 @@ jobs:
     name: Verify Assets Referenced in Map Files Exist
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:24.10
+      image: ubuntu:24.04
     steps:
       - name: Install binutils
         run: apt update && apt install binutils -y
