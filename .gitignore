@@ -2,6 +2,7 @@ tmp/*
 *.DS_Store
 *.wad
 *.bsp
+source/textures/wad/*.log
 wadmaker.dat
 tools/vhlt/*
 tools/wadmaker/*

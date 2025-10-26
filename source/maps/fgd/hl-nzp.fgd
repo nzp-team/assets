@@ -1706,6 +1706,31 @@
 	angles(integer) : "set 'angle' to 0 if this is used"
 	mdlsz(integer) : "Entity size (x y z)"
 	centeroffset(integer) : "Model center offset"
+	gamemode_limiter(choices) : "Only Appear on specified Game Mode" : 0 =
+	[
+		0: "All Modes"
+		2: "Gun Game"
+		3: "Hardcore"
+		4: "Wild West"
+		5: "Sticks & Stones"
+		6: "FEVER"
+	]
+	month_limiter(choices) : "Only Appear on specified Month of the Year" : 0 =
+	[
+		0: "All Year"
+		1: "January"
+		2: "February"
+		3: "March"
+		4: "April"
+		5: "May"
+		6: "June"
+		7: "July"
+		8: "August"
+		9: "September"
+		10: "October"
+		11: "November"
+		12: "December"
+	]
 	spawnflags(flags) =
 		[
 			1: "Gravity" : 0
