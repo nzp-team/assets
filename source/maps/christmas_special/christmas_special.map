@@ -1,4 +1,4 @@
-// Game: NZP
+// Game: Nazi Zombies: Portable
 // Format: Valve
 // entity 0
 {
@@ -8253,6 +8253,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "mbox_holder"
 "_tb_id" "1"
+"_tb_linked_group_id" "{64e65733-5363-447c-ab36-2894d7c6226e}"
 }
 // entity 157
 {
@@ -8378,6 +8379,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "mbox_holder"
 "_tb_id" "2"
+"_tb_linked_group_id" "{d2b0571a-66ed-4d81-b5c6-4e36e59d027b}"
 }
 // entity 160
 {
@@ -8509,6 +8511,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "mbox_holder"
 "_tb_id" "3"
+"_tb_linked_group_id" "{abd91757-35ff-424c-ba76-6e70da14fe62}"
 }
 // entity 164
 {
@@ -8640,6 +8643,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "mbox_holder"
 "_tb_id" "4"
+"_tb_linked_group_id" "{eb8730f9-397c-498c-ba4d-355b3e7ad785}"
 }
 // entity 168
 {
@@ -8771,6 +8775,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "mbox_holder"
 "_tb_id" "5"
+"_tb_linked_group_id" "{ea27ad8f-4c83-4547-8f9d-8ef62db24982}"
 }
 // entity 172
 {
@@ -8969,4 +8974,179 @@
 "oldz" "30"
 "skin" "0"
 "weapon2model" "models/machines/hl_scale/pap/p_roller.mdl"
+}
+// entity 179
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "256 256 70"
+"model" "models/props/derped/pumpkin_1.mdl"
+}
+// entity 180
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "424 260 70"
+"model" "models/props/derped/pumpkin_3.mdl"
+}
+// entity 181
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "-160 144 42"
+"model" "models/props/derped/pumpkin_1.mdl"
+}
+// entity 182
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "-140 140 42"
+"model" "models/props/derped/pumpkin_2.mdl"
+}
+// entity 183
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "-152 164 42"
+"model" "models/props/derped/pumpkin_1.mdl"
+}
+// entity 184
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "272 -172.518 42.0681"
+"model" "models/props/derped/pumpkin_2.mdl"
+"angles" "14 -106 4"
+}
+// entity 185
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "269.521 -441.167 44"
+"model" "models/props/derped/pumpkin_2.mdl"
+"angles" "0 105 0"
+}
+// entity 186
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "249.444 -458.97 44"
+"model" "models/props/derped/pumpkin_3.mdl"
+"angles" "0 105 0"
+}
+// entity 187
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "270.833 -461.521 44"
+"model" "models/props/derped/pumpkin_1.mdl"
+"angles" "0 105 0"
+}
+// entity 188
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "-142.556 -626.97 44"
+"model" "models/props/derped/pumpkin_3.mdl"
+"angles" "0 105 0"
+}
+// entity 189
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "804 -632 40"
+"model" "models/props/derped/pumpkin_1.mdl"
+"angles" "0 105 0"
+}
+// entity 190
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "428 -560 -80"
+"model" "models/props/derped/pumpkin_1.mdl"
+"angles" "0 105 0"
+}
+// entity 191
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "1072 1080 40"
+"model" "models/props/derped/pumpkin_1.mdl"
+"angles" "0 105 0"
+}
+// entity 192
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "848 1076 40"
+"model" "models/props/derped/pumpkin_2.mdl"
+"angles" "0 -30 0"
+}
+// entity 193
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "126.611 -353.803 224"
+"model" "models/props/derped/pumpkin_3.mdl"
+"angles" "0 105 0"
+}
+// entity 194
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "146.688 -336 224"
+"model" "models/props/derped/pumpkin_2.mdl"
+"angles" "0 105 0"
+}
+// entity 195
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "148 -356.354 224"
+"model" "models/props/derped/pumpkin_1.mdl"
+"angles" "0 105 0"
+}
+// entity 196
+{
+"classname" "misc_model"
+"gamemode_limiter" "6"
+"month_limiter" "10"
+"spawnflags" "0"
+"origin" "120 -1200 -68"
+"model" "models/props/derped/tractor.mdl"
+"angles" "-13 -31 -8"
 }
