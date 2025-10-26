@@ -1,0 +1,8 @@
+Nazi Zombies: Portable uses and remixes assets from several external artists. This file's intent is to attribute these artists. They are listed in no particular order.
+
+- Zander Noriega ("Dragged Through Hellfire Abomination"): CC-BY 3.0
+- Pro Sensory ("Halloween"): CC0
+- tricksntraps ("Ascend", "Flying Temple", "Glory Days", "Starting Over"): CC0
+
+If you believe your work is used by Nazi Zombies: Portable and is missing from this list, please open an issue so you can be credited:
+https://github.com/nzp-team/nzportable/issues
