@@ -5,6 +5,7 @@
 # requires wget, unzip.
 #
 set -o errexit
+set -o xtrace
 
 ASSETS_ROOT=$(dirname "${BASH_SOURCE[0]}")/../
 cd "${ASSETS_ROOT}"
@@ -28,6 +29,7 @@ hlrad_args=""
 while true; do
     case "$1" in
         -f | --full ) FULL_COMPILE="1"; shift 1 ;;
+        -m | --map ) MAP_TO_COMPILE="$2"; shift 2 ;;
         -- ) shift; break ;;
         * ) break ;;
     esac
@@ -64,53 +66,68 @@ function download_dependencies()
 }
 
 #
+# compile_individual_level()
+# ----
+# Attempts compilation of a specific map.
+# called by compile_levels().
+#
+function compile_individual_level()
+{
+    local map_file="$1"
+    local command=""
+    local pretty_name=$(basename ${map_file} .map)
+    local map_path="source/maps/${pretty_name}/${pretty_name}"
+    hlbsp_args=""
+    hlcsg_args=""
+    hlvis_args=""
+    hlrad_args=""
+
+    echo "[INFO]: Starting compilation of [${pretty_name}].."
+
+    if [[ -f "${map_path}.args" ]]; then
+        echo "  + Found arguments file!"
+        source "${map_path}.args"
+    fi
+
+    # 1. hlcsg
+    command="tools/vhlt/hlcsg ${HLCSG_PARMS} ${hlcsg_args} ${map_path}.map"
+    echo "[${command}]"
+    $command
+
+    # 2. hlbsp
+    command="tools/vhlt/hlbsp ${HLBSP_PARMS} ${hlbsp_args} ${map_path}.map"
+    echo "[${command}]"
+    $command
+
+    # 3. hlvis
+    command="tools/vhlt/hlvis ${HLVIS_PARMS} ${hlvis_args} ${map_path}.bsp"
+    echo "[${command}]"
+    $command
+
+    # 4. hlrad
+    command="tools/vhlt/hlrad ${HLRAD_PARMS} ${hlrad_args} ${map_path}.bsp"
+    echo "[${command}]"
+    $command
+
+    mv "${map_path}.bsp" "common/maps/${pretty_name}.bsp"
+    find source/maps/${pretty_name} -type f ! -name '*.map' ! -name '*.args' -delete
+}
+
+#
 # compile_levels()
 # ----
-# Attempts to compile all maps.
+# Attempts to compile maps specified.
 #
 function compile_levels()
 {
     # Iterate through every .map in our source..
-    while read -r map_file; do
-        local command=""
-        local pretty_name=$(basename ${map_file} .map)
-        local map_path="source/maps/${pretty_name}/${pretty_name}"
-        hlbsp_args=""
-        hlcsg_args=""
-        hlvis_args=""
-        hlrad_args=""
-
-        echo "[INFO]: Starting compilation of [${pretty_name}].."
-
-        if [[ -f "${map_path}.args" ]]; then
-            echo "  + Found arguments file!"
-            source "${map_path}.args"
-        fi
-
-        # 1. hlcsg
-        command="tools/vhlt/hlcsg ${HLCSG_PARMS} ${hlcsg_args} ${map_path}.map"
-        echo "[${command}]"
-        $command
-
-        # 2. hlbsp
-        command="tools/vhlt/hlbsp ${HLBSP_PARMS} ${hlbsp_args} ${map_path}.map"
-        echo "[${command}]"
-        $command
-
-        # 3. hlvis
-        command="tools/vhlt/hlvis ${HLVIS_PARMS} ${hlvis_args} ${map_path}.bsp"
-        echo "[${command}]"
-        $command
-
-        # 4. hlrad
-        command="tools/vhlt/hlrad ${HLRAD_PARMS} ${hlrad_args} ${map_path}.bsp"
-        echo "[${command}]"
-        $command
-
-        mv "${map_path}.bsp" "common/maps/${pretty_name}.bsp"
-        find source/maps/${pretty_name} -type f ! -name '*.map' ! -name '*.args' -delete
-
-    done < <(find source/maps/ -type f -name "*.map")
+    if [[ -z "${MAP_TO_COMPILE}" ]]; then
+        while read -r map_file; do
+            compile_individual_level "${map_file}"
+        done < <(find source/maps/ -type f -name "*.map")
+    else
+        compile_individual_level "source/maps/${MAP_TO_COMPILE}"
+    fi
 }
 
 #
