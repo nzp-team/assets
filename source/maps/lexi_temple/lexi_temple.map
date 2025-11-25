@@ -4,7 +4,7 @@
 {
 "mapversion" "220"
 "classname" "worldspawn"
-"wad" "source/textures/wad/4all.wad;source/textures/wad/b1oodv4.wad;source/textures/wad/chalk_drawings.wad;source/textures/wad/Dung3on.wad;source/textures/wad/Example_01.wad;source/textures/wad/Example_02.wad;source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/Loop.wad;source/textures/wad/nzphlwad.wad;source/textures/wad/verruckt.wad;source/textures/wad/zhlt.wad"
+"wad" "../../textures/wad/4all.wad;../../textures/wad/b1oodv4.wad;../../textures/wad/chalk_drawings.wad;../../textures/wad/Dung3on.wad;../../textures/wad/Example_01.wad;../../textures/wad/Example_02.wad;../../textures/wad/Ju[s]tice_null2.wad;../../textures/wad/Loop.wad;../../textures/wad/nzphlwad.wad;../../textures/wad/verruckt.wad;../../textures/wad/zhlt.wad"
 "fog" "200 1000 0 0 0"
 "sky" "black"
 "date" "3rd September 1941"

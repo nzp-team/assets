@@ -5,7 +5,7 @@
 "classname" "worldspawn"
 "sky" "Sky_Waldon01"
 "mapversion" "220"
-"wad" "source/textures/wad/4all.wad;source/textures/wad/zhlt.wad"
+"wad" "../../textures/wad/4all.wad;../../textures/wad/zhlt.wad"
 "_generator" "J.A.C.K. 1.1.1064 (vpHalfLife)"
 "person" "BCDeshiG"
 "date" "26th June 1997"
