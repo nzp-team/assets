@@ -127,6 +127,9 @@ function compile_levels()
     # Iterate through every .map in our source..
     if [[ -z "${MAP_TO_COMPILE}" ]]; then
         while read -r map_file; do
+            if [[ "${map_file}" == "source/maps/template.map" ]]; then
+                continue
+            fi
             compile_individual_level "${map_file}"
         done < <(find source/maps/ -type f -name "*.map")
     else
