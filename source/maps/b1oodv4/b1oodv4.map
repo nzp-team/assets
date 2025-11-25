@@ -4,7 +4,7 @@
 {
 "mapversion" "220"
 "classname" "worldspawn"
-"wad" "source/textures/wad/b1oodv4.wad;source/textures/wad/zhlt.wad"
+"wad" "../../textures/wad/b1oodv4.wad;../../textures/wad/zhlt.wad"
 "person" "BCDeshiG"
 "date" "2nd January 1994"
 "location" "Crime Scene?"

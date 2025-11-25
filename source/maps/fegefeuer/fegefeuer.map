@@ -9,7 +9,7 @@
 "date" "1942"
 "person" "Stoohp"
 "mapversion" "220"
-"wad" "source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/nzphlwad.wad;source/textures/wad/zhlt.wad"
+"wad" "../../textures/wad/Ju[s]tice_null2.wad;../../textures/wad/nzphlwad.wad;../../textures/wad/zhlt.wad"
 "_generator" "J.A.C.K. 1.1.2800 (vpHalfLife)"
 "chaptertitle" "Fegefeuer"
 // brush 0

@@ -4,7 +4,7 @@
 {
 "mapversion" "220"
 "classname" "worldspawn"
-"wad" "source/textures/wad/Loop.wad;source/textures/wad/zhlt.wad"
+"wad" "../../textures/wad/Loop.wad;../../textures/wad/zhlt.wad"
 "person" "BCDeshiG"
 "location" "Somewhere"
 "date" "6th June 1963"

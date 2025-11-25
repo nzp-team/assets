@@ -89,25 +89,29 @@ function compile_individual_level()
         source "${map_path}.args"
     fi
 
+    cd "source/maps/${pretty_name}"
+
     # 1. hlcsg
-    command="tools/vhlt/hlcsg ${HLCSG_PARMS} ${hlcsg_args} ${map_path}.map"
+    command="../../../tools/vhlt/hlcsg ${HLCSG_PARMS} ${hlcsg_args} ${pretty_name}.map"
     echo "[${command}]"
     $command
 
     # 2. hlbsp
-    command="tools/vhlt/hlbsp ${HLBSP_PARMS} ${hlbsp_args} ${map_path}.map"
+    command="../../../tools/vhlt/hlbsp ${HLBSP_PARMS} ${hlbsp_args} ${pretty_name}.map"
     echo "[${command}]"
     $command
 
     # 3. hlvis
-    command="tools/vhlt/hlvis ${HLVIS_PARMS} ${hlvis_args} ${map_path}.bsp"
+    command="../../../tools/vhlt/hlvis ${HLVIS_PARMS} ${hlvis_args} ${pretty_name}.bsp"
     echo "[${command}]"
     $command
 
     # 4. hlrad
-    command="tools/vhlt/hlrad ${HLRAD_PARMS} ${hlrad_args} ${map_path}.bsp"
+    command="../../../tools/vhlt/hlrad ${HLRAD_PARMS} ${hlrad_args} ${pretty_name}.bsp"
     echo "[${command}]"
     $command
+
+    cd "../../../"
 
     mv "${map_path}.bsp" "common/maps/${pretty_name}.bsp"
     find source/maps/${pretty_name} -type f ! -name '*.map' ! -name '*.args' -delete

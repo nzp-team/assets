@@ -8,7 +8,7 @@
 "chaptertitle" "Dung3on"
 "person" "BCDeshiG"
 "mapversion" "220"
-"wad" "source/textures/wad/Dung3on.wad;source/textures/wad/zhlt.wad"
+"wad" "../../textures/wad/Dung3on.wad;../../textures/wad/zhlt.wad"
 "_generator" "J.A.C.K. 1.1.1064 (vpHalfLife)"
 // brush 0
 {

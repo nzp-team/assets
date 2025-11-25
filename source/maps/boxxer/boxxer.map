@@ -5,7 +5,7 @@
 "classname" "worldspawn"
 "sounds" "1"
 "mapversion" "220"
-"wad" "source/textures/wad/Example_02.wad;source/textures/wad/Ju[s]tice_null2.wad;source/textures/wad/nzphlwad.wad;source/textures/wad/verruckt.wad;source/textures/wad/zhlt.wad"
+"wad" "../../textures/wad/Example_02.wad;../../textures/wad/Ju[s]tice_null2.wad;../../textures/wad/nzphlwad.wad;../../textures/wad/verruckt.wad;../../textures/wad/zhlt.wad"
 "_generator" "Jackhammer 1.1.700 (vpHalfLife)"
 // brush 0
 {

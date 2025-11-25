@@ -1286,6 +1286,14 @@
 	health(integer) : "Damage Threshold" : 60
 ]
 
+@SolidClass base(Targetname) = spawn_zone : "Zone Spawning Definition" 
+[
+	zone_name(string) : "Name of Zone" : ""
+	adjacent_zones(string) : "Comma separated list of touching Zones (e.g. 'spawn_zone, jugg_zone, third_zone'), Up to 8" : ""
+	zone_target(target_source) : "Targetname of all AI that are spawnable in this Zone"
+	zone_fog(string) : "Fog value specific to this Zone"
+]
+
 @SolidClass base(Targetname) = func_button : "Button" 
 [
 	speed(integer) : "Speed" : 40
