@@ -30,6 +30,7 @@ while true; do
     case "$1" in
         -f | --full ) FULL_COMPILE="1"; shift 1 ;;
         -m | --map ) MAP_TO_COMPILE="$2"; shift 2 ;;
+        -z | --zone-tool-path ) ZONE_TOOL_PATH="$2"; shift 2 ;;
         -- ) shift; break ;;
         * ) break ;;
     esac
@@ -110,6 +111,20 @@ function compile_individual_level()
     command="../../../tools/vhlt/hlrad ${HLRAD_PARMS} ${hlrad_args} ${pretty_name}.bsp"
     echo "[${command}]"
     $command
+
+    # 5. zone tool
+    if [[ -n "${ZONE_TOOL_PATH}" ]]; then
+        local python_path=$(which python3)
+        command="${python_path} ${ZONE_TOOL_PATH}/spawn_zone_tool.py ${pretty_name}.map --output ../../../common/maps/${pretty_name}.nsz"
+        echo "[${command}]"
+        $command
+
+        # Maps may not have zones, just delete empty files.
+        if grep -q "number_of_zones: 0" "../../../common/maps/${pretty_name}.nsz"; then
+            echo "Zero Zones for [${pretty_name}], deleting empty NSZ.."
+            rm -rf ../../../common/maps/${pretty_name}.nsz
+        fi
+    fi
 
     cd "../../../"
 
