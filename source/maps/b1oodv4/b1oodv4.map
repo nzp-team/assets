@@ -1,4 +1,4 @@
-// Game: NZP
+// Game: Nazi Zombies Portable
 // Format: Valve
 // entity 0
 {
@@ -1440,6 +1440,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "Splash"
 "_tb_id" "27"
+"_tb_linked_group_id" "{d851ee91-09e6-4e71-8832-31b2f0fe9633}"
 // brush 0
 {
 ( -32 -32 -80 ) ( -32 -31 -80 ) ( -32 -32 -79 ) null [ 0 -1 0 0 ] [ -0 -0 -1 0 ] 0 2 2
@@ -1516,6 +1517,7 @@
 "origin" "576 288 128"
 "spawnflags" "2"
 "target" "b1"
+"targetname" "spawn"
 "_tb_layer" "13"
 }
 // entity 16
@@ -1525,6 +1527,7 @@
 "angles" "0 90 0"
 "spawnflags" "2"
 "target" "b2"
+"targetname" "spawn"
 "_tb_layer" "13"
 }
 // entity 17
@@ -1534,6 +1537,7 @@
 "angles" "0 180 0"
 "spawnflags" "2"
 "target" "b4"
+"targetname" "spawn"
 "_tb_layer" "13"
 }
 // entity 18
@@ -1553,6 +1557,7 @@
 "angles" "0 90 0"
 "spawnflags" "2"
 "target" "b3"
+"targetname" "spawn"
 "_tb_layer" "13"
 }
 // entity 20
@@ -3430,12 +3435,14 @@
 {
 "classname" "spawn_dog"
 "origin" "720 320 32"
+"targetname" "spawn"
 "_tb_layer" "28"
 }
 // entity 148
 {
 "classname" "spawn_dog"
 "origin" "912 320 32"
+"targetname" "spawn"
 "_tb_layer" "28"
 }
 // entity 149
@@ -3561,4 +3568,97 @@
 "classname" "zombie_horde_point"
 "origin" "800 2224 96"
 "_tb_layer" "29"
+}
+// entity 166
+{
+"classname" "func_group"
+"_tb_type" "_tb_layer"
+"_tb_name" "zones"
+"_tb_id" "30"
+"_tb_layer_sort_index" "15"
+}
+// entity 167
+{
+"classname" "spawn_zone"
+"adjacent_zones" "hall"
+"zone_name" "spawn"
+"zone_target" "spawn"
+"_tb_layer" "30"
+// brush 0
+{
+( 528 8 208 ) ( 528 9 208 ) ( 528 8 209 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 960 -16 208 ) ( 960 -16 209 ) ( 961 -16 208 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 960 8 32 ) ( 961 8 32 ) ( 960 9 32 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 272 224 ) ( 1056 273 224 ) ( 1057 272 224 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 448 216 ) ( 1057 448 216 ) ( 1056 448 217 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1056 272 216 ) ( 1056 272 217 ) ( 1056 273 216 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 168
+{
+"classname" "spawn_zone"
+"zone_name" "stairs"
+"zone_target" "stairs"
+"adjacent_zones" "spawn, double"
+"_tb_layer" "30"
+// brush 0
+{
+( 320 8 208 ) ( 320 9 208 ) ( 320 8 209 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1056 448 216 ) ( 1056 448 217 ) ( 1057 448 216 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 960 8 32 ) ( 961 8 32 ) ( 960 9 32 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 272 208 ) ( 1056 273 208 ) ( 1057 272 208 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 704 216 ) ( 1057 704 216 ) ( 1056 704 217 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1056 272 216 ) ( 1056 272 217 ) ( 1056 273 216 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 169
+{
+"classname" "spawn_zone"
+"adjacent_zones" "stairs, mule"
+"zone_name" "double"
+"zone_target" "inter"
+"_tb_layer" "30"
+// brush 0
+{
+( -16 8 208 ) ( -16 9 208 ) ( -16 8 209 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1056 448 216 ) ( 1056 448 217 ) ( 1057 448 216 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 960 8 32 ) ( 961 8 32 ) ( 960 9 32 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 272 208 ) ( 1056 273 208 ) ( 1057 272 208 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 912 216 ) ( 1057 912 216 ) ( 1056 912 217 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 320 8 208 ) ( 320 8 209 ) ( 320 9 208 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 170
+{
+"classname" "spawn_zone"
+"adjacent_zones" "jugg, double"
+"zone_target" "mid"
+"zone_name" "mule"
+"_tb_layer" "30"
+// brush 0
+{
+( 320 8 208 ) ( 320 9 208 ) ( 320 8 209 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1056 784 216 ) ( 1056 784 217 ) ( 1057 784 216 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 960 8 32 ) ( 961 8 32 ) ( 960 9 32 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 272 224 ) ( 1056 273 224 ) ( 1057 272 224 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 1264 216 ) ( 1057 1264 216 ) ( 1056 1264 217 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 976 8 208 ) ( 976 8 209 ) ( 976 9 208 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 171
+{
+"classname" "spawn_zone"
+"zone_name" "jugg"
+"adjacent_zones" "mule"
+"zone_target" "end"
+"_tb_layer" "30"
+// brush 0
+{
+( 208 8 208 ) ( 208 9 208 ) ( 208 8 209 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1056 1264 216 ) ( 1056 1264 217 ) ( 1057 1264 216 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 960 8 32 ) ( 961 8 32 ) ( 960 9 32 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 272 224 ) ( 1056 273 224 ) ( 1057 272 224 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1056 2720 216 ) ( 1057 2720 216 ) ( 1056 2720 217 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1088 8 208 ) ( 1088 8 209 ) ( 1088 9 208 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }

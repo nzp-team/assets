@@ -1,4 +1,4 @@
-// Game: NZP
+// Game: Nazi Zombies Portable
 // Format: Valve
 // entity 0
 {
@@ -4239,14 +4239,9 @@
 {
 "classname" "func_door_nzp"
 "cost" "5000"
-"target" "Zombie11"
-"target2" "Zombie12"
-"target3" "Zombie13"
-"target5" "Zombie14"
-"target6" ""
+"target" "door2relay"
 "wayTarget" "Door02"
 "angle" "270"
-"target4" "Zombie15b"
 // brush 0
 {
 ( -924 256 128 ) ( -924 256 129 ) ( -924 255 128 ) asylum_wood_doo [ 0 1.0000000000000002 0 -64 ] [ 0 0 -1.0000000000000002 0 ] 0 1 0.75
@@ -5962,11 +5957,7 @@
 "classname" "func_door_nzp"
 "cost" "2500"
 "noise1" ""
-"target" "Zombie6"
-"target3" "Zombie8"
-"target4" "Zombie9"
-"target5" "Zombie10"
-"target6" "Zombie7b"
+"target" "door1relay"
 "wayTarget" "Door01"
 "" ""
 "angle" "90"
@@ -6276,6 +6267,7 @@
 "origin" "-768 -472 36"
 "angle" "180"
 "target" "Zombie1_Path1"
+"targetname" "Zombie15"
 }
 // entity 59
 {
@@ -6304,6 +6296,7 @@
 "origin" "-720 528 38"
 "angle" "0"
 "target" "Zombie2_Path1"
+"targetname" "Zombie15"
 }
 // entity 63
 {
@@ -6360,6 +6353,7 @@
 "origin" "216 88 32"
 "angle" "270"
 "target" "Zombie4_Path1"
+"targetname" "Zombie16"
 }
 // entity 71
 {
@@ -6374,6 +6368,7 @@
 "origin" "-204 -736 32"
 "angle" "180"
 "target" "Zombie5_Path1"
+"targetname" "Zombie16"
 }
 // entity 73
 {
@@ -6464,7 +6459,7 @@
 "origin" "-1504 -512 32"
 "angle" "270"
 "target" "Zombie7_Path2"
-"targetname" "Zombie7b"
+"targetname" "Zombie6"
 "spawnflags" "1"
 }
 // entity 85
@@ -6523,7 +6518,7 @@
 "angle" "90"
 "target" "Zombie8_Path1"
 "spawnflags" "1"
-"targetname" "Zombie8"
+"targetname" "Zombie6"
 }
 // entity 93
 {
@@ -6538,7 +6533,7 @@
 "origin" "-1528 808 32"
 "angle" "0"
 "target" "Zombie9_Path1"
-"targetname" "Zombie9"
+"targetname" "Zombie7"
 "spawnflags" "1"
 }
 // entity 95
@@ -6569,7 +6564,7 @@
 "origin" "-912 864 32"
 "target" "Zombie10_Path1"
 "spawnflags" "1"
-"targetname" "Zombie10"
+"targetname" "Zombie7"
 "angle" "180"
 }
 // entity 99
@@ -6627,7 +6622,7 @@
 "classname" "spawn_zombie"
 "origin" "-188 296 180"
 "target" "Zombie11_Path1"
-"targetname" "Zombie11"
+"targetname" "Zombie13"
 "spawnflags" "1"
 }
 // entity 107
@@ -6664,7 +6659,7 @@
 "classname" "spawn_zombie"
 "origin" "-416 -424 180"
 "target" "Zombie12_Path1"
-"targetname" "Zombie12"
+"targetname" "Zombie14"
 "spawnflags" "1"
 }
 // entity 112
@@ -7094,6 +7089,7 @@
 "classname" "spawn_zombie"
 "origin" "-592 752 32"
 "target" "Zombie3_Path1"
+"targetname" "Zombie16"
 }
 // entity 174
 {
@@ -8904,6 +8900,216 @@
 "classname" "spawn_zombie"
 "origin" "-968 -408 192"
 "target" "Zombie15_Path1b"
-"targetname" "Zombie15b"
+"targetname" "Zombie14"
 "spawnflags" "1"
+}
+// entity 241
+{
+"classname" "func_group"
+"_tb_type" "_tb_layer"
+"_tb_name" "Zone Layer"
+"_tb_id" "1"
+"_tb_layer_sort_index" "0"
+}
+// entity 242
+{
+"classname" "spawn_zone"
+"adjacent_zones" "quick, box, downstairs"
+"zone_name" "sapawn"
+"zone_target" "Zombie16"
+"_tb_layer" "1"
+// brush 0
+{
+( -496 -144 0 ) ( -496 -143 0 ) ( -496 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -512 0 ) ( -672 -512 1 ) ( -671 -512 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 128 ) ( -592 -47 128 ) ( -591 -48 128 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 304 16 ) ( -591 304 16 ) ( -592 304 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -304 -144 0 ) ( -304 -144 1 ) ( -304 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 1
+{
+( -304 -144 0 ) ( -304 -143 0 ) ( -304 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -288 0 ) ( -672 -288 1 ) ( -671 -288 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 128 ) ( -592 -47 128 ) ( -591 -48 128 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 160 16 ) ( -591 160 16 ) ( -592 160 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -112 -48 16 ) ( -112 -48 17 ) ( -112 -47 16 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 243
+{
+"classname" "spawn_zone"
+"zone_target" "Zombie6"
+"zone_name" "box"
+"adjacent_zones" "downstairs, quick, sapawn, notjugg"
+"_tb_layer" "1"
+// brush 0
+{
+( -1120 -144 0 ) ( -1120 -143 0 ) ( -1120 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -432 0 ) ( -672 -432 1 ) ( -671 -432 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 128 ) ( -592 -47 128 ) ( -591 -48 128 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -672 160 0 ) ( -671 160 0 ) ( -672 160 1 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -920 -144 0 ) ( -920 -144 1 ) ( -920 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 1
+{
+( -920 -144 0 ) ( -920 -143 0 ) ( -920 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -288 0 ) ( -672 -288 1 ) ( -671 -288 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 128 ) ( -592 -47 128 ) ( -591 -48 128 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 160 16 ) ( -591 160 16 ) ( -592 160 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -760 -144 0 ) ( -760 -144 1 ) ( -760 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 2
+{
+( -1296 -144 0 ) ( -1296 -143 0 ) ( -1296 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -288 0 ) ( -672 -288 1 ) ( -671 -288 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 128 ) ( -592 -47 128 ) ( -591 -48 128 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 160 16 ) ( -591 160 16 ) ( -592 160 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -1120 -144 0 ) ( -1120 -144 1 ) ( -1120 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 244
+{
+"classname" "spawn_zone"
+"zone_target" "Zombie13"
+"zone_name" "notjugg"
+"adjacent_zones" "jugg, downstairs"
+"_tb_layer" "1"
+// brush 0
+{
+( -736 -144 0 ) ( -736 -143 0 ) ( -736 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -56 0 ) ( -672 -56 1 ) ( -671 -56 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 160 ) ( -671 -144 160 ) ( -672 -143 160 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 272 ) ( -592 -47 272 ) ( -591 -48 272 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -672 168 0 ) ( -671 168 0 ) ( -672 168 1 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -112 -144 0 ) ( -112 -144 1 ) ( -112 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 245
+{
+"classname" "spawn_zone"
+"zone_name" "pap"
+"zone_target" "Zombie13"
+"adjacent_zones" "jugg, notjugg, downstairs, "
+"_tb_layer" "1"
+// brush 0
+{
+( -912 -144 0 ) ( -912 -143 0 ) ( -912 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 168 0 ) ( -672 168 1 ) ( -671 168 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 144 ) ( -671 -144 144 ) ( -672 -143 144 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 272 ) ( -592 -47 272 ) ( -591 -48 272 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -672 288 0 ) ( -671 288 0 ) ( -672 288 1 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -432 -144 0 ) ( -432 -144 1 ) ( -432 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 246
+{
+"classname" "spawn_zone"
+"zone_name" "upstairs"
+"adjacent_zones" "jugg, notjugg, downstairs, box"
+"_tb_layer" "1"
+// brush 0
+{
+( -416 -144 0 ) ( -416 -143 0 ) ( -416 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 168 0 ) ( -672 168 1 ) ( -671 168 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 144 ) ( -671 -144 144 ) ( -672 -143 144 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 272 ) ( -592 -47 272 ) ( -591 -48 272 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 400 16 ) ( -591 400 16 ) ( -592 400 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -280 -144 0 ) ( -280 -144 1 ) ( -280 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 247
+{
+"classname" "spawn_zone"
+"adjacent_zones" "notjugg, jugg, downstairs, box"
+"zone_name" "stairs"
+"_tb_layer" "1"
+// brush 0
+{
+( -920 -144 0 ) ( -920 -143 0 ) ( -920 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 304 0 ) ( -672 304 1 ) ( -671 304 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 272 ) ( -592 -47 272 ) ( -591 -48 272 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 400 16 ) ( -591 400 16 ) ( -592 400 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -416 -144 0 ) ( -416 -144 1 ) ( -416 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 248
+{
+"classname" "spawn_zone"
+"zone_name" "downstairs"
+"adjacent_zones" "notjugg, box, quick, "
+"zone_target" "Zombie7"
+"_tb_layer" "1"
+// brush 0
+{
+( -1120 -144 0 ) ( -1120 -143 0 ) ( -1120 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 160 0 ) ( -672 160 1 ) ( -671 160 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 128 ) ( -592 -47 128 ) ( -591 -48 128 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 448 16 ) ( -591 448 16 ) ( -592 448 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -920 -144 0 ) ( -920 -144 1 ) ( -920 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 249
+{
+"classname" "trigger_relay"
+"triggerstate" "0"
+"sounds" "0"
+"delay" "0"
+"origin" "-816 56 104"
+"targetname" "door1relay"
+"target" "Zombie6"
+"target2" "Zombie7"
+"_tb_layer" "1"
+}
+// entity 250
+{
+"classname" "spawn_zone"
+"zone_target" "Zombie14"
+"zone_name" "jugg"
+"adjacent_zones" "notjugg, downstairs"
+"_tb_layer" "1"
+// brush 0
+{
+( -736 -144 0 ) ( -736 -143 0 ) ( -736 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -400 0 ) ( -672 -400 1 ) ( -671 -400 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 160 ) ( -671 -144 160 ) ( -672 -143 160 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 272 ) ( -592 -47 272 ) ( -591 -48 272 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -672 -56 0 ) ( -671 -56 0 ) ( -672 -56 1 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -112 -144 0 ) ( -112 -144 1 ) ( -112 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 251
+{
+"classname" "spawn_zone"
+"zone_target" "Zombie15"
+"zone_name" "quick"
+"adjacent_zones" "sapawn, box, downstairs"
+"_tb_layer" "1"
+// brush 0
+{
+( -760 -144 0 ) ( -760 -143 0 ) ( -760 -144 1 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -288 0 ) ( -672 -288 1 ) ( -671 -288 0 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -672 -144 0 ) ( -671 -144 0 ) ( -672 -143 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 -48 128 ) ( -592 -47 128 ) ( -591 -48 128 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( -592 160 16 ) ( -591 160 16 ) ( -592 160 17 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -496 -144 0 ) ( -496 -144 1 ) ( -496 -143 0 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 252
+{
+"classname" "trigger_relay"
+"triggerstate" "0"
+"sounds" "0"
+"delay" "0"
+"origin" "-968 352 80"
+"targetname" "door2relay"
+"target" "Zombie13"
+"target2" "Zombie14"
+"_tb_layer" "1"
 }

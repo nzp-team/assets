@@ -1,4 +1,4 @@
-// Game: NZP
+// Game: Nazi Zombies Portable
 // Format: Valve
 // entity 0
 {
@@ -1685,7 +1685,7 @@
 }
 // brush 187
 {
-( 1704 256 128 ) ( 1704 257 128 ) ( 1704 256 129 ) wezu_wall2_bred [ 0 -1 0 0 ] [ -0 -0 -1 0 ] 0 2 2
+( 1704 256 128 ) ( 1704 257 128 ) ( 1704 256 129 ) wezu_wall2_bred [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 ( 1704 256 128 ) ( 1704 256 129 ) ( 1705 256 128 ) null [ 1 0 -0 0 ] [ 0 -0 -1 0 ] 0 2 2
 ( 1704 256 128 ) ( 1705 256 128 ) ( 1704 257 128 ) null [ -1 0 0 0 ] [ -0 -1 -0 0 ] 0 2 2
 ( 1712 416 160 ) ( 1712 417 160 ) ( 1713 416 160 ) wezu_wall2_bred [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 2 2
@@ -4378,6 +4378,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "Splash"
 "_tb_id" "12"
+"_tb_linked_group_id" "{12e7bf1d-0195-42ce-9f19-a521e53711fd}"
 "_tb_layer" "7"
 // brush 0
 {
@@ -4497,6 +4498,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "TV"
 "_tb_id" "13"
+"_tb_linked_group_id" "{b68ff2db-10d7-4822-9447-5e14f2354b4b}"
 "_tb_layer" "7"
 }
 // entity 69
@@ -4596,6 +4598,7 @@
 "_tb_type" "_tb_group"
 "_tb_name" "Fan"
 "_tb_id" "14"
+"_tb_linked_group_id" "{72580a68-d7e9-48fa-99d7-7dd22cf7bbdf}"
 "_tb_layer" "7"
 }
 // entity 72
@@ -4900,7 +4903,7 @@
 // entity 93
 {
 "classname" "spawn_zombie"
-"origin" "1864 1016 416"
+"origin" "1864 1032 416"
 "angles" "0 90 0"
 "targetname" "pass"
 "spawnflags" "1"
@@ -4910,7 +4913,7 @@
 // entity 94
 {
 "classname" "spawn_zombie"
-"origin" "1864 1312 416"
+"origin" "1864 1296 416"
 "angles" "0 -90 0"
 "targetname" "pass"
 "spawnflags" "1"
@@ -5038,13 +5041,22 @@
 }
 // entity 107
 {
+"classname" "spawn_zombie"
+"origin" "1912 2048 288"
+"angles" "0 180 0"
+"targetname" "bed"
+"spawnflags" "7"
+"_tb_layer" "8"
+}
+// entity 108
+{
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "Doors"
 "_tb_id" "10"
 "_tb_layer_sort_index" "6"
 }
-// entity 108
+// entity 109
 {
 "classname" "func_door_nzp"
 "cost" "750"
@@ -5063,7 +5075,7 @@
 ( 1248 1056 136 ) ( 1248 1056 137 ) ( 1248 1057 136 ) null [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 109
+// entity 110
 {
 "classname" "func_door_nzp"
 "cost" "500"
@@ -5082,7 +5094,7 @@
 ( 1448 864 136 ) ( 1448 864 137 ) ( 1448 865 136 ) mechanical_door [ 0 1 0 16 ] [ 0 0 -1 16 ] 0 2 2
 }
 }
-// entity 110
+// entity 111
 {
 "classname" "func_door_nzp"
 "cost" "500"
@@ -5101,7 +5113,7 @@
 ( 1576 832 128 ) ( 1576 832 129 ) ( 1576 833 128 ) NULL [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 111
+// entity 112
 {
 "classname" "func_door_nzp"
 "cost" "750"
@@ -5120,7 +5132,7 @@
 ( 1448 1376 136 ) ( 1448 1376 137 ) ( 1448 1377 136 ) mechanical_door [ 0 1 0 16 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 112
+// entity 113
 {
 "classname" "func_door_nzp"
 "angles" "-90 0 0"
@@ -5138,7 +5150,7 @@
 ( 864 1408 136 ) ( 864 1408 137 ) ( 864 1409 136 ) n3b_metal_door [ 0 1 0 32 ] [ 0 0 -1 -10 ] 0 2 2
 }
 }
-// entity 113
+// entity 114
 {
 "classname" "func_door_nzp"
 "cost" "1000"
@@ -5157,7 +5169,7 @@
 ( 264 2040 16 ) ( 264 2040 17 ) ( 264 2041 16 ) NULL [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 114
+// entity 115
 {
 "classname" "func_door_nzp"
 "spawnflags" "64"
@@ -5173,7 +5185,7 @@
 ( 896 2608 128 ) ( 896 2608 129 ) ( 896 2609 128 ) n3b_metal_door [ 0 1 0 -40 ] [ 0 0 -1 -10 ] 0 2 2
 }
 }
-// entity 115
+// entity 116
 {
 "classname" "func_door_nzp"
 "cost" "1000"
@@ -5192,7 +5204,7 @@
 ( 1576 1368 392 ) ( 1576 1368 393 ) ( 1576 1369 392 ) NULL [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 116
+// entity 117
 {
 "classname" "func_door_nzp"
 "cost" "1000"
@@ -5212,7 +5224,7 @@
 ( 1864 1744 264 ) ( 1864 1744 265 ) ( 1864 1745 264 ) null [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 117
+// entity 118
 {
 "classname" "func_door_nzp"
 "angles" "-90 0 0"
@@ -5231,7 +5243,7 @@
 ( 1608 2112 264 ) ( 1608 2112 265 ) ( 1608 2113 264 ) NULL [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 118
+// entity 119
 {
 "classname" "func_door_nzp"
 "angles" "-90 0 0"
@@ -5248,7 +5260,7 @@
 ( 1336 1584 136 ) ( 1336 1584 137 ) ( 1336 1585 136 ) NULL [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 119
+// entity 120
 {
 "classname" "func_door_nzp"
 "cost" "1000"
@@ -5267,7 +5279,7 @@
 ( 1704 1032 424 ) ( 1704 1032 425 ) ( 1704 1033 424 ) null [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 120
+// entity 121
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
@@ -5284,7 +5296,7 @@
 ( 1392 408 136 ) ( 1392 408 137 ) ( 1392 409 136 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 121
+// entity 122
 {
 "classname" "func_wall"
 "_tb_layer" "15"
@@ -5298,7 +5310,7 @@
 ( 1512 1976 256 ) ( 1512 1975 256 ) ( 1512 1976 257 ) box_side3 [ -1.2246467991473532e-16 1 0 -32 ] [ 0 0 -1 12 ] 0 2 2
 }
 }
-// entity 122
+// entity 123
 {
 "classname" "func_wall"
 "_tb_layer" "15"
@@ -5375,7 +5387,7 @@
 ( 1384 296 136 ) ( 1384 304 136 ) ( 1384 304 128 ) null [ 0 1 -0 0 ] [ 0 -0 -1 0 ] 0 2 2
 }
 }
-// entity 123
+// entity 124
 {
 "classname" "func_wall"
 "_tb_layer" "15"
@@ -5389,7 +5401,7 @@
 ( 1376 1760 136 ) ( 1376 1760 137 ) ( 1376 1761 136 ) null [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 124
+// entity 125
 {
 "classname" "mystery_box"
 "angles" "0 270 0"
@@ -5397,14 +5409,14 @@
 "origin" "1368 344 160"
 "_tb_layer" "15"
 }
-// entity 125
+// entity 126
 {
 "classname" "mystery_box_tp_spot"
 "origin" "116 2500 40"
 "angles" "0 45 0"
 "_tb_layer" "15"
 }
-// entity 126
+// entity 127
 {
 "classname" "func_wall"
 "_tb_layer" "15"
@@ -5418,14 +5430,14 @@
 ( 1536 2568 136 ) ( 1536 2568 137 ) ( 1536 2569 136 ) null [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 127
+// entity 128
 {
 "classname" "mystery_box_tp_spot"
 "origin" "1520 2512 160"
 "angles" "0 270 0"
 "_tb_layer" "15"
 }
-// entity 128
+// entity 129
 {
 "classname" "func_wall"
 "_tb_layer" "15"
@@ -5439,21 +5451,21 @@
 ( 166.91168824543138 2528.2842712474617 8 ) ( 166.20458146424494 2527.577164466275 8 ) ( 166.91168824543138 2528.2842712474617 9 ) box_side3 [ 0.7071067811865483 0.7071067811865466 0 3.104309 ] [ 0 0 -1 -16 ] 0 2 2
 }
 }
-// entity 129
+// entity 130
 {
 "classname" "mystery_box_tp_spot"
 "origin" "1496 1920 288"
 "angles" "0 90 0"
 "_tb_layer" "15"
 }
-// entity 130
+// entity 131
 {
 "classname" "mystery_box_tp_spot"
 "origin" "1360 1704 160"
 "angles" "0 270 0"
 "_tb_layer" "15"
 }
-// entity 131
+// entity 132
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
@@ -5495,12 +5507,12 @@
 }
 // brush 4
 {
-( 1728 2136 344 ) ( 1728 2136 256 ) ( 1728 2192 344 ) CLIP [ 0 -1 0 0 ] [ -0 -0 -1 0 ] 0 2 2
-( 1728 2136 344 ) ( 1808 2136 344 ) ( 1728 2136 256 ) CLIP [ 1 0 -0 0 ] [ 0 -0 -1 0 ] 0 2 2
+( 1664 2136 344 ) ( 1664 2136 256 ) ( 1664 2192 344 ) CLIP [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 2 2
+( 1728 2128 344 ) ( 1808 2128 344 ) ( 1728 2128 256 ) CLIP [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 2 2
 ( 1728 2192 256 ) ( 1728 2136 256 ) ( 1808 2192 256 ) CLIP [ -1 0 0 0 ] [ -0 -1 -0 0 ] 0 2 2
 ( 1728 2136 344 ) ( 1728 2192 344 ) ( 1808 2136 344 ) CLIP [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 2 2
 ( 1728 2192 256 ) ( 1808 2192 256 ) ( 1728 2192 344 ) CLIP [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 2 2
-( 1808 2192 344 ) ( 1808 2192 256 ) ( 1808 2136 344 ) CLIP [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
+( 1872 2192 344 ) ( 1872 2192 256 ) ( 1872 2136 344 ) CLIP [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 // brush 5
 {
@@ -5512,7 +5524,7 @@
 ( 520 1792 120 ) ( 520 1792 8 ) ( 520 1696 120 ) CLIP [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 132
+// entity 133
 {
 "classname" "perk_double"
 "origin" "1792 1060 160"
@@ -5520,7 +5532,7 @@
 "model" "models/machines/hl_scale/double_tap_2.mdl"
 "_tb_layer" "16"
 }
-// entity 133
+// entity 134
 {
 "classname" "perk_deadshot"
 "origin" "888 1080 160"
@@ -5528,7 +5540,7 @@
 "model" "models/machines/hl_scale/deadshot.mdl"
 "_tb_layer" "16"
 }
-// entity 134
+// entity 135
 {
 "classname" "perk_speed"
 "angles" "0 225 0"
@@ -5536,7 +5548,7 @@
 "model" "models/machines/hl_scale/speed_cola.mdl"
 "_tb_layer" "16"
 }
-// entity 135
+// entity 136
 {
 "classname" "perk_staminup"
 "origin" "1676 1324 416"
@@ -5544,7 +5556,7 @@
 "model" "models/machines/hl_scale/staminup.mdl"
 "_tb_layer" "16"
 }
-// entity 136
+// entity 137
 {
 "classname" "perk_pap"
 "angles" "0 270 0"
@@ -5563,7 +5575,7 @@
 "spawnflags" "3"
 "_tb_layer" "16"
 }
-// entity 137
+// entity 138
 {
 "classname" "perk_revive"
 "angles" "0 90 0"
@@ -5572,7 +5584,7 @@
 "killtarget" "cliprev"
 "_tb_layer" "16"
 }
-// entity 138
+// entity 139
 {
 "classname" "perk_juggernog"
 "angles" "0 180 0"
@@ -5580,7 +5592,7 @@
 "model" "models/machines/hl_scale/juggernog.mdl"
 "_tb_layer" "16"
 }
-// entity 139
+// entity 140
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
@@ -5775,7 +5787,7 @@
 ( 896 2416 248 ) ( 1376 2224 248 ) ( 1376 2224 376 ) hint [ -0.9284766908852594 0.3713906763541038 0 0 ] [ 0 0 -1 0 ] 0 4 4
 }
 }
-// entity 140
+// entity 141
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
@@ -5873,7 +5885,7 @@
 ( 1712 1208 424 ) ( 1712 1208 425 ) ( 1712 1209 424 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 2 2
 }
 }
-// entity 141
+// entity 142
 {
 "classname" "item_barricade"
 "origin" "1636 156 192"
@@ -5882,7 +5894,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 142
+// entity 143
 {
 "classname" "item_barricade"
 "origin" "1708 364 192"
@@ -5891,7 +5903,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 143
+// entity 144
 {
 "classname" "item_barricade"
 "origin" "1580 892 192"
@@ -5900,7 +5912,7 @@
 "angles" "0 180 0"
 "_tb_layer" "18"
 }
-// entity 144
+// entity 145
 {
 "classname" "item_barricade"
 "origin" "1708 300 192"
@@ -5909,7 +5921,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 145
+// entity 146
 {
 "classname" "item_barricade"
 "origin" "1812 1204 192"
@@ -5918,7 +5930,7 @@
 "angles" "0 180 0"
 "_tb_layer" "18"
 }
-// entity 146
+// entity 147
 {
 "classname" "item_barricade"
 "origin" "1060 284 192"
@@ -5927,7 +5939,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 147
+// entity 148
 {
 "classname" "item_barricade"
 "origin" "1212 284 192"
@@ -5936,7 +5948,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 148
+// entity 149
 {
 "classname" "item_barricade"
 "origin" "1140 284 192"
@@ -5945,7 +5957,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 149
+// entity 150
 {
 "classname" "item_barricade"
 "origin" "524 1508 72"
@@ -5954,7 +5966,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 150
+// entity 151
 {
 "classname" "item_barricade"
 "origin" "268 2012 72"
@@ -5963,7 +5975,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 151
+// entity 152
 {
 "classname" "item_barricade"
 "origin" "332 2284 72"
@@ -5972,7 +5984,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 152
+// entity 153
 {
 "classname" "item_barricade"
 "origin" "1708 1156 448"
@@ -5981,7 +5993,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 153
+// entity 154
 {
 "classname" "item_barricade"
 "origin" "1524 1740 448"
@@ -5990,7 +6002,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 154
+// entity 155
 {
 "classname" "item_barricade"
 "origin" "1540 2612 320"
@@ -6000,7 +6012,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 155
+// entity 156
 {
 "classname" "item_barricade"
 "origin" "1540 2412 320"
@@ -6010,7 +6022,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 156
+// entity 157
 {
 "classname" "item_barricade"
 "origin" "396 2348 72"
@@ -6019,7 +6031,7 @@
 "model" "models/misc/window.mdl"
 "_tb_layer" "18"
 }
-// entity 157
+// entity 158
 {
 "classname" "item_barricade"
 "origin" "1812 1364 192"
@@ -6028,7 +6040,7 @@
 "angles" "0 180 0"
 "_tb_layer" "18"
 }
-// entity 158
+// entity 159
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
@@ -6036,7 +6048,7 @@
 "_tb_id" "19"
 "_tb_layer_sort_index" "11"
 }
-// entity 159
+// entity 160
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6044,7 +6056,7 @@
 "origin" "1160 616 240"
 "_tb_layer" "19"
 }
-// entity 160
+// entity 161
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6052,7 +6064,7 @@
 "origin" "984 1440 240"
 "_tb_layer" "19"
 }
-// entity 161
+// entity 162
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6060,7 +6072,7 @@
 "origin" "1624 1312 240"
 "_tb_layer" "19"
 }
-// entity 162
+// entity 163
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6068,7 +6080,7 @@
 "origin" "1496 800 240"
 "_tb_layer" "19"
 }
-// entity 163
+// entity 164
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6076,7 +6088,7 @@
 "origin" "1568 352 240"
 "_tb_layer" "19"
 }
-// entity 164
+// entity 165
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6084,7 +6096,7 @@
 "origin" "1296 1656 176"
 "_tb_layer" "19"
 }
-// entity 165
+// entity 166
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6092,7 +6104,7 @@
 "origin" "1176 352 240"
 "_tb_layer" "19"
 }
-// entity 166
+// entity 167
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6100,7 +6112,7 @@
 "origin" "1240 1184 240"
 "_tb_layer" "19"
 }
-// entity 167
+// entity 168
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6108,7 +6120,7 @@
 "origin" "1648 656 280"
 "_tb_layer" "19"
 }
-// entity 168
+// entity 169
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6116,7 +6128,7 @@
 "origin" "1640 904 432"
 "_tb_layer" "19"
 }
-// entity 169
+// entity 170
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6124,7 +6136,7 @@
 "origin" "1536 1176 480"
 "_tb_layer" "19"
 }
-// entity 170
+// entity 171
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6132,7 +6144,7 @@
 "origin" "1696 1448 448"
 "_tb_layer" "19"
 }
-// entity 171
+// entity 172
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6140,7 +6152,7 @@
 "origin" "1704 1672 392"
 "_tb_layer" "19"
 }
-// entity 172
+// entity 173
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6148,7 +6160,7 @@
 "origin" "1600 1944 304"
 "_tb_layer" "19"
 }
-// entity 173
+// entity 174
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6156,7 +6168,7 @@
 "origin" "1544 2280 280"
 "_tb_layer" "19"
 }
-// entity 174
+// entity 175
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6164,7 +6176,7 @@
 "origin" "1888 1888 328"
 "_tb_layer" "19"
 }
-// entity 175
+// entity 176
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6172,7 +6184,7 @@
 "origin" "1400 2512 280"
 "_tb_layer" "19"
 }
-// entity 176
+// entity 177
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6180,7 +6192,7 @@
 "origin" "1040 2328 232"
 "_tb_layer" "19"
 }
-// entity 177
+// entity 178
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6188,7 +6200,7 @@
 "origin" "152 2272 72"
 "_tb_layer" "19"
 }
-// entity 178
+// entity 179
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6196,7 +6208,7 @@
 "origin" "488 2504 72"
 "_tb_layer" "19"
 }
-// entity 179
+// entity 180
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6204,7 +6216,7 @@
 "origin" "144 1888 72"
 "_tb_layer" "19"
 }
-// entity 180
+// entity 181
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6212,7 +6224,7 @@
 "origin" "400 1456 80"
 "_tb_layer" "19"
 }
-// entity 181
+// entity 182
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6220,7 +6232,7 @@
 "origin" "152 1552 80"
 "_tb_layer" "19"
 }
-// entity 182
+// entity 183
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6228,7 +6240,7 @@
 "origin" "456 1744 80"
 "_tb_layer" "19"
 }
-// entity 183
+// entity 184
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6236,7 +6248,7 @@
 "origin" "688 1344 168"
 "_tb_layer" "19"
 }
-// entity 184
+// entity 185
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6244,7 +6256,7 @@
 "origin" "1112 864 240"
 "_tb_layer" "19"
 }
-// entity 185
+// entity 186
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6252,7 +6264,7 @@
 "origin" "552 2016 96"
 "_tb_layer" "19"
 }
-// entity 186
+// entity 187
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6260,7 +6272,7 @@
 "origin" "488 2192 96"
 "_tb_layer" "19"
 }
-// entity 187
+// entity 188
 {
 "classname" "light"
 "_light" "255 255 127 144"
@@ -6268,7 +6280,7 @@
 "origin" "1912 896 216"
 "_tb_layer" "19"
 }
-// entity 188
+// entity 189
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
@@ -6276,51 +6288,248 @@
 "_tb_id" "20"
 "_tb_layer_sort_index" "12"
 }
-// entity 189
+// entity 190
 {
 "classname" "zombie_horde_point"
 "origin" "1200 2496 152"
 "_tb_layer" "20"
 }
-// entity 190
+// entity 191
 {
 "classname" "zombie_horde_point"
 "origin" "208 2232 40"
 "_tb_layer" "20"
 }
-// entity 191
+// entity 192
 {
 "classname" "zombie_horde_point"
 "origin" "1312 1112 160"
 "_tb_layer" "20"
 }
-// entity 192
+// entity 193
 {
 "classname" "zombie_horde_point"
 "origin" "1528 1432 160"
 "_tb_layer" "20"
 }
-// entity 193
+// entity 194
 {
 "classname" "zombie_horde_point"
 "origin" "1584 272 160"
 "_tb_layer" "20"
 }
-// entity 194
+// entity 195
 {
 "classname" "zombie_horde_point"
 "origin" "1520 1120 416"
 "_tb_layer" "20"
 }
-// entity 195
+// entity 196
 {
 "classname" "zombie_horde_point"
 "origin" "1696 1544 416"
 "_tb_layer" "20"
 }
-// entity 196
+// entity 197
 {
 "classname" "zombie_horde_point"
 "origin" "1296 512 160"
 "_tb_layer" "20"
+}
+// entity 198
+{
+"classname" "func_group"
+"_tb_type" "_tb_layer"
+"_tb_name" "zones"
+"_tb_id" "21"
+"_tb_layer_sort_index" "13"
+}
+// entity 199
+{
+"classname" "spawn_zone"
+"zone_name" "spawn"
+"zone_target" "spawn"
+"door_way_targets" "spawnL, spawnK, spawnS"
+"adjacent_zones" "speed, double, stam"
+"_tb_layer" "21"
+// brush 0
+{
+( 1440 160 128 ) ( 1440 161 128 ) ( 1440 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 128 ) ( 1440 160 129 ) ( 1441 160 128 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 128 ) ( 1441 160 128 ) ( 1440 161 128 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 224 528 ) ( 1520 225 528 ) ( 1521 224 528 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1024 144 ) ( 1521 1024 144 ) ( 1520 1024 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1712 224 144 ) ( 1712 224 145 ) ( 1712 225 144 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 200
+{
+"classname" "spawn_zone"
+"adjacent_zones" "end, spawn"
+"zone_name" "stam"
+"zone_target" "pass"
+"door_way_targets" "spawnS, ups"
+"_tb_layer" "21"
+// brush 0
+{
+( 1440 160 128 ) ( 1440 161 128 ) ( 1440 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1024 144 ) ( 1520 1024 145 ) ( 1521 1024 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 368 ) ( 1441 160 368 ) ( 1440 161 368 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 224 528 ) ( 1520 225 528 ) ( 1521 224 528 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1360 144 ) ( 1521 1360 144 ) ( 1520 1360 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1712 224 144 ) ( 1712 224 145 ) ( 1712 225 144 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 201
+{
+"classname" "spawn_zone"
+"zone_name" "end"
+"adjacent_zones" "bump, stam"
+"zone_target" "stair"
+"door_way_targets" "bedO, ups"
+"_tb_layer" "21"
+// brush 0
+{
+( 1440 160 128 ) ( 1440 161 128 ) ( 1440 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1584 144 ) ( 1520 1584 145 ) ( 1521 1584 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 256 ) ( 1441 160 256 ) ( 1440 161 256 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 368 ) ( 1440 161 368 ) ( 1441 160 368 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1744 144 ) ( 1521 1744 144 ) ( 1520 1744 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1872 224 144 ) ( 1872 224 145 ) ( 1872 225 144 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+// brush 1
+{
+( 1440 160 128 ) ( 1440 161 128 ) ( 1440 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1360 144 ) ( 1520 1360 145 ) ( 1521 1360 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 368 ) ( 1441 160 368 ) ( 1440 161 368 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 224 528 ) ( 1520 225 528 ) ( 1521 224 528 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1744 144 ) ( 1521 1744 144 ) ( 1520 1744 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1760 224 144 ) ( 1760 224 145 ) ( 1760 225 144 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 202
+{
+"classname" "spawn_zone"
+"zone_name" "bump"
+"adjacent_zones" "end, quick"
+"zone_target" "bed"
+"door_way_targets" "bedU, bedO"
+"_tb_layer" "21"
+// brush 0
+{
+( 1440 160 128 ) ( 1440 161 128 ) ( 1440 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1744 144 ) ( 1520 1744 145 ) ( 1521 1744 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 256 ) ( 1441 160 256 ) ( 1440 161 256 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 368 ) ( 1440 161 368 ) ( 1441 160 368 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 2112 144 ) ( 1521 2112 144 ) ( 1520 2112 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1968 224 144 ) ( 1968 224 145 ) ( 1968 225 144 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 203
+{
+"classname" "spawn_zone"
+"adjacent_zones" "bunker, bump"
+"zone_name" "quick"
+"zone_target" "back"
+"door_way_targets" "bedO"
+"_tb_layer" "21"
+// brush 0
+{
+( 880 160 128 ) ( 880 161 128 ) ( 880 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 2096 144 ) ( 1520 2096 145 ) ( 1521 2096 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 128 ) ( 1441 160 128 ) ( 1440 161 128 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 400 ) ( 1440 161 400 ) ( 1441 160 400 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 2688 144 ) ( 1521 2688 144 ) ( 1520 2688 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1808 224 144 ) ( 1808 224 145 ) ( 1808 225 144 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 204
+{
+"classname" "spawn_zone"
+"zone_name" "bunker"
+"zone_target" "curve"
+"adjacent_zones" "quick, jugg"
+"door_way_targets" "tunnel"
+"_tb_layer" "21"
+// brush 0
+{
+( 0 160 128 ) ( 0 161 128 ) ( 0 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1840 144 ) ( 1520 1840 145 ) ( 1521 1840 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 0 ) ( 1441 160 0 ) ( 1440 161 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 256 ) ( 1440 161 256 ) ( 1441 160 256 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 2624 144 ) ( 1521 2624 144 ) ( 1520 2624 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 880 160 128 ) ( 880 160 129 ) ( 880 161 128 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 205
+{
+"classname" "spawn_zone"
+"adjacent_zones" "bunker, courtyard"
+"zone_target" "bunk"
+"zone_name" "jugg"
+"door_way_targets" "GardenB, tunnel"
+"_tb_layer" "21"
+// brush 0
+{
+( 0 160 128 ) ( 0 161 128 ) ( 0 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1184 144 ) ( 1520 1184 145 ) ( 1521 1184 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 0 ) ( 1441 160 0 ) ( 1440 161 0 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 256 ) ( 1440 161 256 ) ( 1441 160 256 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1840 144 ) ( 1521 1840 144 ) ( 1520 1840 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 864 160 128 ) ( 864 160 129 ) ( 864 161 128 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 206
+{
+"classname" "spawn_zone"
+"adjacent_zones" "speed, jugg, double"
+"zone_name" "courtyard"
+"zone_target" "garden"
+"door_way_targets" "kitchG, LiveG, GardenB"
+"_tb_layer" "21"
+// brush 0
+{
+( 864 160 128 ) ( 864 161 128 ) ( 864 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1056 144 ) ( 1520 1056 145 ) ( 1521 1056 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 112 ) ( 1441 160 112 ) ( 1440 161 112 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 480 ) ( 1440 161 480 ) ( 1441 160 480 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1760 144 ) ( 1521 1760 144 ) ( 1520 1760 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1392 160 128 ) ( 1392 160 129 ) ( 1392 161 128 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 207
+{
+"classname" "spawn_zone"
+"adjacent_zones" "spawn, courtyard"
+"zone_target" "living"
+"zone_name" "speed"
+"door_way_targets" "LiveG, spawnL"
+"_tb_layer" "21"
+// brush 0
+{
+( 864 160 128 ) ( 864 161 128 ) ( 864 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 160 144 ) ( 1520 160 145 ) ( 1521 160 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 112 ) ( 1441 160 112 ) ( 1440 161 112 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 480 ) ( 1440 161 480 ) ( 1441 160 480 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1056 144 ) ( 1521 1056 144 ) ( 1520 1056 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 128 ) ( 1440 160 129 ) ( 1440 161 128 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 208
+{
+"classname" "spawn_zone"
+"adjacent_zones" "spawn, courtyard"
+"zone_name" "double"
+"zone_target" "kitchen"
+"door_way_targets" "kitchG, spawnK"
+"_tb_layer" "21"
+// brush 0
+{
+( 1392 160 128 ) ( 1392 161 128 ) ( 1392 160 129 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1520 1024 144 ) ( 1520 1024 145 ) ( 1521 1024 144 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1440 160 112 ) ( 1441 160 112 ) ( 1440 161 112 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1440 160 304 ) ( 1440 161 304 ) ( 1441 160 304 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1520 1520 144 ) ( 1521 1520 144 ) ( 1520 1520 145 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1808 160 128 ) ( 1808 160 129 ) ( 1808 161 128 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }
