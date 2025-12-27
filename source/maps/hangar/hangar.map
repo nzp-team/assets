@@ -8355,8 +8355,8 @@
 "box2" "17 0 6"
 "box3" "-18 -31.7 18"
 "cost" "5000"
-"door_model_name" "models/machines/hl_scale/pap/p_flag.mdl"
-"model" "models/machines/hl_scale/pap/p_machine.mdl"
+"door_model_name" "models/machines/hl_scale/packapunch/p_flag.mdl"
+"model" "models/machines/hl_scale/packapunch/p_machine.mdl"
 "oldmodel" "sounds/machines/packapunch/upgrade.wav"
 "oldorigin" "0 0 2"
 "oldz" "30"
@@ -8780,7 +8780,7 @@
 "gamemode_limiter" "0"
 "month_limiter" "10"
 "spawnflags" "0"
-"origin" "-252 744 52"
+"origin" "-36 648 122"
 "model" "models/props/derped/pumpkin_3.mdl"
 "_tb_layer" "2"
 }
@@ -8790,7 +8790,7 @@
 "gamemode_limiter" "0"
 "month_limiter" "10"
 "spawnflags" "0"
-"origin" "-196 768 24"
+"origin" "296 310 24"
 "model" "models/props/derped/pumpkin_2.mdl"
 "_tb_layer" "2"
 }
@@ -8800,9 +8800,8 @@
 "gamemode_limiter" "0"
 "month_limiter" "10"
 "spawnflags" "0"
-"origin" "-268 752 56"
-"model" "models/props/derped/pumpkin_2.mdl"
-"angles" "0 135 0"
+"origin" "328 496 200"
+"model" "models/props/derped/pumpkin_1.mdl"
 "_tb_layer" "2"
 }
 // entity 321
@@ -8811,22 +8810,12 @@
 "gamemode_limiter" "0"
 "month_limiter" "10"
 "spawnflags" "0"
-"origin" "-216 816 80"
-"model" "models/props/derped/pumpkin_1.mdl"
-"_tb_layer" "2"
-}
-// entity 322
-{
-"classname" "misc_model"
-"gamemode_limiter" "0"
-"month_limiter" "10"
-"spawnflags" "0"
-"origin" "-320 680 80"
+"origin" "-32 296 112"
 "model" "models/props/derped/pumpkin_1.mdl"
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 323
+// entity 322
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8836,7 +8825,7 @@
 "model" "models/props/derped/pumpkin_1.mdl"
 "_tb_layer" "2"
 }
-// entity 324
+// entity 323
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8846,7 +8835,7 @@
 "model" "models/props/derped/pumpkin_1.mdl"
 "_tb_layer" "2"
 }
-// entity 325
+// entity 324
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8857,7 +8846,7 @@
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 326
+// entity 325
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8868,7 +8857,7 @@
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 327
+// entity 326
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8879,7 +8868,7 @@
 "angles" "0 -150 0"
 "_tb_layer" "2"
 }
-// entity 328
+// entity 327
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8889,7 +8878,7 @@
 "model" "models/props/derped/pumpkin_3.mdl"
 "_tb_layer" "2"
 }
-// entity 329
+// entity 328
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8900,7 +8889,7 @@
 "angles" "0 90 0"
 "_tb_layer" "2"
 }
-// entity 330
+// entity 329
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8911,7 +8900,7 @@
 "angles" "0 165 0"
 "_tb_layer" "2"
 }
-// entity 331
+// entity 330
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8922,7 +8911,7 @@
 "angles" "0 -45 0"
 "_tb_layer" "2"
 }
-// entity 332
+// entity 331
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8933,7 +8922,7 @@
 "angles" "0 90 0"
 "_tb_layer" "2"
 }
-// entity 333
+// entity 332
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8943,7 +8932,7 @@
 "model" "models/props/derped/pumpkin_3.mdl"
 "_tb_layer" "2"
 }
-// entity 334
+// entity 333
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8954,7 +8943,7 @@
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 335
+// entity 334
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8965,7 +8954,7 @@
 "angles" "0 45 0"
 "_tb_layer" "2"
 }
-// entity 336
+// entity 335
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8976,7 +8965,7 @@
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 337
+// entity 336
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8986,7 +8975,7 @@
 "model" "models/props/derped/pumpkin_3.mdl"
 "_tb_layer" "2"
 }
-// entity 338
+// entity 337
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -8996,7 +8985,7 @@
 "model" "models/props/derped/pumpkin_2.mdl"
 "_tb_layer" "2"
 }
-// entity 339
+// entity 338
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9006,7 +8995,7 @@
 "model" "models/props/derped/pumpkin_1.mdl"
 "_tb_layer" "2"
 }
-// entity 340
+// entity 339
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9017,7 +9006,7 @@
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 341
+// entity 340
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9027,7 +9016,7 @@
 "model" "models/props/derped/pumpkin_3.mdl"
 "_tb_layer" "2"
 }
-// entity 342
+// entity 341
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9038,7 +9027,7 @@
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 343
+// entity 342
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9048,7 +9037,7 @@
 "model" "models/props/derped/pumpkin_3.mdl"
 "_tb_layer" "2"
 }
-// entity 344
+// entity 343
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9059,7 +9048,7 @@
 "angles" "0 135 0"
 "_tb_layer" "2"
 }
-// entity 345
+// entity 344
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9069,7 +9058,7 @@
 "model" "models/props/tree_ch.mdl"
 "_tb_layer" "2"
 }
-// entity 346
+// entity 345
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9079,11 +9068,22 @@
 "model" "models/props/tree_ch.mdl"
 "_tb_layer" "2"
 }
-// entity 347
+// entity 346
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
 "month_limiter" "1"
+"spawnflags" "0"
+"origin" "1132 264 52"
+"model" "models/props/jeep_hl.mdl"
+"angles" "0 -90 0"
+"_tb_layer" "2"
+}
+// entity 347
+{
+"classname" "misc_model"
+"gamemode_limiter" "0"
+"month_limiter" "11"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9094,7 +9094,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "11"
+"month_limiter" "9"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9105,7 +9105,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "9"
+"month_limiter" "10"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9116,7 +9116,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "10"
+"month_limiter" "9"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9127,7 +9127,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "9"
+"month_limiter" "8"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9138,7 +9138,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "8"
+"month_limiter" "7"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9149,7 +9149,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "7"
+"month_limiter" "6"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9160,7 +9160,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "6"
+"month_limiter" "5"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9171,7 +9171,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "5"
+"month_limiter" "4"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9182,7 +9182,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "4"
+"month_limiter" "3"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9193,7 +9193,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "3"
+"month_limiter" "2"
 "spawnflags" "0"
 "origin" "1132 264 52"
 "model" "models/props/jeep_hl.mdl"
@@ -9204,17 +9204,6 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "2"
-"spawnflags" "0"
-"origin" "1132 264 52"
-"model" "models/props/jeep_hl.mdl"
-"angles" "0 -90 0"
-"_tb_layer" "2"
-}
-// entity 359
-{
-"classname" "misc_model"
-"gamemode_limiter" "0"
 "month_limiter" "1"
 "spawnflags" "0"
 "origin" "1168 336 56"
@@ -9222,7 +9211,7 @@
 "angles" "0 -165 0"
 "_tb_layer" "2"
 }
-// entity 360
+// entity 359
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
@@ -9233,11 +9222,22 @@
 "angles" "0 -165 0"
 "_tb_layer" "2"
 }
-// entity 361
+// entity 360
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
 "month_limiter" "9"
+"spawnflags" "0"
+"origin" "1168 336 56"
+"model" "models/props/shelf.mdl"
+"angles" "0 -165 0"
+"_tb_layer" "2"
+}
+// entity 361
+{
+"classname" "misc_model"
+"gamemode_limiter" "0"
+"month_limiter" "10"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9248,7 +9248,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "10"
+"month_limiter" "9"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9259,7 +9259,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "9"
+"month_limiter" "8"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9270,7 +9270,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "8"
+"month_limiter" "7"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9281,7 +9281,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "7"
+"month_limiter" "6"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9292,7 +9292,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "6"
+"month_limiter" "5"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9303,7 +9303,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "5"
+"month_limiter" "4"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9314,7 +9314,7 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "4"
+"month_limiter" "3"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
@@ -9325,65 +9325,10 @@
 {
 "classname" "misc_model"
 "gamemode_limiter" "0"
-"month_limiter" "3"
-"spawnflags" "0"
-"origin" "1168 336 56"
-"model" "models/props/shelf.mdl"
-"angles" "0 -165 0"
-"_tb_layer" "2"
-}
-// entity 370
-{
-"classname" "misc_model"
-"gamemode_limiter" "0"
 "month_limiter" "2"
 "spawnflags" "0"
 "origin" "1168 336 56"
 "model" "models/props/shelf.mdl"
 "angles" "0 -165 0"
-"_tb_layer" "2"
-}
-// entity 371
-{
-"classname" "misc_model"
-"gamemode_limiter" "0"
-"month_limiter" "10"
-"spawnflags" "0"
-"origin" "272 496 228"
-"model" "models/props/derped/pumpkin_2.mdl"
-"angles" "0 0 0"
-"_tb_layer" "2"
-}
-// entity 372
-{
-"classname" "misc_model"
-"gamemode_limiter" "0"
-"month_limiter" "10"
-"spawnflags" "0"
-"origin" "268 700 228"
-"model" "models/props/derped/pumpkin_2.mdl"
-"angles" "0 0 0"
-"_tb_layer" "2"
-}
-// entity 373
-{
-"classname" "misc_model"
-"gamemode_limiter" "0"
-"month_limiter" "10"
-"spawnflags" "0"
-"origin" "280 -344 228"
-"model" "models/props/derped/pumpkin_2.mdl"
-"angles" "0 0 0"
-"_tb_layer" "2"
-}
-// entity 374
-{
-"classname" "misc_model"
-"gamemode_limiter" "0"
-"month_limiter" "10"
-"spawnflags" "0"
-"origin" "276 -140 228"
-"model" "models/props/derped/pumpkin_2.mdl"
-"angles" "0 0 0"
 "_tb_layer" "2"
 }
