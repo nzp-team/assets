@@ -1,0 +1,1 @@
+the source blend for this was lost, but the Gimp 3.0.2-1 save file was recovered, you can use this to simply change the bottom flag layer and make whatever flag you want. then, using any standard quake model tool, to add new skins to the base MDL.
