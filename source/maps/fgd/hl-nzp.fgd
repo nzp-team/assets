@@ -1326,6 +1326,10 @@
 	wait(string) : "Delay before reset" : "1"
 	delay(string) : "Delay before trigger"
 	message(string) : "Message" 
+	spawnflags(flags) =
+	[
+		1 : "Only takes Fire damage" : 0
+	]
 ]
 
 @SolidClass base(Targetname) = func_train : "Moving platform" 
