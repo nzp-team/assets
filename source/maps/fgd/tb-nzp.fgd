@@ -46,6 +46,14 @@
 		"yaw is the rotation around the Z axis, roll is the rotation around the X axis."
 ]
 
+@baseclass base(Target) = Trigger
+[
+	round_delay(integer) : "Rounds before trigger" : 0
+	killtarget(target_source) : "Kill target"
+	delay(integer) : "Delay before trigger" : 0
+	message(string) : "Message"
+]
+
 // info_texlights
 // It defines texture lights.
 // Add any texture name as a key and their brightness as the value.
@@ -307,6 +315,12 @@
 	]
 	currentmag(integer) : "Starting Magazine" : 0
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
+]
+
+@PointClass = info_changesky : "info_changesky (change skybpx)"
+[
+	targetname(target_source) : "Name" 
+	name(string) : "Skybox to change to"
 ]
 
 @PointClass = info_null : "info_null (spotlight target)"
@@ -866,6 +880,7 @@
 		23: "Type 100"
 		28: "MP5K"
 		29: "Springfield"
+		30: "Ray Gun Mark II"
 		27: "Wunderwaffe DG-2"
 		24: "Bowie Knife"
 		25: "Stielhandgranate"
@@ -918,6 +933,7 @@
 		54: "MP5K"
 		58: "Springfield"
 		56: "Wunderwaffe DG-2"
+		60: "Ray Gun Mark II"
 		28: "Mustang & Sally (Colt M1911)"
 		36: "Armageddon (Kar 98k)"
 		38: "Gibs-O-Matic (Thompson)"
@@ -944,6 +960,7 @@
 		32: "MP115 Kollider (MP5K)"
 		59: "Pulverizer (Springfield)"
 		57: "Wunderwaffe DG-3 JZ (Wunderwaffe DG-2)"
+		61: "Porter's Mark II Ray Gun"
 		25: "Bowie Knife"
 		26: "Stielhandgranate"
 		27: "Bouncing Betties"
@@ -953,6 +970,10 @@
 	cost2(integer) : "Ammo Cost" : 0
 	pap_cost(integer) : "Pack-A-Punch Ammo Cost" : 4500
 	target(target_destination) : "Target" 
+	spawnflags(Flags) = 
+	[
+		1 : "Inactive until Triggered" : 0
+	]
 ]
 
 //
@@ -1128,6 +1149,7 @@
 [
 	rendermode(integer) : "rendermode" : 4
 	renderamt(integer) : "renderamt" : 255
+	spawnflags(Flags) = [ 1 : "Start Hidden" : 0 ]
 ]
 
 //@PointClass = func_illusionary2 : "Static model"  
@@ -1310,6 +1332,10 @@
 	wait(string) : "Delay before reset" : "1"
 	delay(string) : "Delay before trigger"
 	message(string) : "Message" 
+	spawnflags(flags) =
+	[
+		1 : "Only takes Fire damage" : 0
+	]
 ]
 
 @SolidClass base(Targetname) = func_train : "Moving platform" 
@@ -1468,6 +1494,10 @@
 
 @SolidClass base(Trigger) = trigger_interact : "Trigger: On Use Button"
 [
+	spawnflags(flags) =
+	[
+		1: "Inactive until Triggered" : 0
+	]
 ]
 
 @SolidClass base(Trigger) = trigger_stuffcmd : "Trigger: Run CMD on Client (NZP)"
@@ -1771,6 +1801,22 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	master(string) : "Master"
 	frags(integer) : "Initial Value" : 0
 	health(integer) : "Limit Value" : 10
+]
+
+@PointClass base(Targetname, Target) = game_screenflash : "Sends screenflash message to server"
+[
+	noise(string) : "Sound to play" : ""
+	weapon(choices) : "Screenflash color" : 0 =
+	[
+		0: "White"
+		1: "Black"
+	]
+	ltime(integer) : "Duration" : 2
+	spawnflags(flags) =
+	[
+		1 : "End current round" : 0
+	]
+	currentammo(integer) "Round delay if End Round spawnflag is set" : 10
 ]
 
 @PointClass base(Targetname, Target) = game_songplay : "Plays a track from tracks/ when triggered."
