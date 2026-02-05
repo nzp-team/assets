@@ -1816,7 +1816,7 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	[
 		1 : "End current round" : 0
 	]
-	currentammo(integer) "Round delay if End Round spawnflag is set" : 10
+	currentammo(integer) : "Round delay if End Round spawnflag is set" : 10
 ]
 
 @PointClass base(Targetname, Target) = game_songplay : "Plays a track from tracks/ when triggered."
