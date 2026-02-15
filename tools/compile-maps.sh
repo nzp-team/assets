@@ -92,6 +92,10 @@ function compile_individual_level()
 
     cd "source/maps/${pretty_name}"
 
+    # Grrr..... Windows....
+    # Swap backslashes in wad key with forward slashes
+    sed -i '/^"wad"/ s|\\|/|g' ${pretty_name}.map
+
     # 1. hlcsg
     command="../../../tools/vhlt/hlcsg ${HLCSG_PARMS} ${hlcsg_args} ${pretty_name}.map"
     echo "[${command}]"

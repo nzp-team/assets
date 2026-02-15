@@ -1,0 +1,17 @@
+name: Verify .MAP files Conform to Standard
+on: [pull_request]
+jobs:
+  PCX-Conformity:
+    name: Verify .MAP files Conform to Standard
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Wait for GitHub to keep up..
+        run: sleep 2s
+        shell: bash
+      - name: Run Script
+        run: |
+          bash testing/map_validator.sh
