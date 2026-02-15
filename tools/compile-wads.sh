@@ -58,11 +58,28 @@ function compile_wads()
         fi
         echo "    + Looks good!"
 
+        # Grrr, Windows...
+        # We need to do some tomfoolery with the textures in order to keep them clone-safe,
+        # water textures (texture names that start with '*') use '$' instead and we need
+        # to copy the directory into /tmp/ (where Windows won't know about it..), rename
+        # all the '$' files to '*', build from that /tmp/ directory, then nuke it.
+        local fixed_wad_path="/tmp/${pretty_name}"
+        cp -r ${wad_path} ${fixed_wad_path}
+
+        for f in "${fixed_wad_path}"/*\$*; do
+            [ -e "$f" ] || continue
+            local new_name="${f//\$/\*}"
+            mv -- "$f" "$new_name"
+        done
+
         echo "  + Using WadMaker to pack into [${pretty_name}.wad].."
-        local command="tools/wadmaker/WadMaker ${wad_path} ${pretty_name}.wad -nologfile"
+        local command="tools/wadmaker/WadMaker ${fixed_wad_path} ${pretty_name}.wad -nologfile"
 
         echo "  + [${command}]"
         $command
+
+        mv /tmp/${pretty_name}.wad "${ASSETS_ROOT}/source/textures/wad/"
+        rm -rf ${fixed_wad_path}
 
         if [[ "$?" -ne "0" ]]; then
             echo "    + WadMaker FAILED!!"
