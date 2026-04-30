@@ -1,0 +1,4 @@
+hlbsp_args=""
+hlcsg_args=""
+hlvis_args="-maxdistance 800"
+hlrad_args=""

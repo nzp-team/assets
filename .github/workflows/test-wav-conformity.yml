@@ -1,0 +1,20 @@
+name: Verify WAV Sounds Conform to Standard
+on: [pull_request]
+jobs:
+  PCX-Conformity:
+    name: Verify WAV Sounds Conform to Standard
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.04
+    steps:
+      - name: Install file
+        run: apt update && apt install file -y
+        shell: bash
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Wait for GitHub to keep up..
+        run: sleep 2s
+        shell: bash
+      - name: Run Script
+        run: |
+          bash testing/wav_validator.sh
