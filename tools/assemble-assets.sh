@@ -15,42 +15,42 @@ cp -r common/* tmp/nzp/
 ## Make PSP 
 cd ${ROOT_DIR}
 cp -r psp/* tmp/psp/
-cp -r tmp/nzp/* tmp/psp/nzportable/nzp/
+cp -rn tmp/nzp/* tmp/psp/nzportable/nzp/
 cd tmp/psp/
 zip -r ../psp-nzp-assets.zip ./*
 
 ## Make Switch
 cd ${ROOT_DIR}
 cp -r nx/* tmp/nx/
-cp -r tmp/nzp/* tmp/nx/nzportable/nzp/
+cp -rn tmp/nzp/* tmp/nx/nzportable/nzp/
 cd tmp/nx/
 zip -r ../nx-nzp-assets.zip ./*
 
 ## Make Vita 
 cd ${ROOT_DIR}
 cp -r vita/* tmp/vita/
-cp -r tmp/nzp/* tmp/vita/data/nzp/nzp/
+cp -rn tmp/nzp/* tmp/vita/data/nzp/nzp/
 cd tmp/vita/
 zip -r ../vita-nzp-assets.zip ./*
 
 ## Make 3DS 
 cd ${ROOT_DIR}
 cp -r ctr/* tmp/ctr/
-cp -r tmp/nzp/* tmp/ctr/nzportable/nzp/
+cp -rn tmp/nzp/* tmp/ctr/nzportable/nzp/
 cd tmp/ctr/
 zip -r ../3ds-nzp-assets.zip ./*
 
 ## Make PC
 cd ${ROOT_DIR}
 cp -r pc/* tmp/pc/
-cp -r tmp/nzp/* tmp/pc/nzp/
+cp -rn tmp/nzp/* tmp/pc/nzp/
 cd tmp/pc/
 zip -r ../pc-nzp-assets.zip ./*
 
 ## Make NSPIRE
 cd ${ROOT_DIR}
 cp -r nspire/* tmp/nspire/
-cp -r tmp/nzp/* tmp/nspire/nzp/
+cp -rn tmp/nzp/* tmp/nspire/nzp/
 cd tmp/nspire/
 
 # naievil -- We don't need any sounds or tracks on NSPIRE as there is no sound processing
