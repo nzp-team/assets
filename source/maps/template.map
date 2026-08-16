@@ -1,11 +1,10 @@
-// Game: Nazi Zombies: Portable
+// Game: Nazi Zombies Portable
 // Format: Valve
 // entity 0
 {
 "mapversion" "220"
 "wad" "../../textures/wad/zhlt.wad;../../textures/wad/Example_02.wad"
 "classname" "worldspawn"
-"_tb_layer_hidden" "1"
 // brush 0
 {
 ( -144 -64 -16 ) ( -144 -63 -16 ) ( -144 -64 -15 ) null [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -285,6 +284,7 @@
 "spawnflags" "0"
 "origin" "124 76 80"
 "angle" "180"
+"targetname" "window_1"
 }
 // entity 8
 {
@@ -389,6 +389,7 @@
 "_tb_name" "Zone Layer"
 "_tb_id" "1"
 "_tb_layer_sort_index" "0"
+"_tb_layer_hidden" "1"
 }
 // entity 16
 {
