@@ -3284,7 +3284,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "1912 -2096 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "180"
 "_tb_layer" "1"
 }
@@ -3292,7 +3292,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "1880 -2104 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "180"
 "_tb_layer" "1"
 }
@@ -3300,14 +3300,14 @@
 {
 "classname" "explosive_barrel"
 "origin" "2224 -2120 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "_tb_layer" "1"
 }
 // entity 88
 {
 "classname" "explosive_barrel"
 "origin" "2192 -2112 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "_tb_layer" "1"
 }
 // entity 89
@@ -5030,7 +5030,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "1944 -3496 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "180"
 "_tb_layer" "1"
 }
@@ -5038,7 +5038,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "1928 -3528 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "180"
 "_tb_layer" "1"
 }
@@ -5046,7 +5046,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "1896 -3512 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "180"
 "_tb_layer" "1"
 }
@@ -5054,7 +5054,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "2149.07 -3600.78 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "240"
 "_tb_layer" "1"
 }
@@ -5062,7 +5062,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "2178.93 -3581.07 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "240"
 "_tb_layer" "1"
 }
@@ -5070,7 +5070,7 @@
 {
 "classname" "explosive_barrel"
 "origin" "2159.22 -3551.22 1040"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "angle" "240"
 "_tb_layer" "1"
 }
@@ -7067,7 +7067,7 @@
 {
 "classname" "place_model"
 "origin" "1984 -2832 824"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "_tb_layer" "5"
 }
@@ -7075,7 +7075,7 @@
 {
 "classname" "place_model"
 "origin" "2000 -2812 824"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "_tb_layer" "5"
 }
@@ -7083,7 +7083,7 @@
 {
 "classname" "place_model"
 "origin" "2016 -2832 824"
-"model" "models/props/barrel_m.mdl"
+"model" "models/props/Barrel_m.mdl"
 "skin" "1"
 "_tb_layer" "5"
 }
