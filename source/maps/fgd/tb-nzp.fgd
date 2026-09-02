@@ -1803,6 +1803,12 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	health(integer) : "Limit Value" : 10
 ]
 
+@PointClass base(Targetname, Target) = game_random : "Fires random entity"
+[
+	name(string) : "Entity targetnames" : ""
+	health(integer) : "Max Number" : 10
+]
+
 @PointClass base(Targetname, Target) = game_screenflash : "Sends screenflash message to server"
 [
 	noise(string) : "Sound to play" : ""
