@@ -1,11 +1,11 @@
-// Game: NZP
+// Game: Nazi Zombies Portable
 // Format: Valve
 // entity 0
 {
 "mapversion" "220"
 "classname" "worldspawn"
 "wad" "../../textures/wad/zhlt.wad;../../textures/wad/Ju[s]tice_null2.wad;../../textures/wad/nzphlwad.wad"
-"_tb_def" "external:W:/trenchbroom/tb-nzp.fgd"
+"_tb_def" "builtin:tb-nzp.fgd"
 // brush 0
 {
 ( -528 -708 16 ) ( -528 -740 144 ) ( -528 -740 16 ) bricks_w_256 [ 0 -1 0 12 ] [ 0 0 -1 0 ] 0 1 1
@@ -2086,19 +2086,12 @@
 }
 // entity 91
 {
-"classname" "perk_pap"
-"origin" "-772 484 48"
-"angle" "0"
-"cost" "1"
-}
-// entity 92
-{
 "classname" "power_switch"
 "origin" "-432 -676 68"
 "model" "models/machines/hl_scale/power_switch.mdl"
 "angle" "180"
 }
-// entity 93
+// entity 92
 {
 "classname" "func_illusionary"
 // brush 0
@@ -2111,25 +2104,25 @@
 ( 320 1136 208 ) ( 320 1136 209 ) ( 320 1137 208 ) NULL [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 94
+// entity 93
 {
 "classname" "light"
 "origin" "88 1151 40"
 "_light" "255 50 50 75"
 }
-// entity 95
+// entity 94
 {
 "classname" "light"
 "origin" "4 988 40"
 "_light" "255 50 50 75"
 }
-// entity 96
+// entity 95
 {
 "classname" "light"
 "origin" "-112 780 40"
 "_light" "255 50 50 75"
 }
-// entity 97
+// entity 96
 {
 "classname" "func_illusionary"
 // brush 0
@@ -2142,7 +2135,7 @@
 ( -104 788 32 ) ( -104 788 33 ) ( -104 789 32 ) p_red [ 0 1 0 12 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 98
+// entity 97
 {
 "classname" "func_illusionary"
 // brush 0
@@ -2155,7 +2148,7 @@
 ( 12 996 32 ) ( 12 996 33 ) ( 12 997 32 ) p_red [ 0 1 0 -4 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 99
+// entity 98
 {
 "classname" "func_illusionary"
 // brush 0
@@ -2168,7 +2161,7 @@
 ( 96 1159 32 ) ( 96 1159 33 ) ( 96 1160 32 ) p_red [ 0 1 0 -7 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 100
+// entity 99
 {
 "classname" "perk_deadshot"
 "origin" "-432 -576 48"
@@ -2177,7 +2170,7 @@
 "cost2" "1"
 "angle" "180"
 }
-// entity 101
+// entity 100
 {
 "classname" "buy_weapon"
 "cost" "1"
@@ -2194,7 +2187,7 @@
 ( -404.25 -279.875 64 ) ( -404.25 -279.875 65 ) ( -404.25 -278.875 64 ) NULL [ 0 1 0 7.875 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 102
+// entity 101
 {
 "classname" "weapon_wall"
 "origin" "-416.25 -295.875 72"
@@ -2202,7 +2195,7 @@
 "targetname" "yeet27"
 "sequence" "29"
 }
-// entity 103
+// entity 102
 {
 "classname" "weapon_wall"
 "origin" "-703.75 -264.125 72"
@@ -2210,7 +2203,7 @@
 "targetname" "yeet28"
 "sequence" "0"
 }
-// entity 104
+// entity 103
 {
 "classname" "buy_weapon"
 "cost" "1"
@@ -2226,4 +2219,46 @@
 ( -699.75 -248.12500000000006 48 ) ( -699.75 -248.12500000000006 49 ) ( -700.75 -248.12500000000006 48 ) NULL [ -1 1.2246467991473532e-16 0 4.25 ] [ 0 0 -1 0 ] 180 1 1
 ( -699.75 -248.12500000000006 48 ) ( -699.75 -249.12500000000006 48 ) ( -699.75 -248.12500000000006 49 ) NULL [ 1.2246467991473532e-16 1 0 8.125 ] [ 0 0 -1 0 ] 180 1 1
 }
+}
+// entity 104
+{
+"classname" "buy_weapon"
+"cost" "1"
+"cost2" "1"
+"weapon" "60"
+"target" "yeet29"
+// brush 0
+{
+( -715.75 -328.12500000000006 64 ) ( -715.75 -328.12500000000006 65 ) ( -715.75 -329.12500000000006 64 ) NULL [ -1.2246467991473532e-16 -1 0 -8.125 ] [ 0 0 -1 0 ] 180 1 1
+( -715.75 -328.12500000000006 64 ) ( -716.75 -328.12500000000006 64 ) ( -715.75 -328.12500000000006 65 ) NULL [ 1 -1.2246467991473532e-16 0 -4.25 ] [ 0 0 -1 0 ] 180 1 1
+( -699.75 -296.12500000000006 48 ) ( -700.75 -296.12500000000006 48 ) ( -699.75 -297.12500000000006 48 ) NULL [ 1 -1.2246467991473532e-16 0 -4.25 ] [ 1.2246467991473532e-16 1 0 8.125 ] 180 1 1
+( -715.75 -328.12500000000006 64 ) ( -715.75 -329.12500000000006 64 ) ( -716.75 -328.12500000000006 64 ) NULL [ -1 1.2246467991473532e-16 0 4.25 ] [ 1.2246467991473532e-16 1 0 8.125 ] 180 1 1
+( -699.75 -296.12500000000006 48 ) ( -699.75 -296.12500000000006 49 ) ( -700.75 -296.12500000000006 48 ) NULL [ -1 1.2246467991473532e-16 0 4.25 ] [ 0 0 -1 0 ] 180 1 1
+( -699.75 -296.12500000000006 48 ) ( -699.75 -297.12500000000006 48 ) ( -699.75 -296.12500000000006 49 ) NULL [ 1.2246467991473532e-16 1 0 8.125 ] [ 0 0 -1 0 ] 180 1 1
+}
+}
+// entity 105
+{
+"classname" "weapon_wall"
+"origin" "-703.75 -312.125 72"
+"angle" "90"
+"targetname" "yeet29"
+"sequence" "30"
+}
+// entity 106
+{
+"classname" "perk_pap"
+"model" "models/machines/hl_scale/pap/p_machine.mdl"
+"skin" "0"
+"oldorigin" "0 0 2"
+"oldz" "30"
+"weapon2model" "models/machines/hl_scale/pap/p_roller.mdl"
+"box1" "7.5 0.1 6.0"
+"door_model_name" "models/machines/hl_scale/pap/p_flag.mdl"
+"box3" "-18 -31.7 18"
+"box2" "17 0 6"
+"cost" "1"
+"oldmodel" "sounds/machines/packapunch/upgrade.wav"
+"spawnflags" "3"
+"origin" "-784 480 48"
 }
