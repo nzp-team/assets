@@ -1,0 +1,337 @@
+{
+    "gameplay": 
+    {
+        "global":
+        {
+            "all_items_cost_multiplier": 1
+        },
+
+        "perksacola": 
+        {
+            "perk_purchase_limit": 8,
+            "perk_quickrevive_health_regeneration_multiplier": 1,
+            "perk_juggernog_player_health": 160,
+            "perk_speedcola_accelerates_barricade_repair": true,
+            "perk_speedcola_reload_speed_multiplier": 2,
+            "perk_doubletap_rate_of_fire_multiplier": 1.298,
+            "perk_doubletap_rechamber_speed_multiplier": 1.5,
+            "perk_staminup_movement_speed_multiplier": 1.07,
+            "perk_staminup_stamina_recharge_multiplier": 2,
+            "perk_deadshot_headshot_damage_multiplier": 1,
+            "perk_deadshot_weapon_spread_reduction_multiplier": 0.65
+        },
+
+        "packapunch":
+        {
+            "packapunch_supports_upgrade_tiers": false,
+            "packapunch_upgrades_instantly": false
+        },
+
+        "powerups":
+        {
+            "max_powerups_per_round": 4,
+            "powerup_spawn_frequency_multiplier": 1,
+
+            "sounds":
+            {
+                "pick_up": "sounds/pu/pickup.wav",
+                "idle": "sounds/pu/powerup.wav",
+                "drop": "sounds/pu/drop.wav"
+            },
+
+            "powerup_max_ammo":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "fills_magazine": false,
+                "toast": "Max Ammo!",
+                "show_toast": true,
+                "model": "models/pu/maxammo!.mdl",
+                "voiceover": "sounds/pu/maxammo.wav"
+            },
+
+            "powerup_instakill":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "duration": 30,
+                "toast": "Insta-Kill!",
+                "show_toast": false,
+                "model": "models/pu/instakill!.mdl",
+                "voiceover": "sounds/pu/insta_kill.wav"
+            },
+
+            "powerup_double_points":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "duration": 30,
+                "score_multiplier": 2,
+                "toast": "Double Points!",
+                "show_toast": false,
+                "model": "models/pu/x2!.mdl",
+                "voiceover": "sounds/pu/double_points.wav"
+            },
+
+            "powerup_carpenter":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "destroyed_barricade_requirement": 5,
+                "score_awarded": 200,
+                "toast": "Carpenter!",
+                "show_toast": false,
+                "model": "models/pu/carpenter!.mdl",
+                "voiceover": "sounds/pu/carpenter.wav"
+            },
+
+            "powerup_nuke":
+            {
+                "enabled": true,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "score_awarded": 400,
+                "toast": "Ka-Boom!",
+                "show_toast": false,
+                "model": "models/pu/nuke!.mdl",
+                "voiceover": "sounds/pu/kaboom.wav",
+                "explosion_sfx": "sounds/pu/nuke.wav"
+            },
+
+            "powerup_free_perk":
+            {
+                "enabled": false,
+                "chance_to_allow_in_rotation": 0.25,
+                "disabled_before_round": 15,
+                "awarded_score_if_no_perk_obtained": 0,
+                "allowed_perksacola":
+                [
+                    "quickrevive",
+                    "juggernog",
+                    "speedcola",
+                    "doubletap",
+                    "phdflopper",
+                    "staminup",
+                    "deadshot",
+                    "mulekick"
+                ],
+                "toast": "Random Perk!",
+                "show_toast": false,
+                "model": "models/pu/perkbottle!.mdl",
+                "voiceover": ""
+            },
+
+            "powerup_bonus_points":
+            {
+                "enabled": false,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "score_awarded": 500,
+                "toast": "Bonus Points!",
+                "show_toast": false,
+                "model": "models/pu/points!.mdl",
+                "voiceover": ""
+            },
+
+            "powerup_weapon_upgrade":
+            {
+                "enabled": false,
+                "chance_to_allow_in_rotation": 1,
+                "disabled_before_round": 0,
+                "awarded_score_if_no_upgrade_received": 0,
+                "toast": "Weapon Upgrade!",
+                "show_toast": false,
+                "model": "models/pu/pack!.mdl",
+                "voiceover": ""
+            }
+        },
+
+        "ai":
+        {
+            "zombie":
+            {
+                "walk_styles":
+                {
+                    "can_walk": true,
+                    "can_jog": true,
+                    "can_sprint": true,
+                    "can_super_sprint": false
+                },
+
+                "sounds": 
+                {
+                    "attack":
+                    [
+                        "sounds/zombie/a0.wav",
+                        "sounds/zombie/a1.wav",
+                        "sounds/zombie/a2.wav",
+                        "sounds/zombie/a3.wav",
+                        "sounds/zombie/a4.wav",
+                        "sounds/zombie/a5.wav",
+                        "sounds/zombie/a6.wav",
+                        "sounds/zombie/a7.wav"
+                    ],
+
+                    "death":
+                    [
+                        "sounds/zombie/d0.wav",
+                        "sounds/zombie/d1.wav",
+                        "sounds/zombie/d2.wav",
+                        "sounds/zombie/d3.wav",
+                        "sounds/zombie/d4.wav",
+                        "sounds/zombie/d5.wav",
+                        "sounds/zombie/d6.wav",
+                        "sounds/zombie/d7.wav"
+                    ],
+
+                    "shout":
+                    [
+                        "sounds/zombie/r0.wav",
+                        "sounds/zombie/r1.wav",
+                        "sounds/zombie/r2.wav",
+                        "sounds/zombie/r3.wav",
+                        "sounds/zombie/r4.wav"
+                    ],
+
+                    "taunt":
+                    [
+                        "sounds/zombie/t0.wav",
+                        "sounds/zombie/t1.wav",
+                        "sounds/zombie/t2.wav",
+                        "sounds/zombie/t3.wav",
+                        "sounds/zombie/t4.wav"
+                    ],
+
+                    "groan":
+                    [
+                        "sounds/zombie/w0.wav",
+                        "sounds/zombie/w1.wav",
+                        "sounds/zombie/w2.wav",
+                        "sounds/zombie/w3.wav",
+                        "sounds/zombie/w4.wav",
+                        "sounds/zombie/w5.wav",
+                        "sounds/zombie/w6.wav",
+                        "sounds/zombie/w7.wav",
+                        "sounds/zombie/w8.wav",
+                        "sounds/zombie/w9.wav"
+                    ]
+                }
+            }
+        },
+
+        "player":
+        {
+            "start_health": 100,
+            "can_earn_points_in_last_stand": false,
+            "can_use_melee": true,
+            "can_use_equipment": true,
+            "can_earn_score_from_sources_other_than_ai": true,
+
+            "health_regeneration":
+            {
+                "regeneration_multiplier": 1,
+                "regeneration_delay_light_damage": 2.4,
+                "regeneration_delay_heavy_damage": 5
+            }
+        },
+
+        "rounds":
+        {
+            "delay_between_rounds": 10,
+            "ai_spawn_delay_reduction_multiplier": 1,
+
+            "sounds":
+            {
+                "game_start": "sounds/rounds/splash.wav",
+                "new_round": "sounds/rounds/nround.wav",
+                "end_round": "sounds/rounds/eround.wav",
+                "new_hound_round": "sounds/rounds/droundstart.wav",
+                "end_hound_round": "sounds/rounds/droundend.wav",
+                "game_over": "sounds/music/end.wav"
+            }
+        }
+    },
+
+    "interface":
+    {
+        "perksacola":
+        {
+            "position_style": "nzp",
+
+            "graphics":
+            {
+                "quickrevive": "gfx/hud/revive",
+                "juggernog": "gfx/hud/jug",
+                "speedcola": "gfx/hud/speed",
+                "doubletap": "gfx/hud/double",
+                "doubletap_2": "gfx/hud/double2",
+                "staminup": "gfx/hud/stamin",
+                "flopper": "gfx/hud/flopper",
+                "deadshot": "gfx/hud/dead",
+                "mulekick": "gfx/hud/mule"
+            }
+        },
+
+        "powerups":
+        {
+            "graphics":
+            {
+                "insta_kill": "gfx/hud/in_kill",
+                "double_points": "gfx/hud/2x"
+            }
+        },
+
+        "rounds":
+        {
+            "use_tally_marks_until_round": 11,
+
+            "graphics":
+            {
+                "tally_marks":
+                [
+                    "gfx/hud/r1",
+                    "gfx/hud/r2",
+                    "gfx/hud/r3",
+                    "gfx/hud/r4",
+                    "gfx/hud/r5"
+                ],
+
+                "numeric":
+                [
+                    "gfx/hud/r_num0",
+                    "gfx/hud/r_num1",
+                    "gfx/hud/r_num2",
+                    "gfx/hud/r_num3",
+                    "gfx/hud/r_num4",
+                    "gfx/hud/r_num5",
+                    "gfx/hud/r_num6",
+                    "gfx/hud/r_num7",
+                    "gfx/hud/r_num8",
+                    "gfx/hud/r_num9"
+                ]
+            }
+        },
+
+        "equipment":
+        {
+            "graphics":
+            {
+                "grenade": "gfx/hud/frag",
+                "bouncing_betty": "gfx/hud/betty"
+            }
+        },
+
+        "score":
+        {
+            "graphics":
+            {
+                "score_background_full": "gfx/hud/moneyback",
+                "score_background_condensed": "gfx/hud/moneyback_condensed"
+            }
+        }
+    }
+}
