@@ -287,6 +287,8 @@
 
         "rounds":
         {
+            "position_style": "bottom_left",
+            "skip_intro": false,
             "use_tally_marks_until_round": 11,
 
             "graphics":
@@ -327,6 +329,8 @@
 
         "score":
         {
+            "position_style": "left",
+
             "graphics":
             {
                 "score_background_full": "gfx/hud/moneyback",
