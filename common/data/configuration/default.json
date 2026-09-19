@@ -153,6 +153,7 @@
         "ai":
         {
             "score_system": "default",
+            "round_health_cap": 0,
 
             "zombie":
             {
