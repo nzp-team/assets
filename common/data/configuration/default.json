@@ -152,6 +152,8 @@
 
         "ai":
         {
+            "score_system": "default",
+
             "zombie":
             {
                 "walk_styles":
