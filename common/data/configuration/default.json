@@ -254,6 +254,7 @@
                 "end_round": "sounds/rounds/eround.wav",
                 "new_hound_round": "sounds/rounds/droundstart.wav",
                 "end_hound_round": "sounds/rounds/droundend.wav",
+                "hound_round_taunts": ["sounds/rounds/fetch.wav"],
                 "game_over": "sounds/music/end.wav"
             }
         }
