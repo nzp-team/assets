@@ -268,15 +268,15 @@
 
             "graphics":
             {
-                "quickrevive": "gfx/hud/revive",
-                "juggernog": "gfx/hud/jug",
-                "speedcola": "gfx/hud/speed",
-                "doubletap": "gfx/hud/double",
-                "doubletap_2": "gfx/hud/double2",
-                "staminup": "gfx/hud/stamin",
-                "flopper": "gfx/hud/flopper",
-                "deadshot": "gfx/hud/dead",
-                "mulekick": "gfx/hud/mule"
+                "quickrevive": "gfx/hud/default/perks/revive",
+                "juggernog": "gfx/hud/default/perks/jug",
+                "speedcola": "gfx/hud/default/perks/speed",
+                "doubletap": "gfx/hud/default/perks/double",
+                "doubletap_2": "gfx/hud/default/perks/double2",
+                "staminup": "gfx/hud/default/perks/stamin",
+                "flopper": "gfx/hud/default/perks/flopper",
+                "deadshot": "gfx/hud/default/perks/dead",
+                "mulekick": "gfx/hud/default/perks/mule"
             }
         },
 
@@ -284,8 +284,8 @@
         {
             "graphics":
             {
-                "insta_kill": "gfx/hud/in_kill",
-                "double_points": "gfx/hud/2x"
+                "insta_kill": "gfx/hud/default/powerups/in_kill",
+                "double_points": "gfx/hud/default/powerups/2x"
             }
         },
 
@@ -300,25 +300,25 @@
             {
                 "tally_marks":
                 [
-                    "gfx/hud/r1",
-                    "gfx/hud/r2",
-                    "gfx/hud/r3",
-                    "gfx/hud/r4",
-                    "gfx/hud/r5"
+                    "gfx/hud/default/rounds/r1",
+                    "gfx/hud/default/rounds/r2",
+                    "gfx/hud/default/rounds/r3",
+                    "gfx/hud/default/rounds/r4",
+                    "gfx/hud/default/rounds/r5"
                 ],
 
                 "numeric":
                 [
-                    "gfx/hud/r_num0",
-                    "gfx/hud/r_num1",
-                    "gfx/hud/r_num2",
-                    "gfx/hud/r_num3",
-                    "gfx/hud/r_num4",
-                    "gfx/hud/r_num5",
-                    "gfx/hud/r_num6",
-                    "gfx/hud/r_num7",
-                    "gfx/hud/r_num8",
-                    "gfx/hud/r_num9"
+                    "gfx/hud/default/rounds/r_num0",
+                    "gfx/hud/default/rounds/r_num1",
+                    "gfx/hud/default/rounds/r_num2",
+                    "gfx/hud/default/rounds/r_num3",
+                    "gfx/hud/default/rounds/r_num4",
+                    "gfx/hud/default/rounds/r_num5",
+                    "gfx/hud/default/rounds/r_num6",
+                    "gfx/hud/default/rounds/r_num7",
+                    "gfx/hud/default/rounds/r_num8",
+                    "gfx/hud/default/rounds/r_num9"
                 ]
             }
         },
@@ -327,8 +327,8 @@
         {
             "graphics":
             {
-                "grenade": "gfx/hud/frag",
-                "bouncing_betty": "gfx/hud/betty"
+                "grenade": "gfx/hud/default/equipment/frag",
+                "bouncing_betty": "gfx/hud/default/equipment/betty"
             }
         },
 
@@ -338,8 +338,8 @@
 
             "graphics":
             {
-                "score_background_full": "gfx/hud/moneyback",
-                "score_background_condensed": "gfx/hud/moneyback_condensed"
+                "score_background_full": "gfx/hud/default/score/moneyback",
+                "score_background_condensed": "gfx/hud/default/score/moneyback_condensed"
             }
         }
     }
