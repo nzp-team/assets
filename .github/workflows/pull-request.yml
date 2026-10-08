@@ -68,11 +68,16 @@ jobs:
         env:
           PR_MERGE_REF: ${{ github.ref }}
           PR_MERGE_SHA: ${{ github.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           git -C /workspace/repos/assets fetch origin "$PR_MERGE_REF"
           git -C /workspace/repos/assets checkout --detach FETCH_HEAD
           test "$(git -C /workspace/repos/assets rev-parse HEAD)" = "$PR_MERGE_SHA"
-          echo "Assets commit: $(git -C /workspace/repos/assets rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          test "$(git -C /workspace/repos/assets rev-parse 'HEAD^2')" = "$PR_HEAD_SHA"
+          {
+            echo "Assets PR head: \`$PR_HEAD_SHA\`"
+            echo "Tested merge commit: \`$PR_MERGE_SHA\`"
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Run
         env:
           ASSETS_TEST: ${{ matrix.test }}
@@ -102,11 +107,16 @@ jobs:
         env:
           PR_MERGE_REF: ${{ github.ref }}
           PR_MERGE_SHA: ${{ github.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           git -C /workspace/repos/assets fetch origin "$PR_MERGE_REF"
           git -C /workspace/repos/assets checkout --detach FETCH_HEAD
           test "$(git -C /workspace/repos/assets rev-parse HEAD)" = "$PR_MERGE_SHA"
-          echo "Assets commit: $(git -C /workspace/repos/assets rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          test "$(git -C /workspace/repos/assets rev-parse 'HEAD^2')" = "$PR_HEAD_SHA"
+          {
+            echo "Assets PR head: \`$PR_HEAD_SHA\`"
+            echo "Tested merge commit: \`$PR_MERGE_SHA\`"
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Build archives
         run: |
           /entrypoint.sh build-map --full
