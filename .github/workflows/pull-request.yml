@@ -1,0 +1,119 @@
+name: Pull Request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  resolve-toolbox:
+    name: Pull Toolbox
+    runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.image.outputs.image }}
+    steps:
+      - name: Resolve Toolbox Image
+        id: image
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+          toolbox_image=$(sed -nE 's/^[[:space:]]*toolbox_image=([^[:space:]]+)[[:space:]]*$/\1/p' <<< "$PR_BODY" | head -n 1)
+          if [ -n "$toolbox_image" ]; then
+            if [[ ! "$toolbox_image" =~ ^ghcr\.io/[A-Za-z0-9-]+/toolbox(:[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}|@sha256:[0-9a-f]{64})$ ]]; then
+              echo "Invalid Toolbox image: $toolbox_image" >&2
+              exit 1
+            fi
+            image="$toolbox_image"
+          else
+            image='ghcr.io/nzp-team/toolbox:main'
+          fi
+          echo "image=$image" >> "$GITHUB_OUTPUT"
+          echo "Toolbox Image: \`$image\`" >> "$GITHUB_STEP_SUMMARY"
+
+  assets-tests:
+    name: ${{ matrix.name }}
+    needs: resolve-toolbox
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ needs.resolve-toolbox.outputs.image }}
+    strategy:
+      matrix:
+        include:
+          - name: Verify .MAP files conform
+            test: map_validator
+          - name: Verify referenced map assets exist
+            test: map_assets_exist
+          - name: Verify WAD textures conform
+            test: wad_texture_conformity
+          - name: Verify MDL models conform
+            test: mdl_validator
+          - name: Verify WAV sounds conform
+            test: wav_validator
+          - name: Verify PCX textures conform
+            test: pcx_validator
+          - name: Verify maps compile
+            test: map-compilation
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Toolbox Fetch
+        env:
+          TOOLBOX_HOST_OS: Linux
+          TOOLBOX_HOST_ARCH: x86_64
+        run: /entrypoint.sh fetch
+      - name: Select assets PR merge commit
+        env:
+          PR_MERGE_REF: ${{ github.ref }}
+          PR_MERGE_SHA: ${{ github.sha }}
+        run: |
+          git -C /workspace/repos/assets fetch origin "$PR_MERGE_REF"
+          git -C /workspace/repos/assets checkout --detach FETCH_HEAD
+          test "$(git -C /workspace/repos/assets rev-parse HEAD)" = "$PR_MERGE_SHA"
+          echo "Assets commit: $(git -C /workspace/repos/assets rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Run
+        env:
+          ASSETS_TEST: ${{ matrix.test }}
+        run: |
+          if [ "$ASSETS_TEST" = 'map-compilation' ]; then
+            /entrypoint.sh build-map
+          else
+            /entrypoint.sh test-assets "$ASSETS_TEST"
+          fi
+
+  assemble-assets:
+    name: Assemble Assets
+    needs: resolve-toolbox
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ needs.resolve-toolbox.outputs.image }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Toolbox Fetch
+        env:
+          TOOLBOX_HOST_OS: Linux
+          TOOLBOX_HOST_ARCH: x86_64
+        run: /entrypoint.sh fetch
+      - name: Select assets PR merge commit
+        env:
+          PR_MERGE_REF: ${{ github.ref }}
+          PR_MERGE_SHA: ${{ github.sha }}
+        run: |
+          git -C /workspace/repos/assets fetch origin "$PR_MERGE_REF"
+          git -C /workspace/repos/assets checkout --detach FETCH_HEAD
+          test "$(git -C /workspace/repos/assets rev-parse HEAD)" = "$PR_MERGE_SHA"
+          echo "Assets commit: $(git -C /workspace/repos/assets rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Build archives
+        run: |
+          /entrypoint.sh build-map --full
+          /entrypoint.sh build-assets
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: assembled-assets-pr
+          path: /workspace/repos/assets/tmp/*.zip
+          if-no-files-found: error
