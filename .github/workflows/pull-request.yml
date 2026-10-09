@@ -41,6 +41,7 @@ jobs:
       - name: Checkout PR merge commit
         uses: actions/checkout@v4
         with:
+          fetch-depth: 2
           persist-credentials: false
       - name: List Maps
         id: maps
