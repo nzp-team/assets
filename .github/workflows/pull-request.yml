@@ -32,6 +32,27 @@ jobs:
           echo "image=$image" >> "$GITHUB_OUTPUT"
           echo "Toolbox Image: \`$image\`" >> "$GITHUB_STEP_SUMMARY"
 
+  discover-maps:
+    name: Discover Maps
+    runs-on: ubuntu-latest
+    outputs:
+      maps: ${{ steps.maps.outputs.maps }}
+    steps:
+      - name: Checkout PR merge commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: List Maps
+        id: maps
+        env:
+          PR_MERGE_SHA: ${{ github.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$PR_MERGE_SHA"
+          test "$(git rev-parse 'HEAD^2')" = "$PR_HEAD_SHA"
+          maps=$(find source/maps -type f -name '*.map' | awk -F/ 'NF == 4 && $4 == $3 ".map" { print $3 }' | jq -Rsc 'split("\n") | map(select(length > 0)) | sort')
+          test "$maps" != '[]' && echo "maps=$maps" >> "$GITHUB_OUTPUT"
+
   assets-tests:
     name: ${{ matrix.name }}
     needs: resolve-toolbox
@@ -53,8 +74,6 @@ jobs:
             test: wav_validator
           - name: Verify PCX textures conform
             test: pcx_validator
-          - name: Verify maps compile
-            test: map-compilation
     defaults:
       run:
         shell: bash
@@ -81,16 +100,57 @@ jobs:
       - name: Run
         env:
           ASSETS_TEST: ${{ matrix.test }}
+        run: /entrypoint.sh test-assets "$ASSETS_TEST"
+
+  map-tests:
+    name: Compile ${{ matrix.map }}
+    needs: [resolve-toolbox, discover-maps]
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ needs.resolve-toolbox.outputs.image }}
+    strategy:
+      fail-fast: false
+      matrix:
+        map: ${{ fromJSON(needs.discover-maps.outputs.maps) }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Toolbox Fetch
+        env:
+          TOOLBOX_HOST_OS: Linux
+          TOOLBOX_HOST_ARCH: x86_64
+        run: /entrypoint.sh fetch
+      - name: Select assets PR merge commit
+        env:
+          PR_MERGE_REF: ${{ github.ref }}
+          PR_MERGE_SHA: ${{ github.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          if [ "$ASSETS_TEST" = 'map-compilation' ]; then
-            /entrypoint.sh build-map
-          else
-            /entrypoint.sh test-assets "$ASSETS_TEST"
-          fi
+          git -C /workspace/repos/assets fetch origin "$PR_MERGE_REF"
+          git -C /workspace/repos/assets checkout --detach FETCH_HEAD
+          test "$(git -C /workspace/repos/assets rev-parse HEAD)" = "$PR_MERGE_SHA"
+          test "$(git -C /workspace/repos/assets rev-parse 'HEAD^2')" = "$PR_HEAD_SHA"
+          {
+            echo "Assets PR head: \`$PR_HEAD_SHA\`"
+            echo "Tested merge commit: \`$PR_MERGE_SHA\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Compile Map
+        env:
+          MAP: ${{ matrix.map }}
+        run: /entrypoint.sh build-map --map "$MAP" --full
+      - name: Upload compiled map
+        uses: actions/upload-artifact@v4
+        with:
+          name: map-${{ matrix.map }}
+          path: |
+            /workspace/repos/assets/common/maps/${{ matrix.map }}.bsp
+            /workspace/repos/assets/common/maps/${{ matrix.map }}.nsz
+          if-no-files-found: error
 
   assemble-assets:
     name: Assemble Assets
-    needs: resolve-toolbox
+    needs: [resolve-toolbox, discover-maps, map-tests]
     runs-on: ubuntu-latest
     container:
       image: ${{ needs.resolve-toolbox.outputs.image }}
@@ -117,9 +177,22 @@ jobs:
             echo "Assets PR head: \`$PR_HEAD_SHA\`"
             echo "Tested merge commit: \`$PR_MERGE_SHA\`"
           } >> "$GITHUB_STEP_SUMMARY"
+      - name: Download compiled maps
+        uses: actions/download-artifact@v4
+        with:
+          pattern: map-*
+          path: /workspace/repos/assets/common/maps
+          merge-multiple: true
+      - name: Verify compiled maps
+        env:
+          MAPS: ${{ needs.discover-maps.outputs.maps }}
+        run: |
+          jq -r '.[]' <<< "$MAPS" | while IFS= read -r map; do
+            test -s "/workspace/repos/assets/common/maps/$map.bsp"
+          done
       - name: Build archives
         run: |
-          /entrypoint.sh build-map --full
+          /entrypoint.sh build-wads
           /entrypoint.sh build-assets
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
