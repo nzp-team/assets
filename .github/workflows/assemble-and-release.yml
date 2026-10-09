@@ -1,44 +1,113 @@
 name: Asset Assembly
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
 jobs:
-  Build:
+  discover-maps:
+    name: Discover Maps
+    runs-on: ubuntu-latest
+    outputs:
+      maps: ${{ steps.maps.outputs.maps }}
+    steps:
+      - name: Checkout Commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: List Maps
+        id: maps
+        run: |
+          maps=$(find source/maps -type f -name '*.map' | awk -F/ 'NF == 4 && $4 == $3 ".map" { print $3 }' | jq -Rsc 'split("\n") | map(select(length > 0)) | sort')
+          test "$maps" != '[]' && echo "maps=$maps" >> "$GITHUB_OUTPUT"
+
+  map-build:
+    name: Compile ${{ matrix.map }}
+    needs: discover-maps
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:24.04
-    steps:
-      - name: Install dependencies
-        run: |
-          apt update && apt install git wget zip unzip python3 python3-pip libicu-dev -y
+      image: ghcr.io/nzp-team/toolbox:main
+    strategy:
+      fail-fast: false
+      matrix:
+        map: ${{ fromJSON(needs.discover-maps.outputs.maps) }}
+    defaults:
+      run:
         shell: bash
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Set up spawn-zone-tool
-        working-directory: /
+    steps:
+      - name: Toolbox Fetch
+        env:
+          TOOLBOX_HOST_OS: Linux
+          TOOLBOX_HOST_ARCH: x86_64
+        run: /entrypoint.sh fetch
+      - name: Select assets push commit
+        env:
+          ASSETS_SHA: ${{ github.sha }}
         run: |
-          git clone --recursive https://github.com/nzp-team/spawn-zone-tool.git
-          python3 -m pip install -r spawn-zone-tool/requirements.txt --break-system-packages
-      - name: Compile WADs
-        working-directory: ./
+          git -C /workspace/repos/assets fetch origin main
+          git -C /workspace/repos/assets checkout --detach "$ASSETS_SHA"
+          echo "Assets commit: $(git -C /workspace/repos/assets rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Compile map
+        env:
+          MAP: ${{ matrix.map }}
+        run: /entrypoint.sh build-map --map "$MAP" --full
+      - name: Upload compiled map
+        uses: actions/upload-artifact@v4
+        with:
+          name: map-${{ matrix.map }}
+          path: |
+            /workspace/repos/assets/common/maps/${{ matrix.map }}.bsp
+            /workspace/repos/assets/common/maps/${{ matrix.map }}.nsz
+          if-no-files-found: error
+
+  Build:
+    needs: [discover-maps, map-build]
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/nzp-team/toolbox:main
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Toolbox Fetch
+        env:
+          TOOLBOX_HOST_OS: Linux
+          TOOLBOX_HOST_ARCH: x86_64
+        run: /entrypoint.sh fetch
+      - name: Select assets push commit
+        env:
+          ASSETS_SHA: ${{ github.sha }}
         run: |
-          bash tools/compile-wads.sh
-      - name: Compile BSPs
-        working-directory: ./
+          git -C /workspace/repos/assets fetch origin main
+          git -C /workspace/repos/assets checkout --detach "$ASSETS_SHA"
+          echo "Assets commit: $(git -C /workspace/repos/assets rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+      - name: Download compiled maps
+        uses: actions/download-artifact@v4
+        with:
+          pattern: map-*
+          path: /workspace/repos/assets/common/maps
+          merge-multiple: true
+      - name: Verify compiled maps
+        env:
+          MAPS: ${{ needs.discover-maps.outputs.maps }}
         run: |
-          bash tools/compile-maps.sh --full --zone-tool-path /spawn-zone-tool
-      - name: Assemble Archives
-        working-directory: ./
+          jq -r '.[]' <<< "$MAPS" | while IFS= read -r map; do
+            test -s "/workspace/repos/assets/common/maps/$map.bsp"
+          done
+      - name: Build archives
         run: |
-          cd tools/
-          bash assemble-assets.sh
+          /entrypoint.sh build-wads
+          /entrypoint.sh build-assets
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: assembled-assets
-          path: ./tmp/*.zip
+          path: /workspace/repos/assets/tmp/*.zip
+          if-no-files-found: error
   Release:
     needs: [Build]
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container:
       image: ubuntu:24.04
     steps:
