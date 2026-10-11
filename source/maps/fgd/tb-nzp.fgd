@@ -1803,6 +1803,26 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	health(integer) : "Limit Value" : 10
 ]
 
+@PointClass base(Targetname) = spawn_pu : "Spawns a Power-Up each time it is triggered"
+[
+	spawn_id(choices) : "Power-Up" : 0 =
+	[
+		-1: "Random"
+		0: "Nuke"
+		1: "Insta-Kill"
+		2: "Double Points"
+		3: "Carpenter"
+		4: "Max Ammo"
+		5: "Free Perk"
+		6: "Weapon Upgrade"
+		7: "Bonus Points"
+	]
+	spawnflags(flags) =
+	[
+		1: "Spawn on Player" : 0
+	]
+]
+
 @PointClass base(Targetname, Target) = game_random : "Fires random entity"
 [
 	name(string) : "Entity targetnames" : ""
