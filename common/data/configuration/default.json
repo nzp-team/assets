@@ -157,6 +157,8 @@
 
             "zombie":
             {
+                "despawn_distance": 0,
+                "despawn_height": 0,
                 "walk_styles":
                 {
                     "can_walk": true,
