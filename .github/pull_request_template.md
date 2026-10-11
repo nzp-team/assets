@@ -6,6 +6,9 @@
 * `CFG`: Configuration files
 
 Ideally you should also use this standard for your commit names too. They'll likely be squashed on merge if they do not conform.
+
+# Swap with your own for validating changes that require toolbox updates.
+#toolbox_image=ghcr.io/nzp-team/toolbox:main
 -->
 
 ### Description of Changes
