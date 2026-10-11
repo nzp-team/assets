@@ -1809,6 +1809,31 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	health(integer) : "Max Number" : 10
 ]
 
+@PointClass base(Targetname, Target) = game_perk : "Gives selected Perks when triggered"
+[
+	mode(choices) : "Perk Selection Mode" : 0 =
+	[
+		0: "One Random Perk"
+		1: "All Selected Perks"
+	]
+	player_mode(choices) : "Client Selection Mode" : 0 =
+	[
+		0: "Activating Client"
+		1: "All Clients"
+	]
+	spawnflags(flags) =
+	[
+		1 : "Enable Jugger-Nog" : 1
+		2 : "Enable Double Tap" : 1
+		4 : "Enable Speed Cola" : 1
+		8 : "Enable Quick Revive" : 1
+		16: "Enable PhD Flopper" : 1
+		32: "Enable Stamin-Up" : 1
+		64: "Enable Deadshot Daiquiri" : 1
+		128: "Enable Mule Kick" : 1
+	]
+]
+
 @PointClass base(Targetname, Target) = game_screenflash : "Sends screenflash message to server"
 [
 	noise(string) : "Sound to play" : ""
