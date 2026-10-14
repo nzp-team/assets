@@ -143,7 +143,7 @@ function validate_mdl_data()
     local mdl_file="${1}"
     local should_fail="0"
 
-    local file_size=$(stat -c %s "${mdl_file}")
+    local file_size=$(wc -c < "${mdl_file}")
 
     local num_frames=$(read_int_in_file_at_ofs "${mdl_file}" "${MDL_NUMFRAMES_OFS}")
     local num_verts=$(read_int_in_file_at_ofs "${mdl_file}" "${MDL_NUMVERTS_OFS}")
@@ -151,59 +151,105 @@ function validate_mdl_data()
     local num_skins=$(read_int_in_file_at_ofs "${mdl_file}" 48)
     local skin_width=$(read_int_in_file_at_ofs "${mdl_file}" "${MDL_SKINWIDTH_OFS}")
     local skin_height=$(read_int_in_file_at_ofs "${mdl_file}" "${MDL_SKINHEIGHT_OFS}")
-    
-    local tex_coord_size=$((num_verts * 4))
-    local triangle_size=$((num_tris * 8))
 
-    local skin_data_bytes=$((num_skins * skin_width * skin_height))
-
-    local frame_header_size=$((4 + 12 + 12 + 16))
-    local frame_size=$((frame_header_size + num_verts * 4))
-    local minimum_file_size=$((MDL_HEADER_LEN + skin_data_bytes + tex_coord_size + triangle_size + frame_size * num_frames))
-
-    local offset="0"
+    local skin_size=$((skin_width * skin_height))
+    local offset="${MDL_HEADER_LEN}"
     local i="0"
+    local j="0"
     local idx="0"
-    local s="0"
-    local t="0"
+    local group="0"
+    local group_items="0"
+    local record_size="0"
 
-    # We have a lot of broken UVs that don't necessarily indiciate
-    # a problem, so disabling this..
+    # Skins are prefixed by a group flag. Grouped skins additionally contain
+    # a count, one interval per image, and that many skin images.
+    for ((i=0; i<num_skins; i++)); do
+        if ((offset + 4 > file_size)); then
+            echo "  - ERROR: Skin [${i}] header extends beyond end of file!"
+            return 1
+        fi
+        group=$(read_int_in_file_at_ofs "${mdl_file}" "${offset}")
+        offset=$((offset + 4))
 
-    # UVs
-    # for ((i=0; i<num_verts; i++)); do
-    #     offset=$((MDL_HEADER_LEN + i * 4))
-    #     s=$(read_byte_in_file_at_ofs "${mdl_file}" $((offset + 1)))
-    #     t=$(read_byte_in_file_at_ofs "${mdl_file}" $((offset + 2)))
+        if [[ "${group}" -eq 0 ]]; then
+            record_size="${skin_size}"
+        else
+            if ((offset + 4 > file_size)); then
+                echo "  - ERROR: Skin group [${i}] header extends beyond end of file!"
+                return 1
+            fi
+            group_items=$(read_int_in_file_at_ofs "${mdl_file}" "${offset}")
+            if [[ "${group_items}" -le 0 ]]; then
+                echo "  - ERROR: Skin group [${i}] has invalid image count [${group_items}]!"
+                return 1
+            fi
+            offset=$((offset + 4))
+            record_size=$((group_items * 4 + group_items * skin_size))
+        fi
 
-    #     if [[ "$s" -ge "$skin_width" || "$t" -ge "$skin_height" ]]; then
-    #         echo "  - ERROR: UV $i out of bounds: (s=$s t=$t)"
-    #         should_fail="1"
-    #     fi
-    # done
+        if ((offset + record_size > file_size)); then
+            echo "  - ERROR: Skin data [${i}] extends beyond end of file!"
+            return 1
+        fi
+        offset=$((offset + record_size))
+    done
 
-    # Vertices
+    # stvert_t contains three 32-bit integers: onseam, s, and t.
+    record_size=$((num_verts * 12))
+    if ((offset + record_size > file_size)); then
+        echo "  - ERROR: Texture-coordinate data extends beyond end of file!"
+        return 1
+    fi
+    offset=$((offset + record_size))
+
+    # dtriangle_t contains facesfront followed by three 32-bit vertex indices.
     for ((i=0; i<num_tris; i++)); do
-        offset=$((MDL_HEADER_LEN + tex_coord_size + i * 8 + 2))
-        for j in 0 2 4; do
-            idx=$(read_short_in_file_at_ofs $((offset + j)))
+        if ((offset + 16 > file_size)); then
+            echo "  - ERROR: Triangle data [${i}] extends beyond end of file!"
+            return 1
+        fi
+        for j in 4 8 12; do
+            idx=$(read_int_in_file_at_ofs "${mdl_file}" $((offset + j)))
             if [[ "${idx}" -ge "${num_verts}" ]]; then 
                 echo "  - ERROR: Triangle [${i}] has invalid vertex index [${idx}]!"
                 should_fail="1"
             fi
         done
+        offset=$((offset + 16))
     done
 
-    # Don't do size check for AI, since the names cause some issues
-    if [[ "${mdl_file}" == *"/ai/"* ]]; then
-        return "${should_fail}"
-    fi
+    # Frames use the same group convention. A simple frame consists of two
+    # four-byte trivertx_t bounds, a 16-byte name, and num_verts vertices.
+    for ((i=0; i<num_frames; i++)); do
+        if ((offset + 4 > file_size)); then
+            echo "  - ERROR: Frame [${i}] header extends beyond end of file!"
+            return 1
+        fi
+        group=$(read_int_in_file_at_ofs "${mdl_file}" "${offset}")
+        offset=$((offset + 4))
 
-    # Size check
-    if [[ "${file_size}" -lt "${minimum_file_size}" ]]; then
-        echo "  - ERROR: Not enough vertex data (corrupt .MDL?) [${actual_data_bytes}] < [${expected_data_bytes}]!"
-        should_fail="1"
-    fi
+        if [[ "${group}" -eq 0 ]]; then
+            record_size=$((24 + num_verts * 4))
+        else
+            if ((offset + 12 > file_size)); then
+                echo "  - ERROR: Frame group [${i}] header extends beyond end of file!"
+                return 1
+            fi
+            group_items=$(read_int_in_file_at_ofs "${mdl_file}" "${offset}")
+            if [[ "${group_items}" -le 0 ]]; then
+                echo "  - ERROR: Frame group [${i}] has invalid frame count [${group_items}]!"
+                return 1
+            fi
+            offset=$((offset + 12)) # count plus group bounding box
+            record_size=$((group_items * 4 + group_items * (24 + num_verts * 4)))
+        fi
+
+        if ((offset + record_size > file_size)); then
+            echo "  - ERROR: Frame data [${i}] extends beyond end of file [$((offset + record_size)) > ${file_size}]!"
+            return 1
+        fi
+        offset=$((offset + record_size))
+    done
 
     return "${should_fail}"
 }
