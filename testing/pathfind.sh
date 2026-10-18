@@ -41,13 +41,20 @@ while [[ "$#" -gt 0 ]]; do
             ;;
         --direct) direct_walk="direct"; shift ;;
         --edges) direct_walk="edges"; shift ;;
+        --all-pairs) direct_walk="path"; shift ;;
         --help|-h)
-            echo "Usage: pathfind.sh [--binary path --game path] [--map name] [--output path] [--timeout seconds] [--source index --destination index [--direct]] [--edges]"
+            echo "Usage: pathfind.sh [--binary path --game path] [--map name] [--output path] [--timeout seconds] [--source index --destination index [--direct]] [--edges|--all-pairs]"
             exit 0
             ;;
         *) echo "Unknown argument: $1" >&2; exit 2 ;;
     esac
 done
+
+if [[ -z "$direct_walk" && -z "$source_node" && -z "$destination_node" ]]; then
+    direct_walk="edges"
+elif [[ "$direct_walk" == "path" ]]; then
+    direct_walk=""
+fi
 
 if [[ "$direct_walk" == "direct" && ( -z "$source_node" || -z "$destination_node" ) ]]; then
     echo "--direct requires --source and --destination." >&2
@@ -84,13 +91,9 @@ function prepare_game()
     fi
 
     echo '[INFO]: Preparing checked-out assets for pathfind validation...'
-    rm -rf "$assets_root/tmp/nzp" "$assets_root/tmp/pc"
-    /entrypoint.sh build-assets
     mkdir -p "$game/nzp"
-
-    if [[ "$game" != /workspace/game ]]; then
-        cp -a "$assets_root/tmp/pc/." "$game/"
-    fi
+    cp -a "$assets_root/common/." "$game/nzp/"
+    cp -a "$assets_root/pc/." "$game/"
 
     echo '[INFO]: Building Vril for pathfind validation..'
     /entrypoint.sh build-vril --target linux-x86_64 --clean
