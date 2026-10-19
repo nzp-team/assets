@@ -574,21 +574,6 @@ origin = '581 -95 192'
 id = 39
 special = 
 target = 38
-target2 = 78
-target3 = 
-target4 = 
-target5 = 
-target6 = 
-target7 = 
-target8 = 
-}
-
-Waypoint
-{
-origin = '703 -117 192'
-id = 78
-special = 
-target = 39
 target2 = 
 target3 = 
 target4 = 
