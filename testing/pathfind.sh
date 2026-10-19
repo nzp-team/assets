@@ -114,8 +114,10 @@ function main()
     local status
     local failed=0
     local config
+    local waypoint_directory="$game/nzp/maps"
 
     if [[ -z "$binary" ]]; then
+        waypoint_directory="$assets_root/common/maps"
         prepare_game
     fi
 
@@ -141,6 +143,11 @@ function main()
 
     for map in "${maps[@]}"; do
         rm -f "$game/nzp/pathfind-report.json" "$output/$map.json"
+
+        if [[ ! -f "$waypoint_directory/$map.way" ]]; then
+            echo "[SKIP]: $map has no .way file."
+            continue
+        fi
 
         {
             printf 'sv_cheats 1\npathfind_test_exit 1\nmap %s\n' "$map"
