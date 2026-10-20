@@ -54,17 +54,17 @@
 		11: "November"
 		12: "December"
 	]
-	gamemode_mask(flags) : "Allowed Game Modes (overrides legacy selector when nonzero)" =
-	[
-		1: "Classic" : 0
-		4: "Gun Game" : 0
-		8: "Hardcore" : 0
-		16: "Wild West" : 0
-		32: "Sticks & Stones" : 0
-		64: "FEVER" : 0
-	]
-	month_mask(flags) : "Allowed Months (overrides legacy selector when nonzero)" =
-	[
+    gamemode_mask(flags) =
+    [
+        1: "Classic" : 0
+        4: "Gun Game" : 0
+        8: "Hardcore" : 0
+        16: "Wild West" : 0
+        32: "Sticks & Stones" : 0
+        64: "FEVER" : 0
+    ]
+    month_mask(flags) =
+    [
 		1: "January" : 0
 		2: "February" : 0
 		4: "March" : 0
