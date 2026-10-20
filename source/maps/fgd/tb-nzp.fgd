@@ -27,6 +27,59 @@
 // base marker definitions
 //
 
+@BaseClass = SpawnLimits
+[
+	gamemode_limiter(choices) : "Only Appear on specified Game Mode" : 0 =
+	[
+		0: "All Modes"
+		2: "Gun Game"
+		3: "Hardcore"
+		4: "Wild West"
+		5: "Sticks & Stones"
+		6: "FEVER"
+	]
+	month_limiter(choices) : "Only Appear on specified Month of the Year" : 0 =
+	[
+		0: "All Year"
+		1: "January"
+		2: "February"
+		3: "March"
+		4: "April"
+		5: "May"
+		6: "June"
+		7: "July"
+		8: "August"
+		9: "September"
+		10: "October"
+		11: "November"
+		12: "December"
+	]
+	gamemode_mask(flags) : "Allowed Game Modes (overrides legacy selector when nonzero)" =
+	[
+		1: "Classic" : 0
+		4: "Gun Game" : 0
+		8: "Hardcore" : 0
+		16: "Wild West" : 0
+		32: "Sticks & Stones" : 0
+		64: "FEVER" : 0
+	]
+	month_mask(flags) : "Allowed Months (overrides legacy selector when nonzero)" =
+	[
+		1: "January" : 0
+		2: "February" : 0
+		4: "March" : 0
+		8: "April" : 0
+		16: "May" : 0
+		32: "June" : 0
+		64: "July" : 0
+		128: "August" : 0
+		256: "September" : 0
+		512: "October" : 0
+		1024: "November" : 0
+		2048: "December" : 0
+	]
+]
+
 @baseclass = Targetname [ targetname(target_source) : "Name" ]
 @baseclass = Target [ 
 	target(target_destination) : "Target" 
@@ -69,7 +122,7 @@
 @baseclass base() size(-16 -16 -32, 16 16 40)
 	color(0 255 0) = PlayerClass []
 
-@PointClass base(PlayerClass, Target) color(255 255 255) model("models/player.mdl") = info_player_1_spawn : "Player 1 Spawn Point" [
+@PointClass base(SpawnLimits, PlayerClass, Target) color(255 255 255) model("models/player.mdl") = info_player_1_spawn : "Player 1 Spawn Point" [
 	name(string) : "Character Name"
 	weapon(choices) : "Weapon" : 0 = 
 	[
@@ -131,7 +184,7 @@
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
 ]
 
-@PointClass base(PlayerClass, Target) color(2 118 181) model("models/player.mdl") = info_player_2_spawn : "Player 2 Spawn Point" [
+@PointClass base(SpawnLimits, PlayerClass, Target) color(2 118 181) model("models/player.mdl") = info_player_2_spawn : "Player 2 Spawn Point" [
 	name(string) : "Character Name"
 	weapon(choices) : "Weapon" : 0 = 
 	[
@@ -193,7 +246,7 @@
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
 ]
 
-@PointClass base(PlayerClass, Target) color(235 189 0) model("models/player.mdl") = info_player_3_spawn : "Player 3 Spawn Point" [
+@PointClass base(SpawnLimits, PlayerClass, Target) color(235 189 0) model("models/player.mdl") = info_player_3_spawn : "Player 3 Spawn Point" [
 	name(string) : "Character Name"
 	weapon(choices) : "Weapon" : 0 = 
 	[
@@ -255,7 +308,7 @@
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
 ]
 
-@PointClass base(PlayerClass, Target) color(0 230 34) model("models/player.mdl") = info_player_4_spawn : "Player 4 Spawn Point" [
+@PointClass base(SpawnLimits, PlayerClass, Target) color(0 230 34) model("models/player.mdl") = info_player_4_spawn : "Player 4 Spawn Point" [
 	name(string) : "Character Name"
 	weapon(choices) : "Weapon" : 0 = 
 	[
@@ -317,18 +370,18 @@
 	currentammo(integer) : "Starting Reserve Ammunition" : 0
 ]
 
-@PointClass = info_changesky : "info_changesky (change skybpx)"
+@PointClass base(SpawnLimits) = info_changesky : "info_changesky (change skybpx)"
 [
 	targetname(target_source) : "Name" 
 	name(string) : "Skybox to change to"
 ]
 
-@PointClass = info_null : "info_null (spotlight target)"
+@PointClass base(SpawnLimits) = info_null : "info_null (spotlight target)"
 [
 	targetname(target_source) : "Name" 
 ]
 
-@PointClass base(Target, Targetname) = info_notnull : "info_notnull (spotlight target)" // I love you
+@PointClass base(SpawnLimits, Target, Targetname) = info_notnull : "info_notnull (spotlight target)" // I love you
 [
 	use(string) : "self.use"
 	think(string) : "self.think"
@@ -336,12 +389,12 @@
 	noise(string) : "noise"
 	wait(integer) : "wait"
 ]
-@PointClass base() = info_intermission : "Intermission camera"
+@PointClass base(SpawnLimits) = info_intermission : "Intermission camera"
 [
 	mangle(string) : "Mangle (Pitch Yaw Roll)"
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Angles) color(107 29 20) model("models/props/teleporter.mdl") =  func_teleporter_entrance : "Teleporter Entrance" 
+@PointClass size(-16 -16 -32, 16 16 56) base(SpawnLimits, Item, Angles) color(107 29 20) model("models/props/teleporter.mdl") =  func_teleporter_entrance : "Teleporter Entrance"
 [
 	target(target_destination) : "Destination"
 	cost(integer) : "Cost"
@@ -355,22 +408,22 @@
 	tpTimer(integer) : "[Timed] Time before return"
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Angles) color(107 29 20) model("models/props/mainframe_pad.mdl") = func_teleporter_destination : "Teleporter Destination" 
+@PointClass size(-16 -16 -32, 16 16 56) base(SpawnLimits, Item, Angles) color(107 29 20) model("models/props/mainframe_pad.mdl") = func_teleporter_destination : "Teleporter Destination"
 [
 	targetname(target_source) : "Name" 
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Angles) color(171 73 252) model("models/props/mainframe_pad.mdl") = func_teleporter_timed : "Teleporter Timed Destination" 
+@PointClass size(-16 -16 -32, 16 16 56) base(SpawnLimits, Item, Angles) color(171 73 252) model("models/props/mainframe_pad.mdl") = func_teleporter_timed : "Teleporter Timed Destination"
 [
 	targetname(target_source) : "Name" 
 ]
 
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Angles) color(62 0 132) model("models/props/mainframe_pad.mdl") = func_teleporter_pad : "Teleporter Pad" 
+@PointClass size(-16 -16 -32, 16 16 56) base(SpawnLimits, Item, Angles) color(62 0 132) model("models/props/mainframe_pad.mdl") = func_teleporter_pad : "Teleporter Pad"
 [
 	targetname(target_source) : "Name" 
 ]
 
-@PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = func_ending : "Buyable Ending" 
+@PointClass base(SpawnLimits) color(114 224 172) model({"path" : model, "skin" : skin}) = func_ending : "Buyable Ending"
 [
 	model(model) : "Model" : "models/props/"
 	skin(integer) : "Skin" : 0
@@ -385,7 +438,7 @@
 	message(string) : "Message"
 ]
 
-@PointClass size(-9 -9 -4, 9 9 4) base(Item, Angles) color(35 67 36) model({{ model != Null -> model, {"path":"models/props/radio.mdl"} }}) =  item_radio : "Radio" 
+@PointClass size(-9 -9 -4, 9 9 4) base(SpawnLimits, Item, Angles) color(35 67 36) model({{ model != Null -> model, {"path":"models/props/radio.mdl"} }}) =  item_radio : "Radio"
 [
 	model(string) : "Model" : "models/props/radio.mdl"
 	mins(vector) : "Bounding Box Mins" : "-8 -8 -4"
@@ -398,10 +451,10 @@
 	]
 ]
 
-@PointClass size(-8 -8 -8, 8 8 8) base(Item)  color(141 85 29) model("models/props/teddy.mdl") =  teddy_spawn : "Teddy spawn location" []
+@PointClass size(-8 -8 -8, 8 8 8) base(SpawnLimits, Item)  color(141 85 29) model("models/props/teddy.mdl") =  teddy_spawn : "Teddy spawn location" []
 
 
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) base(Angles) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_switch.mdl"} }})  =  zapper_switch : "Electro-Shock Activation Switch"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) base(SpawnLimits, Angles) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_switch.mdl"} }})  =  zapper_switch : "Electro-Shock Activation Switch"
 [
 	model(string) : "Model" : "models/machines/hl_scale/zapper/z_switch.mdl"
 	skin(integer) : "Skin" : 0
@@ -419,7 +472,7 @@
 		1 : "Requires Power" : 0
 	]
 ]
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) base(Angles) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_zap.mdl"} }})  =  zapper_node : "Electro-Shock Node"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) base(SpawnLimits, Angles) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_zap.mdl"} }})  =  zapper_node : "Electro-Shock Node"
 [
 	model(string) : "Model" : "models/machines/hl_scale/zapper/z_zap.mdl"
 	skin(integer) : "Skin" : 0
@@ -427,13 +480,13 @@
 	targetname(target_source) : "Name"
 	target(target_destination) : "Target" 
 ]
-@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) base(Angles) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_light.mdl"} }})  =  zapper_light : "Electro-Shock Node"
+@PointClass size(-12 -12 -8, 12 12 8) color(35 67 36) base(SpawnLimits, Angles) model({{ model != Null -> model, {"path":"models/machines/hl_scale/zapper/z_light.mdl"} }})  =  zapper_light : "Electro-Shock Node"
 [
 	model(string) : "Model" : "models/machines/hl_scale/zapper/z_light.mdl"
 	skin(integer) : "Skin" : 0
 	zappername(string) : "Zapper Name"
 ]
-@SolidClass = trigger_electro : "Zapper trigger field"
+@SolidClass base(SpawnLimits) = trigger_electro : "Zapper trigger field"
 [
 	zappername(string) : "Zapper Name"
 ]
@@ -442,7 +495,7 @@
 //NZP Misc
 //
 
-@PointClass color(114 224 172) model({"path" : model, "skin" : skin}) = trigger_song : "Song trigger" 
+@PointClass base(SpawnLimits) color(114 224 172) model({"path" : model, "skin" : skin}) = trigger_song : "Song trigger"
 [
 	model(model) : "Model" : "models/props/"
 	skin(integer) : "Skin" : 0
@@ -458,7 +511,7 @@
 //
 
 // Jugger-Nog
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Target, Angles) color(107 29 20) model({{ model != Null -> model, {"path":"models/machines/hl_scale/juggernog.mdl"} }}) = perk_juggernog : "Jugger-Nog"
+@PointClass size(-16 -16 -32, 16 16 56) base(SpawnLimits, Item, Target, Angles) color(107 29 20) model({{ model != Null -> model, {"path":"models/machines/hl_scale/juggernog.mdl"} }}) = perk_juggernog : "Jugger-Nog"
 [
 	model(model) : "Model" : "models/machines/hl_scale/juggernog.mdl"
 	skin(integer) : "Skin" : 0
@@ -494,7 +547,7 @@
 ]
 
 // PhD Flopper
-@PointClass size(-16 -16 -32, 16 16 56) base(Item, Target, Angles) color(131 63 148) model({{ model != Null -> model, {"path":"models/machines/hl_scale/flopper.mdl"} }}) = perk_flopper : "PhD Flopper"
+@PointClass size(-16 -16 -32, 16 16 56) base(SpawnLimits, Item, Target, Angles) color(131 63 148) model({{ model != Null -> model, {"path":"models/machines/hl_scale/flopper.mdl"} }}) = perk_flopper : "PhD Flopper"
 [
 	model(model) : "Model" : "models/machines/hl_scale/flopper.mdl"
 	skin(integer) : "Skin" : 0
@@ -530,7 +583,7 @@
 ]
 
 // Double Tap Root Beer
-@PointClass size(-16 -16 -32, 16 16 40) base(Item, Target, Angles) color(214 203 1) model({{ model != Null -> model, {"path":"models/machines/hl_scale/double_tap_2.mdl"} }}) = perk_double : "Double Tap Root Beer"
+@PointClass size(-16 -16 -32, 16 16 40) base(SpawnLimits, Item, Target, Angles) color(214 203 1) model({{ model != Null -> model, {"path":"models/machines/hl_scale/double_tap_2.mdl"} }}) = perk_double : "Double Tap Root Beer"
 [
 	model(model) : "Model" : "models/machines/hl_scale/double_tap_2.mdl"
 	skin(integer) : "Skin" : 0
@@ -567,7 +620,7 @@
 ]
 
 // Speed Cola
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target, Angles) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/speed_cola.mdl"} }}) = perk_speed : "Speed Cola"
+@PointClass size(-24 -24 -32, 24 24 56) base(SpawnLimits, Item, Target, Angles) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/speed_cola.mdl"} }}) = perk_speed : "Speed Cola"
 [
 	model(model) : "Model" : "models/machines/hl_scale/speed_cola.mdl"
 	skin(integer) : "Skin" : 0
@@ -603,7 +656,7 @@
 ]
 
 // Quick Revive
-@PointClass size(-16 -16 -32, 16 16 32) base(Item, Target, Angles) color(129 172 254) model({{ model != Null -> model, {"path":"models/machines/hl_scale/quick_revive.mdl"} }}) = perk_revive : "Quick Revive"
+@PointClass size(-16 -16 -32, 16 16 32) base(SpawnLimits, Item, Target, Angles) color(129 172 254) model({{ model != Null -> model, {"path":"models/machines/hl_scale/quick_revive.mdl"} }}) = perk_revive : "Quick Revive"
 [
 	model(model) : "Model" : "models/machines/hl_scale/quick_revive.mdl"
 	skin(integer) : "Skin" : 0
@@ -639,7 +692,7 @@
 ]
 
 // Stamin-Up
-@PointClass size(-24 -24 -32, 24 24 48) base(Item, Target, Angles) color(254 198 65) model({{ model != Null -> model, {"path":"models/machines/hl_scale/staminup.mdl"} }}) = perk_staminup : "Stamin-Up"
+@PointClass size(-24 -24 -32, 24 24 48) base(SpawnLimits, Item, Target, Angles) color(254 198 65) model({{ model != Null -> model, {"path":"models/machines/hl_scale/staminup.mdl"} }}) = perk_staminup : "Stamin-Up"
 [
 	model(model) : "Model" : "models/machines/hl_scale/staminup.mdl"
 	skin(integer) : "Skin" : 0
@@ -675,7 +728,7 @@
 ]
 
 // Deadshot Daiquiri
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target, Angles) color(0 35 10) model({{ model != Null -> model, {"path":"models/machines/hl_scale/deadshot.mdl"} }}) = perk_deadshot : "Deadshot Daiquiri"
+@PointClass size(-24 -24 -32, 24 24 56) base(SpawnLimits, Item, Target, Angles) color(0 35 10) model({{ model != Null -> model, {"path":"models/machines/hl_scale/deadshot.mdl"} }}) = perk_deadshot : "Deadshot Daiquiri"
 [
 	model(model) : "Model" : "models/machines/hl_scale/deadshot.mdl"
 	skin(integer) : "Skin" : 0
@@ -711,7 +764,7 @@
 ]
 
 // Mule Kick
-@PointClass size(-24 -24 -32, 24 24 56) base(Item, Target, Angles) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/mulekick.mdl"} }}) = perk_mule : "Mule Kick"
+@PointClass size(-24 -24 -32, 24 24 56) base(SpawnLimits, Item, Target, Angles) color(0 117 58) model({{ model != Null -> model, {"path":"models/machines/hl_scale/mulekick.mdl"} }}) = perk_mule : "Mule Kick"
 [
 	model(model) : "Model" : "models/machines/hl_scale/mulekick.mdl"
 	skin(integer) : "Skin" : 0
@@ -746,7 +799,7 @@
 	]
 ]
 
-@PointClass size(-32 -32 -32, 32 32 56) base(Item) color(125 196 187) model({{ model != Null -> model, {"path":"models/machines/hl_scale/pap/p_machine.mdl"} }}) =
+@PointClass size(-32 -32 -32, 32 32 56) base(SpawnLimits, Item) color(125 196 187) model({{ model != Null -> model, {"path":"models/machines/hl_scale/pap/p_machine.mdl"} }}) =
 	perk_pap : "Pack-A-Punch" 
 [
 	model(model) : "Model" : "models/machines/hl_scale/pap/p_machine.mdl"
@@ -769,7 +822,7 @@
 	]
 ]
 
-@PointClass size(-24 -24 -32, 24 24 56) base(Item) color(0 117 58) model("models/machines/hl_scale/speed_cola.mdl") =
+@PointClass size(-24 -24 -32, 24 24 56) base(SpawnLimits, Item) color(0 117 58) model("models/machines/hl_scale/speed_cola.mdl") =
 	perk_random : "Random Perk-a-Cola" 
 [
 	spawnflags(Flags) =
@@ -788,7 +841,7 @@
 // NZP Weapons
 //
 
-@PointClass size(-32 -8 -8, 32 8 8) base(Item, Angles) color(141 85 29) model({{ model != Null -> model, {"path":"models/machines/mystery.mdl"} }}) =
+@PointClass size(-32 -8 -8, 32 8 8) base(SpawnLimits, Item, Angles) color(141 85 29) model({{ model != Null -> model, {"path":"models/machines/mystery.mdl"} }}) =
 	mystery_box : "Mystery Box" 
 [	
 	model(model) : "Model" : "models/machines/mystery.mdl"
@@ -802,10 +855,10 @@
 		2 : "No Light" : 0
 	]
 ]
-@PointClass size(-32 -8 -8, 32 8 8) base(Item, Angles) color(151 104 34) model("models/machines/mystery.mdl") =
+@PointClass size(-32 -8 -8, 32 8 8) base(SpawnLimits, Item, Angles) color(151 104 34) model("models/machines/mystery.mdl") =
 	mystery_box_tp_spot : "Mystery Box Possible Spawn Point" []
 	
-@PointClass size(-28 -28 -64, 28 28 40 ) base(Item) color(114 224 172) model({{ model != Null -> model, {"path":"models/misc/window.mdl"} }}) = item_barricade : "Window Barricade"
+@PointClass size(-28 -28 -64, 28 28 40 ) base(SpawnLimits, Item) color(114 224 172) model({{ model != Null -> model, {"path":"models/misc/window.mdl"} }}) = item_barricade : "Window Barricade"
 [
 	model(model) : "Model" : "models/misc/window.mdl"
 	skin(integer) : "Skin" : 0
@@ -820,14 +873,14 @@
 
 ]
 
-@PointClass size(-16 -16 -16, 16 16 51 ) base(Item, Angles) color(147 132 108) model({{ model != Null -> model, {"path":"models/machines/hl_scale/power_switch.mdl"} }}) = power_switch : "Power Switch"
+@PointClass size(-16 -16 -16, 16 16 51 ) base(SpawnLimits, Item, Angles) color(147 132 108) model({{ model != Null -> model, {"path":"models/machines/hl_scale/power_switch.mdl"} }}) = power_switch : "Power Switch"
 [
 	model(string) : "Model" : "models/machines/hl_scale/power_switch.mdl"
 	skin(integer) : "Skin" : 0
 	oldmodel(string) : "Activation Sound" : "sounds/machines/power.wav"
 ]
 
-@PointClass color(114 224 172) base(Angles) model({"path" : model, "skin" : skin}) = place_model : "Place a Model" 
+@PointClass color(114 224 172) base(SpawnLimits, Angles) model({"path" : model, "skin" : skin}) = place_model : "Place a Model"
 [
 	model(model) : "Model" : "models/props/"
 	skin(integer) : "Skin" : 0
@@ -841,7 +894,7 @@
 
 
 
-@PointClass color(114 224 172) = place_fire : "Place a fire effect" 
+@PointClass base(SpawnLimits) color(114 224 172) = place_fire : "Place a fire effect"
 [
 	frame(choices) : "Size" : 111 = 
 	[
@@ -850,7 +903,7 @@
 	]
 ]
 
-@PointClass  base(Targetname, Angles) color(114 224 172) model({"path" : "models/misc/chalk.mdl", "frame" : sequence}) = weapon_wall : "Wall weapon for buy_weapon"
+@PointClass  base(SpawnLimits, Targetname, Angles) color(114 224 172) model({"path" : "models/misc/chalk.mdl", "frame" : sequence}) = weapon_wall : "Wall weapon for buy_weapon"
 [
 	sequence(choices) : "Weapon" : 0 = 
 	[
@@ -888,7 +941,7 @@
 	]
 	model(string) : "World Model" : "models/GModels/"
 ]
-@PointClass  base(Targetname, Angles) color(114 224 172) model({{ model != Null -> model, {"path":"models/props/barrel_m.mdl"} }}) = explosive_barrel : "Barrel that can explode when shot at"
+@PointClass  base(SpawnLimits, Targetname, Angles) color(114 224 172) model({{ model != Null -> model, {"path":"models/props/barrel_m.mdl"} }}) = explosive_barrel : "Barrel that can explode when shot at"
 [
 	model(string) : "Model" : "models/props/barrel_m.mdl"
 	health(integer) : "Health" : 300
@@ -902,7 +955,7 @@
 ]
 
 //JUKKI DOOR
-@SolidClass base(Targetname) = buy_weapon : "buy_weapon"
+@SolidClass base(SpawnLimits, Targetname) = buy_weapon : "buy_weapon"
 [
 	weapon(choices) : "Weapon" : 0 = 
 	[
@@ -985,7 +1038,7 @@
 ]
 
 //@PointClass base(Monster) size(-16 -16 -24, 16 16 40) = monster_army : //"Grunt" []
-@PointClass base(Monster) size(-16 -16 -32, 16 16 16) model("models/ai/dog.mdl") = spawn_dog : "Hellhound" 
+@PointClass base(SpawnLimits, Monster) size(-16 -16 -32, 16 16 16) model("models/ai/dog.mdl") = spawn_dog : "Hellhound"
 [
 	spawnflags(Flags) = 
 	[
@@ -995,7 +1048,7 @@
 
 
 
-@PointClass base(Monster) size(-16 -16 -32, 16 16 40) model("models/ai/zfull.mdl") =  spawn_zombie : "zombie respawn" 
+@PointClass base(SpawnLimits, Monster) size(-16 -16 -32, 16 16 40) model("models/ai/zfull.mdl") =  spawn_zombie : "zombie respawn"
 [
 	spawnflags(Flags) = 
 	[
@@ -1005,7 +1058,7 @@
 	]
 ]
 
-@PointClass base(Targetname) size(-8 -8 -32, 8 8 8) color(121 130 62) = 
+@PointClass base(SpawnLimits, Targetname) size(-8 -8 -32, 8 8 8) color(121 130 62) =
 	path_corner : "Zombie Path When Walking to Window"
 [
 	target(target_source) : "Next stop target"
@@ -1021,12 +1074,12 @@
 // Trigger Commands
 //
 
-@SolidClass base(Targetname) = trigger_command : "Triggered Client Command"
+@SolidClass base(SpawnLimits, Targetname) = trigger_command : "Triggered Client Command"
 [
 	message(string) : "Command"
 ]
 
-@PointClass base(Targetname) color(256 256 0) = info_command : "Triggered Server Command"
+@PointClass base(SpawnLimits, Targetname) color(256 256 0) = info_command : "Triggered Server Command"
 [
 	message(string) : "Command"
 ]
@@ -1036,7 +1089,7 @@
 // Misc Objects
 //
 
-@PointClass color(128 128 128) = func_model: "Custom map model" [ model(string) : "Location" ]
+@PointClass base(SpawnLimits) color(128 128 128) = func_model: "Custom map model" [ model(string) : "Location" ]
 
 //@SolidClass = wooden_crate: "Breakable Wooden Crate" []
 
@@ -1073,45 +1126,45 @@
 	]
 ]
 
-@PointClass iconsprite("models/sprites/lamp_glow.spr") = light_environment : "Environment" 
+@PointClass base(SpawnLimits) iconsprite("models/sprites/lamp_glow.spr") = light_environment : "Environment"
 [
 	pitch(integer) : "Pitch" : 0
 	_light(color255) : "Brightness" : "255 255 128 200"
 ]
 
-@PointClass size(-8 -8 -8, 8 8 8) base(Light, Target, Targetname) iconsprite("models/sprites/lamp_glow.spr") = 
+@PointClass size(-8 -8 -8, 8 8 8) base(SpawnLimits, Light, Target, Targetname) iconsprite("models/sprites/lamp_glow.spr") =
 	light : "Invisible lightsource"
 	[
 		spawnflags(Flags) = [ 1 : "Initially dark" : 0 ]
 	]
-@PointClass size(-8 -8 -8, 8 8 8) base(Light, Target, Targetname) = 
+@PointClass size(-8 -8 -8, 8 8 8) base(SpawnLimits, Light, Target, Targetname) =
 	light_fluoro : "Fluorescent light"
 	[
 		spawnflags(Flags) = [ 1 : "Initially dark" : 0 ]
 	]
-@PointClass size(-8 -8 -8, 8 8 8) base(Light, Target, Targetname) = 
+@PointClass size(-8 -8 -8, 8 8 8) base(SpawnLimits, Light, Target, Targetname) =
 	light_fluorospark : "Sparking fluorescent light"
 	[
 		spawnflags(Flags) = [ 1 : "Initially dark" : 0 ]
 	]
-@PointClass size(-8 -8 -8, 8 8 8) base(Light, Target, Targetname) = 
+@PointClass size(-8 -8 -8, 8 8 8) base(SpawnLimits, Light, Target, Targetname) =
 	light_globe : "Globe light" []
-@PointClass size(-8 -8 -12, 8 8 20) base(Light, Target, Targetname) = 
+@PointClass size(-8 -8 -12, 8 8 20) base(SpawnLimits, Light, Target, Targetname) =
 	light_flame_large_yellow : "Large yellow flame" []
-@PointClass size(-4 -4 -12, 4 4 20) base(Light, Target, Targetname) = 
+@PointClass size(-4 -4 -12, 4 4 20) base(SpawnLimits, Light, Target, Targetname) =
 	light_flame_small_yellow : "Small yellow flame" 
 	[
 		spawnflags(Flags) = [ 1 : "Initially dark" : 0 ]
 	]
-@PointClass size(-4 -4 -12, 4 4 20) base(Light, Target, Targetname) = 
+@PointClass size(-4 -4 -12, 4 4 20) base(SpawnLimits, Light, Target, Targetname) =
 	light_flame_small_white : "Small white flame" 
 	[
 		spawnflags(Flags) = [ 1 : "Initially dark" : 0 ]
 	]
-@PointClass size(-4 -4 -12, 4 4 20) base(Light, Target, Targetname) = 
+@PointClass size(-4 -4 -12, 4 4 20) base(SpawnLimits, Light, Target, Targetname) =
 	light_torch_small_walltorch : "Small walltorch" []
 
-@PointClass size(-4 -4 -12, 4 4 20) base(Targetname, Target, Angles) = light_spot : "Spotlight" 
+@PointClass size(-4 -4 -12, 4 4 20) base(SpawnLimits, Targetname, Target, Angles) = light_spot : "Spotlight"
 [
 	_cone(integer) : "Inner (bright) angle" : 30
 	_cone2(integer) : "Outer (fading) angle" : 45
@@ -1145,7 +1198,7 @@
 // misc
 //
 
-@SolidClass = func_illusionary : "Static model"  
+@SolidClass base(SpawnLimits) = func_illusionary : "Static model"
 [
 	rendermode(integer) : "rendermode" : 4
 	renderamt(integer) : "renderamt" : 255
@@ -1178,7 +1231,7 @@
 //
 
 
-@SolidClass base(Targetname, Target) = func_door : "Basic door"
+@SolidClass base(SpawnLimits, Targetname, Target) = func_door : "Basic door"
 [
 	speed(integer) : "Speed" : 100
 	sounds(choices) : "Sound" : 0 = 
@@ -1207,7 +1260,7 @@
 	]
 ]
 //JUKKI DOOR
-@SolidClass base(Targetname, Target) = func_door_nzp : "nzp door"
+@SolidClass base(SpawnLimits, Targetname, Target) = func_door_nzp : "nzp door"
 [
 	wayTarget(string) : "Waypoint Target"
 	speed(integer) : "Speed" : 100
@@ -1238,7 +1291,7 @@
 	]
 ]
 
-@SolidClass base(Targetname) = func_wall : "Wall"
+@SolidClass base(SpawnLimits, Targetname) = func_wall : "Wall"
 [
 	alpha(string) : "Transparency (0.1 - 1.0)"
 	rendermode(integer) : "rendermode" : 4
@@ -1249,9 +1302,14 @@
 	]
 ]
 
+// Passive landing volume; evaluated at the player's feet when landing.
+@SolidClass base(SpawnLimits) = func_nofalldamage : "No Fall Damage Volume. Suppresses player fall damage when their feet land inside its bounds. Use one axis-aligned rectangular brush per entity, extending slightly below the floor and above the landing surface. Passing through the volume does not grant protection outside it. Does not fire targets."
+[
+]
+
 // func_detail
 // Similar in function to the func_detail in Source, though it is still subject to the bsp file format.
-@SolidClass = func_detail : "Detail brushes"
+@SolidClass base(SpawnLimits) = func_detail : "Detail brushes"
 [
 	// You can leave the detail level to 1. For tiny objects, you might set to 2, so that they won't chop faces of other func_details.
 	zhlt_detaillevel(integer) : "Detail level" : 1
@@ -1271,7 +1329,7 @@
 	]
 ]
 
-@PointClass size(32 32 32) base(Targetname, Target) = func_counter : "Activation Counter"
+@PointClass size(32 32 32) base(SpawnLimits, Targetname, Target) = func_counter : "Activation Counter"
 [
 	spawnflags(flags) =
 	[
@@ -1290,7 +1348,7 @@
 	killtarget2(string) : "Killtarget #2"
 ]
 
-@PointClass base(Targetname, Target) = func_oncount : "Counter Target"
+@PointClass base(SpawnLimits, Targetname, Target) = func_oncount : "Counter Target"
 [
 	count(integer) : "# to Trigger On" : 1
 	delay(integer) : "Trigger Delay"
@@ -1298,7 +1356,7 @@
 
 
 
-@SolidClass base(Target) = trigger_damagethreshold : "Damage Threshold Trigger"
+@SolidClass base(SpawnLimits, Target) = trigger_damagethreshold : "Damage Threshold Trigger"
 [
 	spawnflags(flags) =
 	[
@@ -1308,7 +1366,7 @@
 	health(integer) : "Damage Threshold" : 60
 ]
 
-@SolidClass base(Targetname) = spawn_zone : "Zone Spawning Definition" 
+@SolidClass base(SpawnLimits, Targetname) = spawn_zone : "Zone Spawning Definition"
 [
 	zone_name(string) : "Name of Zone" : ""
 	adjacent_zones(string) : "Comma separated list of touching Zones (e.g. 'spawn_zone, jugg_zone, third_zone'), Up to 8" : ""
@@ -1316,7 +1374,7 @@
 	zone_fog(string) : "Fog value specific to this Zone"
 ]
 
-@SolidClass base(Targetname) = func_button : "Button" 
+@SolidClass base(SpawnLimits, Targetname) = func_button : "Button"
 [
 	speed(integer) : "Speed" : 40
 	lip(integer) : "Lip" : 4
@@ -1338,7 +1396,7 @@
 	]
 ]
 
-@SolidClass base(Targetname) = func_train : "Moving platform" 
+@SolidClass base(SpawnLimits, Targetname) = func_train : "Moving platform"
 [
 	sounds(choices) : "Sound" : 1 =
 	[
@@ -1350,7 +1408,7 @@
 	dmg(integer) : "Damage on crush" : 0
 ]
 
-@SolidClass base(Targetname) = func_plat : "Elevator" 
+@SolidClass base(SpawnLimits, Targetname) = func_plat : "Elevator"
 [	
 	spawnflags(Flags) =
 	[
@@ -1435,7 +1493,7 @@
 	]
 ]
 
-@PointClass base(Targetname, Soundplaying) = ambient_generic : "Universal Ambient Sound"
+@PointClass base(SpawnLimits, Targetname, Soundplaying) = ambient_generic : "Universal Ambient Sound"
 [	
 	spawnflags(flags) = 
 	[
@@ -1451,12 +1509,12 @@
 	message(string) : "Ambient Sound"
 ]
 
-@PointClass base(Targetname) = trigger_atroundend : "Trigger at End of Round"
+@PointClass base(SpawnLimits, Targetname) = trigger_atroundend : "Trigger at End of Round"
 [
 	health(integer) : "Round to Activate on" : 0
 ]
 
-@PointClass base(Targetname, Soundplaying) = ambient_bgm : "Back Ground Music"
+@PointClass base(SpawnLimits, Targetname, Soundplaying) = ambient_bgm : "Back Ground Music"
 [
 	spawnflags(flags) =
 	[
@@ -1472,7 +1530,7 @@
 	button0(string) : "Extro length"
 ]
 
-@SolidClass= trigger_changelevel : "Trigger: Change level"
+@SolidClass base(SpawnLimits)= trigger_changelevel : "Trigger: Change level"
 [
 	map(string) : "New map name"
 	target(target_destination) : "Target"
@@ -1482,17 +1540,17 @@
 	]
 ]
 
-@SolidClass base(Trigger) = trigger_once : "Trigger: Activate once"
+@SolidClass base(SpawnLimits, Trigger) = trigger_once : "Trigger: Activate once"
 [
 	health(integer) : "Health"
 	spawnflags(flags) = [ 1: "Entity only" : 0 ]
 ]
 
-@SolidClass base(Trigger) = trigger_activator : "Trigger: Activate spawnpoints"
+@SolidClass base(SpawnLimits, Trigger) = trigger_activator : "Trigger: Activate spawnpoints"
 [
 ]
 
-@SolidClass base(Trigger) = trigger_interact : "Trigger: On Use Button"
+@SolidClass base(SpawnLimits, Trigger) = trigger_interact : "Trigger: On Use Button"
 [
 	spawnflags(flags) =
 	[
@@ -1500,7 +1558,7 @@
 	]
 ]
 
-@SolidClass base(Trigger) = trigger_stuffcmd : "Trigger: Run CMD on Client (NZP)"
+@SolidClass base(SpawnLimits, Trigger) = trigger_stuffcmd : "Trigger: Run CMD on Client (NZP)"
 [
 	message(string) : "CMD"
 	spawnflags(flags) =
@@ -1510,23 +1568,23 @@
 	]
 ]
 
-@SolidClass base(Trigger) = trigger_multiple : "Trigger: Activate multiple" 
+@SolidClass base(SpawnLimits, Trigger) = trigger_multiple : "Trigger: Activate multiple"
 [
 	wait(string) : "Wait before reset" : "4"
 	health(integer) : "Health"
 	spawnflags(flags) = [ 1: "Entity only" : 0 ]
 ]
-@SolidClass base(TriggerVoice) = trigger_voice : "Trigger: Activate voice" 
+@SolidClass base(SpawnLimits, TriggerVoice) = trigger_voice : "Trigger: Activate voice"
 [
 	wait(string) : "Wait before reset" : "4"
 	health(integer) : "Health"
 	spawnflags(flags) = [ 1: "Entity only" : 0 ]
 ]
-@SolidClass base(Trigger) = trigger_onlyregistered : "Trigger: Registered only" 
+@SolidClass base(SpawnLimits, Trigger) = trigger_onlyregistered : "Trigger: Registered only"
 [
 	spawnflags(flags) = [ 1: "Entity only" : 0 ]
 ]
-@SolidClass base(Trigger) = trigger_secret : "Trigger: Secret" 
+@SolidClass base(SpawnLimits, Trigger) = trigger_secret : "Trigger: Secret"
 [
 	sounds(choices) : "Sound style" : 1 =
 	[
@@ -1539,7 +1597,7 @@
 	spawnflags(flags) = [ 1: "Entity only" : 0 ]
 ]
 
-@SolidClass base(Target, Targetname) = trigger_teleport : "Trigger teleport" 
+@SolidClass base(SpawnLimits, Target, Targetname) = trigger_teleport : "Trigger teleport"
 [
 	spawnflags(Flags) =
 	[
@@ -1550,7 +1608,7 @@
 
 // need updates:
 
-@PointClass base(Trigger) = trigger_relay : "Trigger relay"
+@PointClass base(SpawnLimits, Trigger) = trigger_relay : "Trigger relay"
 [
 	triggerstate(choices) : "Trigger State" : 0 =
 	[
@@ -1559,22 +1617,29 @@
 	]
 ]
 
-@SolidClass base(Targetname) = trigger_monsterjump : "Trigger monster jump" 
+@SolidClass base(SpawnLimits, Targetname) = trigger_monsterjump : "Trigger monster jump"
 [
 	speed(integer) : "Jump Speed" : 200
 	height(integer) : "Jump Height" : 200
 ]
-@PointClass base(Target, Targetname) = trigger_counter : "Trigger counter" 
+@PointClass base(SpawnLimits, Target, Targetname) = trigger_counter : "Trigger counter"
 [
 	spawnflags(flags) = [ 1: "No Message" : 0 ]
 	count(integer) : "Count before activation" : 2
 ]
-@SolidClass base(Targetname) = trigger_push : "Trigger player push"
+@SolidClass base(SpawnLimits, Targetname, Angles) = trigger_push : "Trigger push"
 [
-	spawnflags(flags) = [ 1: "Once Only" : 0 ]
-	speed(integer) : "Speed of push" : 1000
+	speed(integer) : "Speed of push" : 100
+	velocity_retention(integer) : "Velocity retained (%)" : 0
+	spawnflags(flags) =
+	[
+		1: "Once Only" : 0
+		2: "Affects Players" : 0
+		4: "Affects Non-Players" : 0
+		8: "Start disabled" : 0
+	]
 ]
-@SolidClass  base(Targetname) = trigger_hurt : "Trigger hurt" 
+@SolidClass  base(SpawnLimits, Targetname) = trigger_hurt : "Trigger hurt"
 [
 	dmg(integer) : "Damage" : 5
 	wait(integer) : "Delay before reset"
@@ -1583,9 +1648,10 @@
 	[
 		1: "No damage to AI/Enemies": 0
 		2: "No damage to clients" : 0
+		8: "Start disabled" : 0
 	]
 ]
-@SolidClass  base(Targetname) = trigger_setfire : "Trigger fire effect" 
+@SolidClass  base(SpawnLimits, Targetname) = trigger_setfire : "Trigger fire effect"
 [
 	fire_timeout(integer) : "Effect Duration" : 2
 	spawnflags(Flags) =
@@ -1594,7 +1660,7 @@
 		2: "No damage to AI/Enemies" : 0
 	]
 ]
-@SolidClass  base(Targetname) = trigger_awardpoints : "Award Score to Client" 
+@SolidClass  base(SpawnLimits, Targetname) = trigger_awardpoints : "Award Score to Client"
 [
 	points(integer) : "Score to add" : 25
 	noise(string) : "Sound to play on trigger" : "sounds/misc/ching.wav"
@@ -1607,7 +1673,7 @@
 	]
 ]
 
-@SolidClass  base(Targetname) = func_rotating : "Rotateing Brush" 
+@SolidClass  base(SpawnLimits, Targetname) = func_rotating : "Rotateing Brush"
 [
 ]
 
@@ -1615,11 +1681,11 @@
 // # Hipnotic entities #
 // #####################
 
-@SolidClass base(Targetname, Target) = rotate_object : "Object to be rotated"[]
+@SolidClass base(SpawnLimits, Targetname, Target) = rotate_object : "Object to be rotated"[]
 
-@PointClass size(-4 -4 -4, 4 4 4) base(Targetname) = info_rotate : "Point of rotation" []
+@PointClass size(-4 -4 -4, 4 4 4) base(SpawnLimits, Targetname) = info_rotate : "Point of rotation" []
 
-@SolidClass base(Targetname) = func_movewall : "Movable Wall, used for rotating brush collision"
+@SolidClass base(SpawnLimits, Targetname) = func_movewall : "Movable Wall, used for rotating brush collision"
 [
 	spawnflags(flags) =
 	[
@@ -1630,7 +1696,7 @@
 	dmg(integer) : "Damage"
 ]
 
-@PointClass size(-8 -8 -8, 8 8 8) base(Targetname) = func_rotate_door : "Rotating Door"
+@PointClass size(-8 -8 -8, 8 8 8) base(SpawnLimits, Targetname) = func_rotate_door : "Rotating Door"
 [
 	spawnflags(flags) =
 	[
@@ -1656,7 +1722,7 @@
 	killtarget2(string) : "Killtarget #2"
 ]
 
-@PointClass base(Targetname) = func_rotate_entity : "func_rotate_entity"
+@PointClass base(SpawnLimits, Targetname) = func_rotate_entity : "func_rotate_entity"
 [
 	spawnflags(flags) =
 	[
@@ -1670,7 +1736,7 @@
 	deathtype(string) : "Death Message"
 ]
 
-@PointClass base(Targetname, Target) = path_rotate : "Path_Rotate"
+@PointClass base(SpawnLimits, Targetname, Target) = path_rotate : "Path_Rotate"
 [
 	spawnflags(flags) =
 	[
@@ -1694,7 +1760,7 @@
 ]
 
 // I don't think that these will work without the modified QBSP
-@PointClass base(Targetname) = func_rotate_train : "Rotating Train"
+@PointClass base(SpawnLimits, Targetname) = func_rotate_train : "Rotating Train"
 [
 	target(target_destination) : "Name of Parts"
 	path(string) : "First path_rotate"
@@ -1711,7 +1777,7 @@
 	noise1(string) : "Move Sound"
 ]
 
-@PointClass = func_clock : "Clock Hand"
+@PointClass base(SpawnLimits) = func_clock : "Clock Hand"
 [
 	target(target_destination) : "Rotate Object"
 	cnt(integer) : "Starting Time"
@@ -1725,14 +1791,14 @@
 ]
 
 // Hipnotic warns that they don't work well.
-@SolidClass = func_pushable : "Pushable Walls" []
+@SolidClass base(SpawnLimits) = func_pushable : "Pushable Walls" []
 
-@PointClass = wallsprite : "Wall Sprite"
+@PointClass base(SpawnLimits) = wallsprite : "Wall Sprite"
 [
 	model(string) : "Sprite Model" : "progs/s_blood1.spr"
 ]
 
-@PointClass base(Angle, Target, Targetname) size(32 32 32) base(Angles) color(255 128 0) model({"path" : model, "skin" : skin, "frame": frame}) = misc_model : "A point entity for displaying models. A frame range can be given to animate the model.
+@PointClass base(SpawnLimits, Angle, Target, Targetname) size(32 32 32) base(Angles) color(255 128 0) model({"path" : model, "skin" : skin, "frame": frame}) = misc_model : "A point entity for displaying models. A frame range can be given to animate the model.
 
 mdl: The model to display. Can be of type mdl, bsp, or spr.
 frame: Single frame to display. Can also be used to offset the animation.
@@ -1751,31 +1817,7 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	angles(integer) : "set 'angle' to 0 if this is used"
 	mdlsz(integer) : "Entity size (x y z)"
 	centeroffset(integer) : "Model center offset"
-	gamemode_limiter(choices) : "Only Appear on specified Game Mode" : 0 =
-	[
-		0: "All Modes"
-		2: "Gun Game"
-		3: "Hardcore"
-		4: "Wild West"
-		5: "Sticks & Stones"
-		6: "FEVER"
-	]
-	month_limiter(choices) : "Only Appear on specified Month of the Year" : 0 =
-	[
-		0: "All Year"
-		1: "January"
-		2: "February"
-		3: "March"
-		4: "April"
-		5: "May"
-		6: "June"
-		7: "July"
-		8: "August"
-		9: "September"
-		10: "October"
-		11: "November"
-		12: "December"
-	]
+
 	spawnflags(flags) =
 		[
 			1: "Gravity" : 0
@@ -1788,10 +1830,10 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 		]
 ]
 
-@PointClass = zombie_horde_point : "Hording spot for Zombies"
+@PointClass base(SpawnLimits) = zombie_horde_point : "Hording spot for Zombies"
 []
 
-@PointClass base(Targetname, Target) = game_counter : "Fires when it hits limit"
+@PointClass base(SpawnLimits, Targetname, Target) = game_counter : "Fires when it hits limit"
 [
 	spawnflags(flags) =
 	[
@@ -1803,7 +1845,17 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	health(integer) : "Limit Value" : 10
 ]
 
-@PointClass base(Targetname) = spawn_pu : "Spawns a Power-Up each time it is triggered"
+@PointClass base(SpawnLimits, Targetname) = game_counter_set : "Sets the value of targeted game_counter entities"
+[
+	target(target_destination) : "Target"
+	frags(integer) : "New Value" : 0
+	spawnflags(flags) =
+	[
+		1: "Remove On fire" : 0
+	]
+]
+
+@PointClass base(SpawnLimits, Targetname) = spawn_pu : "Spawns a Power-Up each time it is triggered"
 [
 	spawn_id(choices) : "Power-Up" : 0 =
 	[
@@ -1823,13 +1875,13 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	]
 ]
 
-@PointClass base(Targetname, Target) = game_random : "Fires random entity"
+@PointClass base(SpawnLimits, Targetname, Target) = game_random : "Fires random entity"
 [
 	name(string) : "Entity targetnames" : ""
 	health(integer) : "Max Number" : 10
 ]
 
-@PointClass base(Targetname, Target) = game_perk : "Gives selected Perks when triggered"
+@PointClass base(SpawnLimits, Targetname, Target) = game_perk : "Gives selected Perks when triggered"
 [
 	mode(choices) : "Perk Selection Mode" : 0 =
 	[
@@ -1854,7 +1906,7 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	]
 ]
 
-@PointClass base(Targetname, Target) = game_screenflash : "Sends screenflash message to server"
+@PointClass base(SpawnLimits, Targetname, Target) = game_screenflash : "Sends screenflash message to server"
 [
 	noise(string) : "Sound to play" : ""
 	weapon(choices) : "Screenflash color" : 0 =
@@ -1870,7 +1922,7 @@ NOTE: set angle value to 0 if using angles key to rotate mdls"
 	currentammo(integer) : "Round delay if End Round spawnflag is set" : 10
 ]
 
-@PointClass base(Targetname, Target) = game_songplay : "Plays a track from tracks/ when triggered."
+@PointClass base(SpawnLimits, Targetname, Target) = game_songplay : "Plays a track from tracks/ when triggered."
 [
 	aistatus(string) : "Track name (looks in nzp/tracks/)"
 	cost(integer) : "Track duration (seconds)" : 0
