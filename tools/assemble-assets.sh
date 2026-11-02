@@ -47,6 +47,12 @@ cp -rn tmp/nzp/* tmp/pc/nzp/
 cd tmp/pc/
 zip -r ../pc-nzp-assets.zip ./*
 
+# Make emscripten (based on PC)
+if [ -f ${EMSDK}/upstream/emscripten/tools/file_packager ]; then
+    ${EMSDK}/upstream/emscripten/tools/file_packager assets.data --preload nzp@nzp --js-output=assets.js
+    zip -r ../emscripten-nzp-assets.zip assets.data assets.js
+fi
+
 ## Make NSPIRE
 cd ${ROOT_DIR}
 cp -r nspire/* tmp/nspire/
