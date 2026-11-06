@@ -100,7 +100,7 @@ target4 = 6
 target5 = 8
 target6 = 9
 target7 = 10
-target8 = 11
+target8 = 
 }
 
 Waypoint
@@ -115,7 +115,7 @@ target4 = 6
 target5 = 7
 target6 = 9
 target7 = 10
-target8 = 11
+target8 = 
 }
 
 Waypoint
@@ -144,8 +144,8 @@ target3 = 6
 target4 = 7
 target5 = 8
 target6 = 9
-target7 = 11
-target8 = 42
+target7 = 42
+target8 = 
 }
 
 Waypoint
@@ -228,11 +228,11 @@ Waypoint
 origin = '120 705 32'
 id = 16
 special = 
-target = 11
-target2 = 12
-target3 = 15
-target4 = 17
-target5 = 40
+target = 12
+target2 = 17
+target3 = 40
+target4 = 
+target5 = 
 target6 = 
 target7 = 
 target8 = 

@@ -32,6 +32,26 @@ jobs:
           echo "image=$image" >> "$GITHUB_OUTPUT"
           echo "Toolbox Image: \`$image\`" >> "$GITHUB_STEP_SUMMARY"
 
+  resolve-refs:
+    name: Resolve Dependency Refs
+    runs-on: ubuntu-latest
+    outputs:
+      quakec_ref: ${{ steps.refs.outputs.quakec_ref }}
+      vril_ref: ${{ steps.refs.outputs.vril_ref }}
+    steps:
+      - name: Read dependency refs
+        id: refs
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+          quakec_ref=$(sed -nE 's/^[[:space:]]*quakec_ref=([^[:space:]]+)[[:space:]]*$/\1/p' <<< "$PR_BODY" | head -n 1)
+          vril_ref=$(sed -nE 's/^[[:space:]]*vril_ref=([^[:space:]]+)[[:space:]]*$/\1/p' <<< "$PR_BODY" | head -n 1)
+          {
+            echo "quakec_ref=$quakec_ref"
+            echo "vril_ref=$vril_ref"
+          } >> "$GITHUB_OUTPUT"
+
   discover-maps:
     name: Discover Maps
     runs-on: ubuntu-latest
@@ -56,7 +76,7 @@ jobs:
 
   assets-tests:
     name: ${{ matrix.name }}
-    needs: resolve-toolbox
+    needs: [resolve-toolbox, resolve-refs]
     runs-on: ubuntu-latest
     container:
       image: ${{ needs.resolve-toolbox.outputs.image }}
@@ -75,6 +95,8 @@ jobs:
             test: wav_validator
           - name: Verify PCX textures conform
             test: pcx_validator
+          - name: Validate waypoint paths
+            test: pathfind
     defaults:
       run:
         shell: bash
@@ -98,10 +120,36 @@ jobs:
             echo "Assets PR head: \`$PR_HEAD_SHA\`"
             echo "Tested merge commit: \`$PR_MERGE_SHA\`"
           } >> "$GITHUB_STEP_SUMMARY"
+      - name: Select dependency overrides
+        if: needs.resolve-refs.outputs.quakec_ref != '' || needs.resolve-refs.outputs.vril_ref != ''
+        env:
+          QUAKEC_REF: ${{ needs.resolve-refs.outputs.quakec_ref }}
+          VRIL_REF: ${{ needs.resolve-refs.outputs.vril_ref }}
+          PR_HEAD_OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
+        run: |
+          set -euo pipefail
+          for dependency in quakec vril; do
+            case "$dependency" in
+              quakec) repository=quakec; ref="$QUAKEC_REF" ;;
+              vril) repository=vril-engine; ref="$VRIL_REF" ;;
+            esac
+            [ -n "$ref" ] || continue
+            directory="/workspace/repos/$repository"
+            git -C "$directory" fetch "https://github.com/${PR_HEAD_OWNER}/${repository}.git" "$ref"
+            git -C "$directory" checkout --detach FETCH_HEAD
+            echo "${repository} override: \`${PR_HEAD_OWNER}/${repository}@$(git -C "$directory" rev-parse HEAD)\` (requested \`$ref\`)" >> "$GITHUB_STEP_SUMMARY"
+          done
       - name: Run
         env:
           ASSETS_TEST: ${{ matrix.test }}
         run: /entrypoint.sh test-assets "$ASSETS_TEST"
+      - name: Upload pathfind reports
+        if: always() && matrix.test == 'pathfind'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pathfind-reports
+          path: /workspace/repos/assets/tmp/pathfind
+          if-no-files-found: warn
 
   map-tests:
     name: Compile ${{ matrix.map }}

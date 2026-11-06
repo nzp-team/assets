@@ -23,7 +23,7 @@ It is also an option for people who may want to modify model sources to either [
 Inside of the directory for a given asset is is mesh (`mesh.blend`) and a texture in PNG format (`texture.png`). Relative texture paths are already established so you can open the mesh in Blender 2.9X and begin modifying.
 
 ## Modifying Map Sources
-Being a Quake-based game, NZ:P uses conventional Quake mapping tools and standards. It is recommended to use [Trenchbroom](https://trenchbroom.github.io/) to map, though [J.A.C.K.](https://jack.hlfx.ru/en/) is also an option.
+Being a Quake-based game, NZ:P uses conventional Quake mapping tools and standards. It is recommended to use [Trenchbroom](https://trenchbroom.github.io/) to map.
 
 If you are new to Quake mapping, check out `dumptruck_ds`'s ["Mapping for Quake" Trenchbroom YouTube tutorials](https://www.youtube.com/watch?v=gONePWocbqA&list=PLgDKRPte5Y0AZ_K_PZbWbgBAEt5xf74aE). If you are familiar with Trenchbroom and want to get started with NZ:P mapping, you can watch `BCDeshiG`'s [NZ:P Trenchbroom Set Up Guide](https://youtu.be/ATvpV7xyfhQ).
 
