@@ -329,6 +329,7 @@
         {
             "graphics":
             {
+                "dpad": "gfx/hud/default/equipment/dpad",
                 "grenade": "gfx/hud/default/equipment/frag",
                 "bouncing_betty": "gfx/hud/default/equipment/betty"
             }
