@@ -9,7 +9,7 @@ cd "${SCRIPT_DIR}"
 
 # Make generics 
 cd ../
-mkdir -p tmp/{pc,psp,nx,vita,ctr,nzp,nspire}
+mkdir -p tmp/{pc,psp,ps4,nx,vita,ctr,nzp,nspire}
 cp -r common/* tmp/nzp/
 
 ## Make PSP 
@@ -18,6 +18,13 @@ cp -r psp/* tmp/psp/
 cp -rn tmp/nzp/* tmp/psp/nzportable/nzp/
 cd tmp/psp/
 zip -r ../psp-nzp-assets.zip ./*
+
+## Make PS4
+cd ${ROOT_DIR}
+cp -r playstation/* tmp/ps4/
+cp -rn tmp/nzp/* tmp/ps4/nzportable/nzp/
+cd tmp/ps4/
+zip -r ../ps4-nzp-assets.zip ./*
 
 ## Make Switch
 cd ${ROOT_DIR}

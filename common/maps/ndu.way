@@ -1005,7 +1005,7 @@ target8 =
 
 Waypoint
 {
-origin = '1390 1780 83'
+origin = '1380 1796 80.125'
 id = 69
 special = 
 target = 5

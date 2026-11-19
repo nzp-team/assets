@@ -9,6 +9,8 @@ Ideally you should also use this standard for your commit names too. They'll lik
 
 # Swap with your own for validating changes that require toolbox updates.
 #toolbox_image=ghcr.io/nzp-team/toolbox:main
+# quakec_ref=main
+# vril_ref=main
 -->
 
 ### Description of Changes

@@ -915,7 +915,7 @@ target8 =
 
 Waypoint
 {
-origin = '1046 230 336'
+origin = '1046 242 336'
 id = 62
 special = 
 target = 61

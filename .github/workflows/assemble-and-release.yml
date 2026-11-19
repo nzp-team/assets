@@ -152,6 +152,7 @@ jobs:
               - NX: `/switch/`
               - PC: Anywhere, or where your `nzportable.exe` from an existing install is.
               - PSP: `/PSP/GAME/`
+              - PS4: `/data/` (resulting in `/data/nzportable/nzp/`).
               - VITA: `/ux0:` (archive contains a `data` folder).
               - 3DS: `/3ds/`
           draft: true
@@ -182,6 +183,15 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./tmp/psp-nzp-assets.zip
           asset_name: psp-nzp-assets.zip
+          asset_content_type: application/zip
+      - name: Upload PS4 Data
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./tmp/ps4-nzp-assets.zip
+          asset_name: ps4-nzp-assets.zip
           asset_content_type: application/zip
       - name: Upload VITA Data
         uses: actions/upload-release-asset@v1
