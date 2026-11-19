@@ -1203,6 +1203,12 @@
 	rendermode(integer) : "rendermode" : 4
 	renderamt(integer) : "renderamt" : 255
 	spawnflags(Flags) = [ 1 : "Start Hidden" : 0 ]
+	// VHLT does not disable clip node generation for illusionary by default, adding this does however fix it when set to 1. Should be set this way by default to reduce clipnode generation.
+	zhlt_noclip(choices) : "Passable" : "1" =
+	[
+		"": "No"
+		1: "Yes"
+	]
 ]
 
 //@PointClass = func_illusionary2 : "Static model"  
