@@ -1,0 +1,6 @@
+{
+    "gameplay": {
+        "perksacola": { "perk_purchase_limit": 4 },
+        "rounds": { "delay_between_rounds": 6 }
+    }
+}
