@@ -4,6 +4,9 @@ Nazi Zombies: Portable uses and remixes assets from several external artists. Th
 - Pro Sensory ("Halloween"): CC0
 - tricksntraps ("Ascend", "Flying Temple", "Glory Days", "Starting Over"): CC0
 - Hansjörg Malthaner [http://opengameart.org/users/varkalandar] ("Glass Bell Sounds"): CC-BY-SA 3.0
+- Wezu [https://opengameart.org/users/wezu] ("Old Wall Texture (w/ normal+height)"): OGA-BY 3.0
+- N3b [https://opengameart.org/users/n3b] ("Seamless Metal Door Texture"): CC-BY 3.0
+- Free Texture Friday [https://web.archive.org/web/20220611190904/https://jooinn.com/black-wall-texture-5.html] ("Black Wall Texture 5" used for b1ood_wall_rock): Commercial
 
 If you believe your work is used by Nazi Zombies: Portable and is missing from this list, please open an issue so you can be credited:
 https://github.com/nzp-team/nzportable/issues
